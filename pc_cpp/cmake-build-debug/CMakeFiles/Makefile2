@@ -44,10 +44,10 @@ RM = /home/bab21/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/bin/
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bab21/CLionProjects/robotArm
+CMAKE_SOURCE_DIR = /home/bab21/PycharmProjects/robotArm/pc_cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bab21/CLionProjects/robotArm/cmake-build-debug
+CMAKE_BINARY_DIR = /home/bab21/PycharmProjects/robotArm/pc_cpp/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ preinstall:
 CMakeFiles/robotArm.dir/all:
 	$(MAKE) -f CMakeFiles/robotArm.dir/build.make CMakeFiles/robotArm.dir/depend
 	$(MAKE) -f CMakeFiles/robotArm.dir/build.make CMakeFiles/robotArm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bab21/CLionProjects/robotArm/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target robotArm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bab21/PycharmProjects/robotArm/pc_cpp/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target robotArm"
 .PHONY : CMakeFiles/robotArm.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/robotArm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bab21/CLionProjects/robotArm/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bab21/PycharmProjects/robotArm/pc_cpp/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/robotArm.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bab21/CLionProjects/robotArm/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bab21/PycharmProjects/robotArm/pc_cpp/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/robotArm.dir/rule
 
 # Convenience name for target.
