@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="robotArm" targetName="robotArm" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="09459e80-773d-43e5-81ec-57aef335d28b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZP4PsthznwX29lIaRq5z0sxVrf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build_lib.sh" />
+    <property name="settings.editor.selected.configurable" value="dynamic.analysis.tools.profiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.robotArm">
+    <configuration name="robotArm" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robotArm" RUN_TARGET_NAME="robotArm">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Build lib" type="ShConfigurationType">
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/build_lib.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.robotArm" />
+      <item itemvalue="Shell Script.Build lib" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09459e80-773d-43e5-81ec-57aef335d28b" name="Default Changelist" comment="" />
+      <created>1584727373535</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584727373535</updated>
+      <workItem from="1584727376016" duration="8111000" />
+      <workItem from="1584797849768" duration="2486000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="449" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584728947040">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="449" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1584728947040" />
+    <state x="664" y="354" width="642" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584728574133">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="664" y="354" width="642" height="403" key="#com.intellij.fileTypes.FileTypeChooser/54.27.1866.1053@54.27.1866.1053" timestamp="1584728574133" />
+    <state x="750" y="253" width="470" height="604" key="#com.intellij.ide.util.MemberChooser" timestamp="1584737099821">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="750" y="253" width="470" height="604" key="#com.intellij.ide.util.MemberChooser/54.27.1866.1053@54.27.1866.1053" timestamp="1584737099821" />
+    <state x="664" y="131" width="642" height="848" key="#test_libRobotArm" timestamp="1584728662758">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="664" y="131" width="642" height="848" key="#test_libRobotArm/54.27.1866.1053@54.27.1866.1053" timestamp="1584728662758" />
+    <state x="748" y="205" key="#xdebugger.evaluate" timestamp="1584731976101">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="748" y="205" key="#xdebugger.evaluate/54.27.1866.1053@54.27.1866.1053" timestamp="1584731976101" />
+    <state x="773" y="283" width="424" height="497" key="FileChooserDialogImpl" timestamp="1584731843218">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="773" y="283" width="424" height="497" key="FileChooserDialogImpl/54.27.1866.1053@54.27.1866.1053" timestamp="1584731843218" />
+    <state width="1820" height="275" key="GridCell.Tab.0.bottom" timestamp="1584736767706">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state width="1820" height="275" key="GridCell.Tab.0.bottom/54.27.1866.1053@54.27.1866.1053" timestamp="1584736767706" />
+    <state width="1820" height="275" key="GridCell.Tab.0.center" timestamp="1584736767706">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state width="1820" height="275" key="GridCell.Tab.0.center/54.27.1866.1053@54.27.1866.1053" timestamp="1584736767706" />
+    <state width="1820" height="275" key="GridCell.Tab.0.left" timestamp="1584736767706">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state width="1820" height="275" key="GridCell.Tab.0.left/54.27.1866.1053@54.27.1866.1053" timestamp="1584736767706" />
+    <state width="1820" height="275" key="GridCell.Tab.0.right" timestamp="1584736767706">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state width="1820" height="275" key="GridCell.Tab.0.right/54.27.1866.1053@54.27.1866.1053" timestamp="1584736767706" />
+    <state width="1820" height="340" key="GridCell.Tab.1.bottom" timestamp="1584732095008">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state width="1820" height="340" key="GridCell.Tab.1.bottom/54.27.1866.1053@54.27.1866.1053" timestamp="1584732095008" />
+    <state width="1820" height="340" key="GridCell.Tab.1.center" timestamp="1584732095008">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state width="1820" height="340" key="GridCell.Tab.1.center/54.27.1866.1053@54.27.1866.1053" timestamp="1584732095008" />
+    <state width="1820" height="340" key="GridCell.Tab.1.left" timestamp="1584732095007">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state width="1820" height="340" key="GridCell.Tab.1.left/54.27.1866.1053@54.27.1866.1053" timestamp="1584732095007" />
+    <state width="1820" height="340" key="GridCell.Tab.1.right" timestamp="1584732095008">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state width="1820" height="340" key="GridCell.Tab.1.right/54.27.1866.1053@54.27.1866.1053" timestamp="1584732095008" />
+    <state x="479" y="172" width="1016" height="743" key="SettingsEditor" timestamp="1584731847563">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="479" y="172" width="1016" height="743" key="SettingsEditor/54.27.1866.1053@54.27.1866.1053" timestamp="1584731847563" />
+    <state x="647" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1584798206368">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="647" y="372" key="com.intellij.ide.util.TipDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1584798206368" />
+  </component>
+</project>
