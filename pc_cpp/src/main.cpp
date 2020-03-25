@@ -1,5 +1,5 @@
 #include <ctime>
-#include "robotArm.cpp"
+#include "libRobotArm.cpp"
 
 static const int times = 10000;
 

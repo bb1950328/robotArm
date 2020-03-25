@@ -3,4 +3,4 @@ project(robotArm)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(robotArm main.cpp)
+add_executable(robotArm src/main.cpp)

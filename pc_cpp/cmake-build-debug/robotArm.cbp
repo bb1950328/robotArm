@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/bab21/PycharmProjects/robotArm/pc_cpp/main.cpp">
+		<Unit filename="/home/bab21/PycharmProjects/robotArm/pc_cpp/src/main.cpp">
 			<Option target="robotArm"/>
 		</Unit>
 		<Unit filename="/home/bab21/PycharmProjects/robotArm/pc_cpp/CMakeLists.txt">

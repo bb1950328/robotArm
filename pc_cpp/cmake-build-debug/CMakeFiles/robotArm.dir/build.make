@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/bab21/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/bab21/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/bab21/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/bab21/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -57,27 +57,27 @@ include CMakeFiles/robotArm.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/robotArm.dir/flags.make
 
-CMakeFiles/robotArm.dir/main.cpp.o: CMakeFiles/robotArm.dir/flags.make
-CMakeFiles/robotArm.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bab21/PycharmProjects/robotArm/pc_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/robotArm.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robotArm.dir/main.cpp.o -c /home/bab21/PycharmProjects/robotArm/pc_cpp/main.cpp
+CMakeFiles/robotArm.dir/src/main.cpp.o: CMakeFiles/robotArm.dir/flags.make
+CMakeFiles/robotArm.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bab21/PycharmProjects/robotArm/pc_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/robotArm.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robotArm.dir/src/main.cpp.o -c /home/bab21/PycharmProjects/robotArm/pc_cpp/src/main.cpp
 
-CMakeFiles/robotArm.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robotArm.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bab21/PycharmProjects/robotArm/pc_cpp/main.cpp > CMakeFiles/robotArm.dir/main.cpp.i
+CMakeFiles/robotArm.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robotArm.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bab21/PycharmProjects/robotArm/pc_cpp/src/main.cpp > CMakeFiles/robotArm.dir/src/main.cpp.i
 
-CMakeFiles/robotArm.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotArm.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bab21/PycharmProjects/robotArm/pc_cpp/main.cpp -o CMakeFiles/robotArm.dir/main.cpp.s
+CMakeFiles/robotArm.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotArm.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bab21/PycharmProjects/robotArm/pc_cpp/src/main.cpp -o CMakeFiles/robotArm.dir/src/main.cpp.s
 
 # Object files for target robotArm
 robotArm_OBJECTS = \
-"CMakeFiles/robotArm.dir/main.cpp.o"
+"CMakeFiles/robotArm.dir/src/main.cpp.o"
 
 # External object files for target robotArm
 robotArm_EXTERNAL_OBJECTS =
 
-robotArm: CMakeFiles/robotArm.dir/main.cpp.o
+robotArm: CMakeFiles/robotArm.dir/src/main.cpp.o
 robotArm: CMakeFiles/robotArm.dir/build.make
 robotArm: CMakeFiles/robotArm.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bab21/PycharmProjects/robotArm/pc_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable robotArm"

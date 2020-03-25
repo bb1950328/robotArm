@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f36a62af-f5c4-4ad8-bbf1-c160a489a638" name="Default Changelist" comment="added python and pc C++ project" />
+    <list default="true" id="f36a62af-f5c4-4ad8-bbf1-c160a489a638" name="Default Changelist" comment="added python and pc C++ project">
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,8 +45,19 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -38,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585073986980</updated>
-      <workItem from="1585073990723" duration="326000" />
+      <workItem from="1585073990723" duration="872000" />
     </task>
     <task id="LOCAL-00001" summary="added python and pc C++ project">
       <created>1585074239810</created>
@@ -67,5 +98,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added python and pc C++ project" />
     <option name="LAST_COMMIT_MESSAGE" value="added python and pc C++ project" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="581" y="122" width="808" height="868" key="CommitChangelistDialog2" timestamp="1585074195008">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="581" y="122" width="808" height="868" key="CommitChangelistDialog2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074195008" />
   </component>
 </project>

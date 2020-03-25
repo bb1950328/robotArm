@@ -11,7 +11,34 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09459e80-773d-43e5-81ec-57aef335d28b" name="Default Changelist" comment="" />
+    <list default="true" id="09459e80-773d-43e5-81ec-57aef335d28b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/h/Point3d.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h/Point3dLinkNode.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h/ServoState.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h/constants.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Point3d.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Point3dLinkNode.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ServoState.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libRobotArm.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ramp3d.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/robotArm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/robotArm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/robotArm.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/robotArm.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robotArm.cpp" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +59,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1ZP4PsthznwX29lIaRq5z0sxVrf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -45,6 +73,10 @@
     <property name="settings.editor.selected.configurable" value="dynamic.analysis.tools.profiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/h" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -80,25 +112,44 @@
       <updated>1584727373535</updated>
       <workItem from="1584727376016" duration="8111000" />
       <workItem from="1584797849768" duration="2486000" />
+      <workItem from="1585074682154" duration="128000" />
+      <workItem from="1585076322952" duration="1763000" />
+      <workItem from="1585152676118" duration="1752000" />
     </task>
+    <task id="LOCAL-00001" summary="some intellij files...">
+      <created>1585074752086</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585074752086</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="some intellij files..." />
+    <option name="LAST_COMMIT_MESSAGE" value="some intellij files..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="449" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584728947040">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="449" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1584728947040" />
-    <state x="664" y="354" width="642" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584728574133">
+    <state x="664" y="348" width="642" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585154428010">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state x="664" y="354" width="642" height="403" key="#com.intellij.fileTypes.FileTypeChooser/54.27.1866.1053@54.27.1866.1053" timestamp="1584728574133" />
+    <state x="664" y="348" width="642" height="403" key="#com.intellij.fileTypes.FileTypeChooser/54.27.1866.1053@54.27.1866.1053" timestamp="1585154428010" />
     <state x="750" y="253" width="470" height="604" key="#com.intellij.ide.util.MemberChooser" timestamp="1584737099821">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="750" y="253" width="470" height="604" key="#com.intellij.ide.util.MemberChooser/54.27.1866.1053@54.27.1866.1053" timestamp="1584737099821" />
+    <state x="723" y="295" width="524" height="515" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585153203566">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="723" y="295" width="524" height="515" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1585153203566" />
     <state x="664" y="131" width="642" height="848" key="#test_libRobotArm" timestamp="1584728662758">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
@@ -107,26 +158,30 @@
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="748" y="205" key="#xdebugger.evaluate/54.27.1866.1053@54.27.1866.1053" timestamp="1584731976101" />
+    <state x="552" y="96" width="865" height="925" key="CommitChangelistDialog2" timestamp="1585074751979">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="552" y="96" width="865" height="925" key="CommitChangelistDialog2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074751979" />
     <state x="773" y="283" width="424" height="497" key="FileChooserDialogImpl" timestamp="1584731843218">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="773" y="283" width="424" height="497" key="FileChooserDialogImpl/54.27.1866.1053@54.27.1866.1053" timestamp="1584731843218" />
-    <state width="1820" height="275" key="GridCell.Tab.0.bottom" timestamp="1584736767706">
+    <state width="1820" height="375" key="GridCell.Tab.0.bottom" timestamp="1585154393784">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state width="1820" height="275" key="GridCell.Tab.0.bottom/54.27.1866.1053@54.27.1866.1053" timestamp="1584736767706" />
-    <state width="1820" height="275" key="GridCell.Tab.0.center" timestamp="1584736767706">
+    <state width="1820" height="375" key="GridCell.Tab.0.bottom/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393784" />
+    <state width="1820" height="375" key="GridCell.Tab.0.center" timestamp="1585154393783">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state width="1820" height="275" key="GridCell.Tab.0.center/54.27.1866.1053@54.27.1866.1053" timestamp="1584736767706" />
-    <state width="1820" height="275" key="GridCell.Tab.0.left" timestamp="1584736767706">
+    <state width="1820" height="375" key="GridCell.Tab.0.center/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393783" />
+    <state width="1820" height="375" key="GridCell.Tab.0.left" timestamp="1585154393782">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state width="1820" height="275" key="GridCell.Tab.0.left/54.27.1866.1053@54.27.1866.1053" timestamp="1584736767706" />
-    <state width="1820" height="275" key="GridCell.Tab.0.right" timestamp="1584736767706">
+    <state width="1820" height="375" key="GridCell.Tab.0.left/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393782" />
+    <state width="1820" height="375" key="GridCell.Tab.0.right" timestamp="1585154393783">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state width="1820" height="275" key="GridCell.Tab.0.right/54.27.1866.1053@54.27.1866.1053" timestamp="1584736767706" />
+    <state width="1820" height="375" key="GridCell.Tab.0.right/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393783" />
     <state width="1820" height="340" key="GridCell.Tab.1.bottom" timestamp="1584732095008">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
@@ -147,9 +202,21 @@
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="479" y="172" width="1016" height="743" key="SettingsEditor/54.27.1866.1053@54.27.1866.1053" timestamp="1584731847563" />
-    <state x="647" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1585074687083">
+    <state x="585" y="288" width="800" height="541" key="Vcs.Push.Dialog.v2" timestamp="1585074759295">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state x="647" y="366" key="com.intellij.ide.util.TipDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1585074687083" />
+    <state x="585" y="288" width="800" height="541" key="Vcs.Push.Dialog.v2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074759295" />
+    <state x="647" y="354" key="com.intellij.ide.util.TipDialog" timestamp="1585152683903">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="647" y="354" key="com.intellij.ide.util.TipDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1585152683903" />
+    <state x="757" y="472" width="459" height="173" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585153314769">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="757" y="472" width="459" height="173" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/54.27.1866.1053@54.27.1866.1053" timestamp="1585153314769" />
+    <state x="633" y="159" width="707" height="783" key="find.popup" timestamp="1585153913756">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="633" y="159" width="707" height="783" key="find.popup/54.27.1866.1053@54.27.1866.1053" timestamp="1585153913756" />
   </component>
 </project>
