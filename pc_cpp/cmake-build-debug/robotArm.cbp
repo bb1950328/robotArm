@@ -87,6 +87,9 @@
 		<Unit filename="/home/bab21/PycharmProjects/robotArm/pc_cpp/src/main.cpp">
 			<Option target="robotArm"/>
 		</Unit>
+		<Unit filename="/home/bab21/PycharmProjects/robotArm/pc_cpp/src/ramp3d.cpp">
+			<Option target="robotArm"/>
+		</Unit>
 		<Unit filename="/home/bab21/PycharmProjects/robotArm/pc_cpp/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

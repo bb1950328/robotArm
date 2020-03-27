@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/robotArm.dir/src/main.cpp.o  -o robotArm 
+/usr/bin/c++  -g   CMakeFiles/robotArm.dir/src/main.cpp.o CMakeFiles/robotArm.dir/src/ramp3d.cpp.o  -o robotArm 

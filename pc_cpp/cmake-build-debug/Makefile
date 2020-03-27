@@ -150,6 +150,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/robotArm.dir/build.make CMakeFiles/robotArm.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/ramp3d.o: src/ramp3d.cpp.o
+
+.PHONY : src/ramp3d.o
+
+# target to build an object file
+src/ramp3d.cpp.o:
+	$(MAKE) -f CMakeFiles/robotArm.dir/build.make CMakeFiles/robotArm.dir/src/ramp3d.cpp.o
+.PHONY : src/ramp3d.cpp.o
+
+src/ramp3d.i: src/ramp3d.cpp.i
+
+.PHONY : src/ramp3d.i
+
+# target to preprocess a source file
+src/ramp3d.cpp.i:
+	$(MAKE) -f CMakeFiles/robotArm.dir/build.make CMakeFiles/robotArm.dir/src/ramp3d.cpp.i
+.PHONY : src/ramp3d.cpp.i
+
+src/ramp3d.s: src/ramp3d.cpp.s
+
+.PHONY : src/ramp3d.s
+
+# target to generate assembly for a file
+src/ramp3d.cpp.s:
+	$(MAKE) -f CMakeFiles/robotArm.dir/build.make CMakeFiles/robotArm.dir/src/ramp3d.cpp.s
+.PHONY : src/ramp3d.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/ramp3d.o"
+	@echo "... src/ramp3d.i"
+	@echo "... src/ramp3d.s"
 .PHONY : help
 
 

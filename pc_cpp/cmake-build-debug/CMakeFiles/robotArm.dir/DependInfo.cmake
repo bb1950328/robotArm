@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/bab21/PycharmProjects/robotArm/pc_cpp/src/main.cpp" "/home/bab21/PycharmProjects/robotArm/pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/src/main.cpp.o"
+  "/home/bab21/PycharmProjects/robotArm/pc_cpp/src/ramp3d.cpp" "/home/bab21/PycharmProjects/robotArm/pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/src/ramp3d.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

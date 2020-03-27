@@ -12,32 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09459e80-773d-43e5-81ec-57aef335d28b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/h/Point3d.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h/Point3dLinkNode.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h/ServoState.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h/constants.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Point3d.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Point3dLinkNode.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ServoState.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libRobotArm.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ramp3d.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/robotArm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/robotArm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/robotArm.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/robotArm.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robotArm.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Point3d.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point3d.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ramp3d.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ramp3d.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +101,8 @@
       <workItem from="1584797849768" duration="2486000" />
       <workItem from="1585074682154" duration="128000" />
       <workItem from="1585076322952" duration="1763000" />
-      <workItem from="1585152676118" duration="1752000" />
+      <workItem from="1585152676118" duration="3492000" />
+      <workItem from="1585245092858" duration="1657000" />
     </task>
     <task id="LOCAL-00001" summary="some intellij files...">
       <created>1585074752086</created>
@@ -123,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585074752086</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=" - some intellij files...&#10; - some cmake files...&#10; &#10; - restructured pc_cpp">
+      <created>1585154634741</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585154634742</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,7 +126,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some intellij files..." />
-    <option name="LAST_COMMIT_MESSAGE" value="some intellij files..." />
+    <MESSAGE value=" - some intellij files...&#10; - some cmake files...&#10; &#10; - restructured pc_cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - some intellij files...&#10; - some cmake files...&#10; &#10; - restructured pc_cpp" />
   </component>
   <component name="WindowStateProjectService">
     <state x="449" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584728947040">
@@ -158,10 +154,10 @@
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="748" y="205" key="#xdebugger.evaluate/54.27.1866.1053@54.27.1866.1053" timestamp="1584731976101" />
-    <state x="552" y="96" width="865" height="925" key="CommitChangelistDialog2" timestamp="1585074751979">
+    <state x="552" y="90" width="865" height="925" key="CommitChangelistDialog2" timestamp="1585154634645">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state x="552" y="96" width="865" height="925" key="CommitChangelistDialog2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074751979" />
+    <state x="552" y="90" width="865" height="925" key="CommitChangelistDialog2/54.27.1866.1053@54.27.1866.1053" timestamp="1585154634645" />
     <state x="773" y="283" width="424" height="497" key="FileChooserDialogImpl" timestamp="1584731843218">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
@@ -202,14 +198,14 @@
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="479" y="172" width="1016" height="743" key="SettingsEditor/54.27.1866.1053@54.27.1866.1053" timestamp="1584731847563" />
-    <state x="585" y="288" width="800" height="541" key="Vcs.Push.Dialog.v2" timestamp="1585074759295">
+    <state x="585" y="282" width="800" height="541" key="Vcs.Push.Dialog.v2" timestamp="1585246139789">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state x="585" y="288" width="800" height="541" key="Vcs.Push.Dialog.v2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074759295" />
-    <state x="647" y="354" key="com.intellij.ide.util.TipDialog" timestamp="1585152683903">
+    <state x="585" y="282" width="800" height="541" key="Vcs.Push.Dialog.v2/54.27.1866.1053@54.27.1866.1053" timestamp="1585246139789" />
+    <state x="647" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1585245096012">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state x="647" y="354" key="com.intellij.ide.util.TipDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1585152683903" />
+    <state x="647" y="342" key="com.intellij.ide.util.TipDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1585245096012" />
     <state x="757" y="472" width="459" height="173" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585153314769">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
