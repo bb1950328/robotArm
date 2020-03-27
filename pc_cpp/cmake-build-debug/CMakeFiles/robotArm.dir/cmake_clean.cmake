@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/robotArm.dir/src/main.cpp.o"
-  "robotArm"
+  "CMakeFiles/robotArm.dir/src/coupling.cpp.obj"
+  "CMakeFiles/robotArm.dir/src/main.cpp.obj"
+  "CMakeFiles/robotArm.dir/src/utils.cpp.obj"
+  "librobotArm.dll.a"
+  "robotArm.exe"
+  "robotArm.exe.manifest"
   "robotArm.pdb"
 )
 

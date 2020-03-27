@@ -1,21 +1,11 @@
-#define PI 3.14159265358979323846264338327f
+
 
 #include "math.h"
 #include <iostream>
 #include "../h/ServoState.hpp"
-#include "../h/constants.hpp"
+#include "../h/utils.hpp"
 
 using namespace std;
-
-
-float degrees(float rad) {
-    return rad * 180.0f / PI;
-}
-
-float radians(float deg) {
-    return deg * PI / 180.0f;
-}
-
 
 const float U_MAX = sqrt(L1 * L1 + L2 * L2 - 2 * L1 * L2 * cos(radians(180 - BETA_MIN))); // cosine law
 
