@@ -4,13 +4,14 @@
 #include <iostream>
 #include "../h/ServoState.hpp"
 #include "../h/utils.hpp"
+#include "../h/libRobotArm.hpp"
 
 using namespace std;
 
 const float U_MAX = sqrt(L1 * L1 + L2 * L2 - 2 * L1 * L2 * cos(radians(180 - BETA_MIN))); // cosine law
 
 
-ServoState internal_calc2d(float r, float z, float omega) {
+ServoState RobotArm::internal_calc2d(float r, float z, float omega) {
 
     ServoState state;
 
@@ -31,7 +32,7 @@ ServoState internal_calc2d(float r, float z, float omega) {
 }
 
 
-ServoState calc2d(float r, float z, float omega) {
+ServoState RobotArm::calc2d(float r, float z, float omega) {
     ServoState state = internal_calc2d(r, z, omega);
     if (state.isValid()) {
         return state;
@@ -47,14 +48,14 @@ ServoState calc2d(float r, float z, float omega) {
     return internal_calc2d(r, z, omega);
 }
 
-ServoState calc3d(float x, float y, float z, float omega) {
-    float r = sqrt(x*x+y*y);
+ServoState RobotArm::calc3d(float x, float y, float z, float omega) {
+    float r = sqrt(x * x + y * y);
     ServoState state = calc2d(r, z, omega);
-    state.delta = degrees(atan(y/x));
+    state.delta = degrees(atan(y / x));
     return state;
 }
 
-void print_config() {
+void RobotArm::print_config() {
     cout << "***Robot Arm Config***\n";
     cout << "* L1=" << L1 << LEN_UNIT << EOL;
     cout << "* L2=" << L2 << LEN_UNIT << EOL;

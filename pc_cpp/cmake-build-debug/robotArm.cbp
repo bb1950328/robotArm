@@ -80,19 +80,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/h/coupling.hpp">
+		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/src/Point3d.cpp">
 			<Option target="robotArm"/>
 		</Unit>
-		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/h/utils.hpp">
+		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/src/Point3dLinkNode.cpp">
+			<Option target="robotArm"/>
+		</Unit>
+		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/src/ServoState.cpp">
 			<Option target="robotArm"/>
 		</Unit>
 		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/src/coupling.cpp">
 			<Option target="robotArm"/>
 		</Unit>
-		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/src/main.cpp">
+		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/src/libRobotArm.cpp">
 			<Option target="robotArm"/>
 		</Unit>
-		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/src/utils.cpp">
+		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/src/main.cpp">
 			<Option target="robotArm"/>
 		</Unit>
 		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/CMakeLists.txt">

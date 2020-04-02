@@ -5,8 +5,14 @@
 #ifndef ROBOTARM_COUPLING_HPP
 #define ROBOTARM_COUPLING_HPP
 
-class Coupling;
+class Coupling {
+public:
+    float l;
+    float la, lb;
 
-#include "../src/coupling.cpp"
+    Coupling(float couplerLength, float jointRadius, float servoHornRadius);
+
+    float getServoAngle(float jointAngle);
+};
 
 #endif //ROBOTARM_COUPLING_HPP

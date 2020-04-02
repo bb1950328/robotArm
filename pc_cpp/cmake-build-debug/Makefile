@@ -122,6 +122,87 @@ robotArm/fast:
 	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/build
 .PHONY : robotArm/fast
 
+src/Point3d.obj: src/Point3d.cpp.obj
+
+.PHONY : src/Point3d.obj
+
+# target to build an object file
+src/Point3d.cpp.obj:
+	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/Point3d.cpp.obj
+.PHONY : src/Point3d.cpp.obj
+
+src/Point3d.i: src/Point3d.cpp.i
+
+.PHONY : src/Point3d.i
+
+# target to preprocess a source file
+src/Point3d.cpp.i:
+	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/Point3d.cpp.i
+.PHONY : src/Point3d.cpp.i
+
+src/Point3d.s: src/Point3d.cpp.s
+
+.PHONY : src/Point3d.s
+
+# target to generate assembly for a file
+src/Point3d.cpp.s:
+	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/Point3d.cpp.s
+.PHONY : src/Point3d.cpp.s
+
+src/Point3dLinkNode.obj: src/Point3dLinkNode.cpp.obj
+
+.PHONY : src/Point3dLinkNode.obj
+
+# target to build an object file
+src/Point3dLinkNode.cpp.obj:
+	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/Point3dLinkNode.cpp.obj
+.PHONY : src/Point3dLinkNode.cpp.obj
+
+src/Point3dLinkNode.i: src/Point3dLinkNode.cpp.i
+
+.PHONY : src/Point3dLinkNode.i
+
+# target to preprocess a source file
+src/Point3dLinkNode.cpp.i:
+	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/Point3dLinkNode.cpp.i
+.PHONY : src/Point3dLinkNode.cpp.i
+
+src/Point3dLinkNode.s: src/Point3dLinkNode.cpp.s
+
+.PHONY : src/Point3dLinkNode.s
+
+# target to generate assembly for a file
+src/Point3dLinkNode.cpp.s:
+	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/Point3dLinkNode.cpp.s
+.PHONY : src/Point3dLinkNode.cpp.s
+
+src/ServoState.obj: src/ServoState.cpp.obj
+
+.PHONY : src/ServoState.obj
+
+# target to build an object file
+src/ServoState.cpp.obj:
+	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/ServoState.cpp.obj
+.PHONY : src/ServoState.cpp.obj
+
+src/ServoState.i: src/ServoState.cpp.i
+
+.PHONY : src/ServoState.i
+
+# target to preprocess a source file
+src/ServoState.cpp.i:
+	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/ServoState.cpp.i
+.PHONY : src/ServoState.cpp.i
+
+src/ServoState.s: src/ServoState.cpp.s
+
+.PHONY : src/ServoState.s
+
+# target to generate assembly for a file
+src/ServoState.cpp.s:
+	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/ServoState.cpp.s
+.PHONY : src/ServoState.cpp.s
+
 src/coupling.obj: src/coupling.cpp.obj
 
 .PHONY : src/coupling.obj
@@ -148,6 +229,33 @@ src/coupling.s: src/coupling.cpp.s
 src/coupling.cpp.s:
 	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/coupling.cpp.s
 .PHONY : src/coupling.cpp.s
+
+src/libRobotArm.obj: src/libRobotArm.cpp.obj
+
+.PHONY : src/libRobotArm.obj
+
+# target to build an object file
+src/libRobotArm.cpp.obj:
+	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/libRobotArm.cpp.obj
+.PHONY : src/libRobotArm.cpp.obj
+
+src/libRobotArm.i: src/libRobotArm.cpp.i
+
+.PHONY : src/libRobotArm.i
+
+# target to preprocess a source file
+src/libRobotArm.cpp.i:
+	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/libRobotArm.cpp.i
+.PHONY : src/libRobotArm.cpp.i
+
+src/libRobotArm.s: src/libRobotArm.cpp.s
+
+.PHONY : src/libRobotArm.s
+
+# target to generate assembly for a file
+src/libRobotArm.cpp.s:
+	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/libRobotArm.cpp.s
+.PHONY : src/libRobotArm.cpp.s
 
 src/main.obj: src/main.cpp.obj
 
@@ -176,33 +284,6 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/utils.obj: src/utils.cpp.obj
-
-.PHONY : src/utils.obj
-
-# target to build an object file
-src/utils.cpp.obj:
-	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/utils.cpp.obj
-.PHONY : src/utils.cpp.obj
-
-src/utils.i: src/utils.cpp.i
-
-.PHONY : src/utils.i
-
-# target to preprocess a source file
-src/utils.cpp.i:
-	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/utils.cpp.i
-.PHONY : src/utils.cpp.i
-
-src/utils.s: src/utils.cpp.s
-
-.PHONY : src/utils.s
-
-# target to generate assembly for a file
-src/utils.cpp.s:
-	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/utils.cpp.s
-.PHONY : src/utils.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -212,15 +293,24 @@ help:
 	@echo ... robotArm
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... src/Point3d.obj
+	@echo ... src/Point3d.i
+	@echo ... src/Point3d.s
+	@echo ... src/Point3dLinkNode.obj
+	@echo ... src/Point3dLinkNode.i
+	@echo ... src/Point3dLinkNode.s
+	@echo ... src/ServoState.obj
+	@echo ... src/ServoState.i
+	@echo ... src/ServoState.s
 	@echo ... src/coupling.obj
 	@echo ... src/coupling.i
 	@echo ... src/coupling.s
+	@echo ... src/libRobotArm.obj
+	@echo ... src/libRobotArm.i
+	@echo ... src/libRobotArm.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
-	@echo ... src/utils.obj
-	@echo ... src/utils.i
-	@echo ... src/utils.s
 .PHONY : help
 
 

@@ -9,11 +9,11 @@ void testCoupling();
 void testCalc3d();
 
 void testCalc3d() {
-    print_config();
+    RobotArm::print_config();
     ServoState state;
     clock_t start = clock();
     for (int i = 0; i < times; ++i) {
-        state = calc3d(8.2f, 8.2f, 3.9f, 60.0f);
+        state = RobotArm::calc3d(8.2f, 8.2f, 3.9f, 60.0f);
     }
     clock_t end = clock();
     float seconds = (float) (end - start) * 1000000 / (float)times / CLOCKS_PER_SEC;
