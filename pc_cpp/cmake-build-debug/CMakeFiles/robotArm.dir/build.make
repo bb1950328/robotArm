@@ -69,94 +69,20 @@ CMakeFiles/robotArm.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotArm.dir/src/main.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\SchuleDev\robotArm\pc_cpp\src\main.cpp -o CMakeFiles\robotArm.dir\src\main.cpp.s
 
-CMakeFiles/robotArm.dir/src/coupling.cpp.obj: CMakeFiles/robotArm.dir/flags.make
-CMakeFiles/robotArm.dir/src/coupling.cpp.obj: ../src/coupling.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/robotArm.dir/src/coupling.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\robotArm.dir\src\coupling.cpp.obj -c D:\SchuleDev\robotArm\pc_cpp\src\coupling.cpp
-
-CMakeFiles/robotArm.dir/src/coupling.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robotArm.dir/src/coupling.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\SchuleDev\robotArm\pc_cpp\src\coupling.cpp > CMakeFiles\robotArm.dir\src\coupling.cpp.i
-
-CMakeFiles/robotArm.dir/src/coupling.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotArm.dir/src/coupling.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\SchuleDev\robotArm\pc_cpp\src\coupling.cpp -o CMakeFiles\robotArm.dir\src\coupling.cpp.s
-
-CMakeFiles/robotArm.dir/src/libRobotArm.cpp.obj: CMakeFiles/robotArm.dir/flags.make
-CMakeFiles/robotArm.dir/src/libRobotArm.cpp.obj: ../src/libRobotArm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/robotArm.dir/src/libRobotArm.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\robotArm.dir\src\libRobotArm.cpp.obj -c D:\SchuleDev\robotArm\pc_cpp\src\libRobotArm.cpp
-
-CMakeFiles/robotArm.dir/src/libRobotArm.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robotArm.dir/src/libRobotArm.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\SchuleDev\robotArm\pc_cpp\src\libRobotArm.cpp > CMakeFiles\robotArm.dir\src\libRobotArm.cpp.i
-
-CMakeFiles/robotArm.dir/src/libRobotArm.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotArm.dir/src/libRobotArm.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\SchuleDev\robotArm\pc_cpp\src\libRobotArm.cpp -o CMakeFiles\robotArm.dir\src\libRobotArm.cpp.s
-
-CMakeFiles/robotArm.dir/src/Point3d.cpp.obj: CMakeFiles/robotArm.dir/flags.make
-CMakeFiles/robotArm.dir/src/Point3d.cpp.obj: ../src/Point3d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/robotArm.dir/src/Point3d.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\robotArm.dir\src\Point3d.cpp.obj -c D:\SchuleDev\robotArm\pc_cpp\src\Point3d.cpp
-
-CMakeFiles/robotArm.dir/src/Point3d.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robotArm.dir/src/Point3d.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\SchuleDev\robotArm\pc_cpp\src\Point3d.cpp > CMakeFiles\robotArm.dir\src\Point3d.cpp.i
-
-CMakeFiles/robotArm.dir/src/Point3d.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotArm.dir/src/Point3d.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\SchuleDev\robotArm\pc_cpp\src\Point3d.cpp -o CMakeFiles\robotArm.dir\src\Point3d.cpp.s
-
-CMakeFiles/robotArm.dir/src/Point3dLinkNode.cpp.obj: CMakeFiles/robotArm.dir/flags.make
-CMakeFiles/robotArm.dir/src/Point3dLinkNode.cpp.obj: ../src/Point3dLinkNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/robotArm.dir/src/Point3dLinkNode.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\robotArm.dir\src\Point3dLinkNode.cpp.obj -c D:\SchuleDev\robotArm\pc_cpp\src\Point3dLinkNode.cpp
-
-CMakeFiles/robotArm.dir/src/Point3dLinkNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robotArm.dir/src/Point3dLinkNode.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\SchuleDev\robotArm\pc_cpp\src\Point3dLinkNode.cpp > CMakeFiles\robotArm.dir\src\Point3dLinkNode.cpp.i
-
-CMakeFiles/robotArm.dir/src/Point3dLinkNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotArm.dir/src/Point3dLinkNode.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\SchuleDev\robotArm\pc_cpp\src\Point3dLinkNode.cpp -o CMakeFiles\robotArm.dir\src\Point3dLinkNode.cpp.s
-
-CMakeFiles/robotArm.dir/src/ServoState.cpp.obj: CMakeFiles/robotArm.dir/flags.make
-CMakeFiles/robotArm.dir/src/ServoState.cpp.obj: ../src/ServoState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/robotArm.dir/src/ServoState.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\robotArm.dir\src\ServoState.cpp.obj -c D:\SchuleDev\robotArm\pc_cpp\src\ServoState.cpp
-
-CMakeFiles/robotArm.dir/src/ServoState.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robotArm.dir/src/ServoState.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\SchuleDev\robotArm\pc_cpp\src\ServoState.cpp > CMakeFiles\robotArm.dir\src\ServoState.cpp.i
-
-CMakeFiles/robotArm.dir/src/ServoState.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotArm.dir/src/ServoState.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\SchuleDev\robotArm\pc_cpp\src\ServoState.cpp -o CMakeFiles\robotArm.dir\src\ServoState.cpp.s
-
 # Object files for target robotArm
 robotArm_OBJECTS = \
-"CMakeFiles/robotArm.dir/src/main.cpp.obj" \
-"CMakeFiles/robotArm.dir/src/coupling.cpp.obj" \
-"CMakeFiles/robotArm.dir/src/libRobotArm.cpp.obj" \
-"CMakeFiles/robotArm.dir/src/Point3d.cpp.obj" \
-"CMakeFiles/robotArm.dir/src/Point3dLinkNode.cpp.obj" \
-"CMakeFiles/robotArm.dir/src/ServoState.cpp.obj"
+"CMakeFiles/robotArm.dir/src/main.cpp.obj"
 
 # External object files for target robotArm
 robotArm_EXTERNAL_OBJECTS =
 
 robotArm.exe: CMakeFiles/robotArm.dir/src/main.cpp.obj
-robotArm.exe: CMakeFiles/robotArm.dir/src/coupling.cpp.obj
-robotArm.exe: CMakeFiles/robotArm.dir/src/libRobotArm.cpp.obj
-robotArm.exe: CMakeFiles/robotArm.dir/src/Point3d.cpp.obj
-robotArm.exe: CMakeFiles/robotArm.dir/src/Point3dLinkNode.cpp.obj
-robotArm.exe: CMakeFiles/robotArm.dir/src/ServoState.cpp.obj
 robotArm.exe: CMakeFiles/robotArm.dir/build.make
+robotArm.exe: librobotArm_library.a
 robotArm.exe: CMakeFiles/robotArm.dir/linklibs.rsp
 robotArm.exe: CMakeFiles/robotArm.dir/objects1.rsp
 robotArm.exe: CMakeFiles/robotArm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable robotArm.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable robotArm.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\robotArm.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

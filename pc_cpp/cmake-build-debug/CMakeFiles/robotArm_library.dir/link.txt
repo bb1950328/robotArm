@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc librobotArm_library.a  CMakeFiles/robotArm_library.dir/src/coupling.cpp.obj CMakeFiles/robotArm_library.dir/src/libRobotArm.cpp.obj CMakeFiles/robotArm_library.dir/src/Point3d.cpp.obj CMakeFiles/robotArm_library.dir/src/Point3dLinkNode.cpp.obj CMakeFiles/robotArm_library.dir/src/ServoState.cpp.obj CMakeFiles/robotArm_library.dir/src/util.cpp.obj
+C:\MinGW\bin\ranlib.exe librobotArm_library.a

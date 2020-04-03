@@ -4,11 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/SchuleDev/robotArm/pc_cpp/src/Point3d.cpp" "D:/SchuleDev/robotArm/pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/src/Point3d.cpp.obj"
-  "D:/SchuleDev/robotArm/pc_cpp/src/Point3dLinkNode.cpp" "D:/SchuleDev/robotArm/pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/src/Point3dLinkNode.cpp.obj"
-  "D:/SchuleDev/robotArm/pc_cpp/src/ServoState.cpp" "D:/SchuleDev/robotArm/pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/src/ServoState.cpp.obj"
-  "D:/SchuleDev/robotArm/pc_cpp/src/coupling.cpp" "D:/SchuleDev/robotArm/pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/src/coupling.cpp.obj"
-  "D:/SchuleDev/robotArm/pc_cpp/src/libRobotArm.cpp" "D:/SchuleDev/robotArm/pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/src/libRobotArm.cpp.obj"
   "D:/SchuleDev/robotArm/pc_cpp/src/main.cpp" "D:/SchuleDev/robotArm/pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
@@ -19,6 +14,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "D:/SchuleDev/robotArm/pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

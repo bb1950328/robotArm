@@ -10,21 +10,21 @@ D:/SchuleDev/robotArm/pc_cpp/h/ServoState.hpp
 
 D:/SchuleDev/robotArm/pc_cpp/h/constants.hpp
 
-D:/SchuleDev/robotArm/pc_cpp/h/coupling.hpp
-
 D:/SchuleDev/robotArm/pc_cpp/h/libRobotArm.hpp
 constants.hpp
 D:/SchuleDev/robotArm/pc_cpp/h/constants.hpp
 
 D:/SchuleDev/robotArm/pc_cpp/h/util.hpp
 
-D:/SchuleDev/robotArm/pc_cpp/src/coupling.cpp
-cmath
--
-../h/util.hpp
-D:/SchuleDev/robotArm/pc_cpp/h/util.hpp
-../h/coupling.hpp
-D:/SchuleDev/robotArm/pc_cpp/h/coupling.hpp
+D:/SchuleDev/robotArm/pc_cpp/src/ServoState.cpp
+iostream
+D:/SchuleDev/robotArm/pc_cpp/src/iostream
+../h/constants.hpp
+D:/SchuleDev/robotArm/pc_cpp/h/constants.hpp
+math.h
+D:/SchuleDev/robotArm/pc_cpp/src/math.h
+../h/ServoState.hpp
+D:/SchuleDev/robotArm/pc_cpp/h/ServoState.hpp
 
 D:/SchuleDev/robotArm/pc_cpp/src/libRobotArm.cpp
 math.h
@@ -37,16 +37,6 @@ D:/SchuleDev/robotArm/pc_cpp/h/ServoState.hpp
 D:/SchuleDev/robotArm/pc_cpp/h/util.hpp
 ../h/libRobotArm.hpp
 D:/SchuleDev/robotArm/pc_cpp/h/libRobotArm.hpp
-../h/constants.hpp
-D:/SchuleDev/robotArm/pc_cpp/h/constants.hpp
-
-D:/SchuleDev/robotArm/pc_cpp/src/main.cpp
-ctime
--
-libRobotArm.cpp
-D:/SchuleDev/robotArm/pc_cpp/src/libRobotArm.cpp
-coupling.cpp
-D:/SchuleDev/robotArm/pc_cpp/src/coupling.cpp
 ../h/constants.hpp
 D:/SchuleDev/robotArm/pc_cpp/h/constants.hpp
 

@@ -22,7 +22,7 @@ public:
         double travel_per_step = acceleration / steps_per_second;
         Point3dLinkNode *node_a = startNode;
         Point3dLinkNode *node_b = stopNode;
-        while (travelled_distance*2 + travel_per_step < total_distance) {
+        while (travelled_distance * 2 + travel_per_step < total_distance) {
             Point3dLinkNode *new_a = new Point3dLinkNode(/*TODO*/);
         }
     }
@@ -31,8 +31,8 @@ private:
     Point3dLinkNode *startNode;
     Point3dLinkNode *stopNode;
 
-    Point3dLinkNode* getStartRamp() {
-        
+    Point3dLinkNode *getStartRamp() {
+
     }
 };
 

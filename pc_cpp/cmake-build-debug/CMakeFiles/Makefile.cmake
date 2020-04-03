@@ -53,5 +53,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/robotArm_library.dir/DependInfo.cmake"
   "CMakeFiles/robotArm.dir/DependInfo.cmake"
   )

@@ -1,6 +1,7 @@
 #include <ctime>
 #include "libRobotArm.cpp"
 #include "coupling.cpp"
+#include "../h/constants.hpp"
 
 static const int times = 10000;
 
@@ -16,7 +17,7 @@ void testCalc3d() {
         state = RobotArm::calc3d(8.2f, 8.2f, 3.9f, 60.0f);
     }
     clock_t end = clock();
-    float seconds = (float) (end - start) * 1000000 / (float)times / CLOCKS_PER_SEC;
+    float seconds = (float) (end - start) * 1000000 / (float) times / CLOCKS_PER_SEC;
     printf("calc3d() function used %.12f us\n", seconds);
     state.print();
 }
@@ -36,5 +37,6 @@ void testCoupling() {
     }
     clock_t end = clock();
     cout << "servo angle: " << result << ANGLE_UNIT << EOL;
-    cout << "cp.getServoAngle(35) used " << (float)(end-start)*1000000/(float)times/CLOCKS_PER_SEC << "us" << EOL;
+    cout << "cp.getServoAngle(35) used " << (float) (end - start) * 1000000 / (float) times / CLOCKS_PER_SEC << "us"
+         << EOL;
 }

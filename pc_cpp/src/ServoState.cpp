@@ -55,5 +55,3 @@ bool ServoState::isValid() {
             isnan(zeta) || ZETA_MIN > zeta || ZETA_MAX < zeta
     );
 }
-
-};

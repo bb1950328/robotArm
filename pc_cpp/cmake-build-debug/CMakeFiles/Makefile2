@@ -52,11 +52,13 @@ CMAKE_BINARY_DIR = D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/robotArm_library.dir/all
 all: CMakeFiles/robotArm.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
+clean: CMakeFiles/robotArm_library.dir/clean
 clean: CMakeFiles/robotArm.dir/clean
 
 .PHONY : clean
@@ -67,18 +69,45 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
+# Target rules for target CMakeFiles/robotArm_library.dir
+
+# All Build rule for target.
+CMakeFiles/robotArm_library.dir/all:
+	$(MAKE) -f CMakeFiles\robotArm_library.dir\build.make CMakeFiles/robotArm_library.dir/depend
+	$(MAKE) -f CMakeFiles\robotArm_library.dir\build.make CMakeFiles/robotArm_library.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles --progress-num=3,4,5,6,7,8,9 "Built target robotArm_library"
+.PHONY : CMakeFiles/robotArm_library.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/robotArm_library.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles 7
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/robotArm_library.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/robotArm_library.dir/rule
+
+# Convenience name for target.
+robotArm_library: CMakeFiles/robotArm_library.dir/rule
+
+.PHONY : robotArm_library
+
+# clean rule for target.
+CMakeFiles/robotArm_library.dir/clean:
+	$(MAKE) -f CMakeFiles\robotArm_library.dir\build.make CMakeFiles/robotArm_library.dir/clean
+.PHONY : CMakeFiles/robotArm_library.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/robotArm.dir
 
 # All Build rule for target.
-CMakeFiles/robotArm.dir/all:
+CMakeFiles/robotArm.dir/all: CMakeFiles/robotArm_library.dir/all
 	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/depend
 	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target robotArm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target robotArm"
 .PHONY : CMakeFiles/robotArm.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/robotArm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles 9
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/robotArm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/robotArm.dir/rule
