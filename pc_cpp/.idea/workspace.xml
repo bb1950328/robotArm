@@ -14,43 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09459e80-773d-43e5-81ec-57aef335d28b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../PythonRobotArm/file_hasher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PythonRobotArm/ino_builder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generate_preprocessor_output.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h/ramp3d.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PythonRobotArm/.idea/PythonRobotArm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PythonRobotArm/.idea/PythonRobotArm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PythonRobotArm/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PythonRobotArm/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/robotArm.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/robotArm.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h/constants.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/h/constants.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h/libRobotArm.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/h/libRobotArm.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serialLinux/serialLinux.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serialWindows/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serialWindows/serialPort.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serialWindows/serialPort.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Point3dLinkNode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point3dLinkNode.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServoState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServoState.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libRobotArm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/libRobotArm.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ramp3d.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ramp3d.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_preprocessor_output.sh" beforeDir="false" afterPath="$PROJECT_DIR$/generate_preprocessor_output.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +108,7 @@
       <workItem from="1585856696263" duration="5340000" />
       <workItem from="1585900232675" duration="4038000" />
       <workItem from="1585905020282" duration="3848000" />
-      <workItem from="1585910447064" duration="1244000" />
+      <workItem from="1585910447064" duration="1696000" />
     </task>
     <task id="LOCAL-00001" summary="some intellij files...">
       <created>1585074752086</created>
@@ -172,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585901744695</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="made C++ to .ino converter (ino_builder.py)">
+      <created>1585922452206</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585922452206</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +157,8 @@
     <MESSAGE value="- added algorithm to calculate servo angle from joint angle;" />
     <MESSAGE value="restructured class definition and implementation" />
     <MESSAGE value="- some restructuration&#10;- project builds again" />
-    <option name="LAST_COMMIT_MESSAGE" value="- some restructuration&#10;- project builds again" />
+    <MESSAGE value="made C++ to .ino converter (ino_builder.py)" />
+    <option name="LAST_COMMIT_MESSAGE" value="made C++ to .ino converter (ino_builder.py)" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -222,11 +196,11 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="772" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585901822362" />
-    <state x="547" y="73" width="1234" height="973" key="CommitChangelistDialog2" timestamp="1585901743502">
+    <state x="547" y="73" width="1234" height="973" key="CommitChangelistDialog2" timestamp="1585922441275">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="547" y="73" width="1234" height="973" key="CommitChangelistDialog2/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585901743502" />
-    <state x="547" y="73" key="CommitChangelistDialog2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585326661143" />
+    <state x="547" y="73" key="CommitChangelistDialog2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585922441275" />
     <state x="552" y="96" width="865" height="925" key="CommitChangelistDialog2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074751979" />
     <state x="789" y="270" width="424" height="497" key="FileChooserDialogImpl" timestamp="1585904327592">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -291,10 +265,11 @@
     <state x="466" y="153" key="SettingsEditor/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585903849341" />
     <state x="466" y="153" key="SettingsEditor/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585327088387" />
     <state x="479" y="172" width="1016" height="743" key="SettingsEditor/54.27.1866.1053@54.27.1866.1053" timestamp="1584731847563" />
-    <state x="583" y="276" width="800" height="541" key="Vcs.Push.Dialog.v2" timestamp="1585901753112">
+    <state x="583" y="276" width="800" height="541" key="Vcs.Push.Dialog.v2" timestamp="1585922457140">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="583" y="276" key="Vcs.Push.Dialog.v2/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585901753112" />
+    <state x="583" y="276" key="Vcs.Push.Dialog.v2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585922457140" />
     <state x="585" y="288" width="800" height="541" key="Vcs.Push.Dialog.v2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074759295" />
     <state x="651" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1585910637220">
       <screen x="0" y="0" width="2048" height="1112" />

@@ -32,13 +32,28 @@ replaces = [
     ["std::atan", "atan"],
     ["std::sqrt", "sqrt"],
     ["std::ceil", "ceil"],
-    ["cout", "//cout"],
 ]
 
 EOL = "\n"
 
 ino_file = r"D:\SchuleDev\robotArm\ArduinoRobotArm\ArduinoRobotArm.ino"
 cpp_base_dir = os.path.abspath(os.path.join(".", "..", "pc_cpp"))
+
+
+def convert_cout(cout_line: str) -> List[str]:
+    parts = [n.strip() for n in cout_line.split("<<")]
+    if parts[-1].endswith(";"):
+        parts[-1] = parts[-1].strip(";")
+    if parts[0] != "cout":
+        raise ValueError(f"Invalid cout line: {cout_line}")
+    result = []
+    for p in parts[1:]:
+        if p == "EOL":
+            result[-1] = result[-1].replace("print", "println", 1)
+            result.append("")
+        else:
+            result.append(f"Serial.print({p});")
+    return result
 
 
 def read_file(path: str, include_comment=True) -> List[str]:
@@ -52,7 +67,14 @@ def read_file(path: str, include_comment=True) -> List[str]:
 
 
 def clean_file(inp: List[str]) -> List[str]:
-    return [line for line in inp if not is_obsolete_line(line)]
+    result = []
+    for line in inp:
+        if not is_obsolete_line(line):
+            if line.strip().startswith("cout"):
+                result.extend(convert_cout(line))
+            else:
+                result.append(line)
+    return result
 
 
 def is_obsolete_line(line) -> bool:
@@ -122,6 +144,17 @@ if __name__ == '__main__':
 
     for rep in replaces:
         lib = [line.replace(*rep) for line in lib]
+
+    indent = 0
+    for i in range(len(lib)):
+        if lib[i].endswith("{"):
+            lib[i] = indent * 2 * " " + lib[i]
+            indent += 1
+        elif lib[i].startswith("}"):
+            indent -= 1
+            lib[i] = indent * 2 * " " + lib[i]
+        elif lib[i]:
+            lib[i] = indent * 2 * " " + lib[i]
 
     picasso = picasso[:pos] + lib + picasso[pos:]
 
