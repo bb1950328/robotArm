@@ -6,7 +6,6 @@ CMakeFiles/robotArm_library.dir/src/Point3d.cpp.obj: ../src/Point3d.cpp
 
 CMakeFiles/robotArm_library.dir/src/Point3dLinkNode.cpp.obj: ../h/Point3d.hpp
 CMakeFiles/robotArm_library.dir/src/Point3dLinkNode.cpp.obj: ../h/Point3dLinkNode.hpp
-CMakeFiles/robotArm_library.dir/src/Point3dLinkNode.cpp.obj: ../src/Point3d.cpp
 CMakeFiles/robotArm_library.dir/src/Point3dLinkNode.cpp.obj: ../src/Point3dLinkNode.cpp
 
 CMakeFiles/robotArm_library.dir/src/ServoState.cpp.obj: ../h/ServoState.hpp
@@ -22,6 +21,11 @@ CMakeFiles/robotArm_library.dir/src/libRobotArm.cpp.obj: ../h/constants.hpp
 CMakeFiles/robotArm_library.dir/src/libRobotArm.cpp.obj: ../h/libRobotArm.hpp
 CMakeFiles/robotArm_library.dir/src/libRobotArm.cpp.obj: ../h/util.hpp
 CMakeFiles/robotArm_library.dir/src/libRobotArm.cpp.obj: ../src/libRobotArm.cpp
+
+CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.obj: ../h/Point3d.hpp
+CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.obj: ../h/Point3dLinkNode.hpp
+CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.obj: ../h/ramp3d.hpp
+CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.obj: ../src/ramp3d.cpp
 
 CMakeFiles/robotArm_library.dir/src/util.cpp.obj: ../h/util.hpp
 CMakeFiles/robotArm_library.dir/src/util.cpp.obj: ../src/util.cpp

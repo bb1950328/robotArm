@@ -140,6 +140,9 @@
 		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/src/main.cpp">
 			<Option target="robotArm"/>
 		</Unit>
+		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/src/ramp3d.cpp">
+			<Option target="robotArm_library"/>
+		</Unit>
 		<Unit filename="D:/SchuleDev/robotArm/pc_cpp/src/util.cpp">
 			<Option target="robotArm_library"/>
 		</Unit>

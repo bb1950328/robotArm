@@ -6,7 +6,7 @@
 #define ROBOTARM_CONSTANTS_HPP
 
 #define LEN_UNIT "cm"
-#define ANGLE_UNIT "deg."//"°"
+#define ANGLE_UNIT "deg"//"°"
 
 #define EOL "\n"
 

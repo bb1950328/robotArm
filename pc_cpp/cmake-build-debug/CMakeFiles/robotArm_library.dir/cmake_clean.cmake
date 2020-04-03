@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/robotArm_library.dir/src/ServoState.cpp.obj"
   "CMakeFiles/robotArm_library.dir/src/coupling.cpp.obj"
   "CMakeFiles/robotArm_library.dir/src/libRobotArm.cpp.obj"
+  "CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.obj"
   "CMakeFiles/robotArm_library.dir/src/util.cpp.obj"
   "librobotArm_library.a"
   "librobotArm_library.pdb"

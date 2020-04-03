@@ -134,6 +134,19 @@ CMakeFiles/robotArm_library.dir/src/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotArm_library.dir/src/util.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\SchuleDev\robotArm\pc_cpp\src\util.cpp -o CMakeFiles\robotArm_library.dir\src\util.cpp.s
 
+CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.obj: CMakeFiles/robotArm_library.dir/flags.make
+CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.obj: ../src/ramp3d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\robotArm_library.dir\src\ramp3d.cpp.obj -c D:\SchuleDev\robotArm\pc_cpp\src\ramp3d.cpp
+
+CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\SchuleDev\robotArm\pc_cpp\src\ramp3d.cpp > CMakeFiles\robotArm_library.dir\src\ramp3d.cpp.i
+
+CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\SchuleDev\robotArm\pc_cpp\src\ramp3d.cpp -o CMakeFiles\robotArm_library.dir\src\ramp3d.cpp.s
+
 # Object files for target robotArm_library
 robotArm_library_OBJECTS = \
 "CMakeFiles/robotArm_library.dir/src/coupling.cpp.obj" \
@@ -141,7 +154,8 @@ robotArm_library_OBJECTS = \
 "CMakeFiles/robotArm_library.dir/src/Point3d.cpp.obj" \
 "CMakeFiles/robotArm_library.dir/src/Point3dLinkNode.cpp.obj" \
 "CMakeFiles/robotArm_library.dir/src/ServoState.cpp.obj" \
-"CMakeFiles/robotArm_library.dir/src/util.cpp.obj"
+"CMakeFiles/robotArm_library.dir/src/util.cpp.obj" \
+"CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.obj"
 
 # External object files for target robotArm_library
 robotArm_library_EXTERNAL_OBJECTS =
@@ -152,9 +166,10 @@ librobotArm_library.a: CMakeFiles/robotArm_library.dir/src/Point3d.cpp.obj
 librobotArm_library.a: CMakeFiles/robotArm_library.dir/src/Point3dLinkNode.cpp.obj
 librobotArm_library.a: CMakeFiles/robotArm_library.dir/src/ServoState.cpp.obj
 librobotArm_library.a: CMakeFiles/robotArm_library.dir/src/util.cpp.obj
+librobotArm_library.a: CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.obj
 librobotArm_library.a: CMakeFiles/robotArm_library.dir/build.make
 librobotArm_library.a: CMakeFiles/robotArm_library.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library librobotArm_library.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\SchuleDev\robotArm\pc_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library librobotArm_library.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\robotArm_library.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\robotArm_library.dir\link.txt --verbose=$(VERBOSE)
 

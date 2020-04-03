@@ -1,9 +1,12 @@
 #include <ctime>
-#include "libRobotArm.cpp"
-#include "coupling.cpp"
+#include <iostream>
+#include "../h/libRobotArm.hpp"
+#include "../h/coupling.hpp"
 #include "../h/constants.hpp"
+#include "../h/ServoState.hpp"
 
 static const int times = 10000;
+using namespace std;
 
 void testCoupling();
 
@@ -18,7 +21,7 @@ void testCalc3d() {
     }
     clock_t end = clock();
     float seconds = (float) (end - start) * 1000000 / (float) times / CLOCKS_PER_SEC;
-    printf("calc3d() function used %.12f us\n", seconds);
+    cout << "calc3d() function used %.12f us\n" << seconds;
     state.print();
 }
 

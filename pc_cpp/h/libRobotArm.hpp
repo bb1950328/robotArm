@@ -6,6 +6,7 @@
 #define ROBOTARM_LIBROBOTARM_HPP
 
 #include "constants.hpp"
+#include "ServoState.hpp"
 
 class RobotArm {
 public:

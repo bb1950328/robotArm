@@ -1,6 +1,6 @@
 
 
-#include "math.h"
+#include <cmath>
 #include <iostream>
 #include "../h/ServoState.hpp"
 #include "../h/util.hpp"

@@ -20,12 +20,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f36a62af-f5c4-4ad8-bbf1-c160a489a638" name="Default Changelist" comment="added python and pc C++ project">
+      <change afterPath="$PROJECT_DIR$/file_hasher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ino_builder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pc_cpp/generate_preprocessor_output.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pc_cpp/h/ramp3d.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PythonRobotArm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonRobotArm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pc_cpp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/robotArm.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/robotArm.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/h/libRobotArm.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/h/libRobotArm.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/serialLinux/serialLinux.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/serialWindows/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/serialWindows/serialPort.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/serialWindows/serialPort.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/src/Point3dLinkNode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/src/Point3dLinkNode.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/src/ServoState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/src/ServoState.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/src/libRobotArm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/src/libRobotArm.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/src/ramp3d.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/src/ramp3d.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -44,6 +86,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last.edited.regexp" value="#include &quot;ServoState.hpp&quot;" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -53,11 +96,41 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ino_builder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonRobotArm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ino_builder.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ino_builder" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -70,6 +143,9 @@
       <option name="presentableId" value="Default" />
       <updated>1585073986980</updated>
       <workItem from="1585073990723" duration="872000" />
+      <workItem from="1585910456668" duration="155000" />
+      <workItem from="1585910618751" duration="1217000" />
+      <workItem from="1585911845202" duration="10117000" />
     </task>
     <task id="LOCAL-00001" summary="added python and pc C++ project">
       <created>1585074239810</created>
@@ -82,14 +158,16 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -100,9 +178,91 @@
     <option name="LAST_COMMIT_MESSAGE" value="added python and pc C++ project" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="581" y="122" width="808" height="868" key="CommitChangelistDialog2" timestamp="1585074195008">
-      <screen x="54" y="27" width="1866" height="1053" />
+    <state x="1162" y="248" key="#xdebugger.evaluate" timestamp="1585919093843">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="1162" y="248" key="#xdebugger.evaluate/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585919093843" />
+    <state x="578" y="100" width="1275" height="950" key="CommitChangelistDialog2" timestamp="1585911808295">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="578" y="100" width="1275" height="950" key="CommitChangelistDialog2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585911808295" />
     <state x="581" y="122" width="808" height="868" key="CommitChangelistDialog2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074195008" />
+    <state x="22" y="6" key="DiffContextDialog" timestamp="1585911806750">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="22" y="6" key="DiffContextDialog/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585911806750" />
+    <state x="804" y="311" key="FileChooserDialogImpl" timestamp="1585910583716">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="804" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585910583716" />
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1585921983085">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585921983085" />
+    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1585921983085">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585921983085" />
+    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1585921983085">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585921983085" />
+    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1585921983085">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585921983085" />
+    <state width="2005" height="514" key="GridCell.Tab.1.bottom" timestamp="1585921185233">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="514" key="GridCell.Tab.1.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585921185233" />
+    <state width="2005" height="514" key="GridCell.Tab.1.center" timestamp="1585921185233">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="514" key="GridCell.Tab.1.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585921185233" />
+    <state width="2005" height="514" key="GridCell.Tab.1.left" timestamp="1585921185233">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="514" key="GridCell.Tab.1.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585921185233" />
+    <state width="2005" height="514" key="GridCell.Tab.1.right" timestamp="1585921185233">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="514" key="GridCell.Tab.1.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585921185233" />
+    <state x="533" y="199" key="SettingsEditor" timestamp="1585910609237">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="533" y="199" key="SettingsEditor/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585910240857" />
+    <state x="533" y="199" key="SettingsEditor/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585910609237" />
+    <state x="780" y="401" key="cloudConfig.PluginsDialog" timestamp="1585910551683">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="780" y="401" key="cloudConfig.PluginsDialog/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585910551683" />
+    <state x="780" y="401" key="cloudConfig.SelfSettingsDialog" timestamp="1585910557364">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="780" y="401" key="cloudConfig.SelfSettingsDialog/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585910557364" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ino_builder.py</url>
+          <line>125</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ino_builder.py</url>
+          <line>100</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ino_builder.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PythonRobotArm$ino_builder.coverage" NAME="ino_builder Coverage Results" MODIFIED="1585921983076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

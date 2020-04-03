@@ -4,7 +4,7 @@
 
 #include "iostream"
 #include "../h/constants.hpp"
-#include "math.h" // todo switch to <cmath>
+#include <cmath>
 #include "../h/ServoState.hpp"
 
 using namespace std;

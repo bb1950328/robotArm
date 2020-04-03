@@ -9,42 +9,48 @@
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Preprocessor" GENERATION_OPTIONS="-E" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09459e80-773d-43e5-81ec-57aef335d28b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PythonRobotArm/file_hasher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PythonRobotArm/ino_builder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generate_preprocessor_output.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h/ramp3d.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PythonRobotArm/.idea/PythonRobotArm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PythonRobotArm/.idea/PythonRobotArm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PythonRobotArm/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PythonRobotArm/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/linklibs.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/linklibs.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robotArm_library.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/robotArm.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/robotArm.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h/constants.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/h/constants.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h/libRobotArm.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/h/libRobotArm.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h/utils.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/h/util.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serialLinux/serialLinux.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/serialLinux/serialLinux.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serialWindows/serialPort.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/serialWindows/serialPort.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serialWindows/serialPort.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/serialWindows/serialPort.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serialLinux/serialLinux.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serialWindows/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serialWindows/serialPort.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serialWindows/serialPort.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Point3dLinkNode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point3dLinkNode.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServoState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServoState.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coupling.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/coupling.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/libRobotArm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/libRobotArm.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ramp3d.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ramp3d.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/util.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +80,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -132,7 +140,9 @@
       <workItem from="1585152676118" duration="1752000" />
       <workItem from="1585324571375" duration="2514000" />
       <workItem from="1585856696263" duration="5340000" />
-      <workItem from="1585900232675" duration="703000" />
+      <workItem from="1585900232675" duration="4038000" />
+      <workItem from="1585905020282" duration="3848000" />
+      <workItem from="1585910447064" duration="1244000" />
     </task>
     <task id="LOCAL-00001" summary="some intellij files...">
       <created>1585074752086</created>
@@ -155,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585857894148</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- some restructuration&#10;- project builds again">
+      <created>1585901744695</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585901744695</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +183,8 @@
     <MESSAGE value="some intellij files..." />
     <MESSAGE value="- added algorithm to calculate servo angle from joint angle;" />
     <MESSAGE value="restructured class definition and implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="restructured class definition and implementation" />
+    <MESSAGE value="- some restructuration&#10;- project builds again" />
+    <option name="LAST_COMMIT_MESSAGE" value="- some restructuration&#10;- project builds again" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -174,13 +192,15 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="617" y="215" key="#New_File_Extensions/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585325106372" />
-    <state x="449" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584728947040">
-      <screen x="54" y="27" width="1866" height="1053" />
+    <state x="434" y="152" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585905064486">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="434" y="152" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585905064486" />
     <state x="449" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1584728947040" />
-    <state x="664" y="348" width="642" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585154428010">
-      <screen x="54" y="27" width="1866" height="1053" />
+    <state x="669" y="339" width="642" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585907251857">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="669" y="339" key="#com.intellij.fileTypes.FileTypeChooser/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585907251857" />
     <state x="664" y="348" width="642" height="403" key="#com.intellij.fileTypes.FileTypeChooser/54.27.1866.1053@54.27.1866.1053" timestamp="1585154428010" />
     <state x="750" y="253" width="470" height="604" key="#com.intellij.ide.util.MemberChooser" timestamp="1584737099821">
       <screen x="54" y="27" width="1866" height="1053" />
@@ -198,39 +218,44 @@
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="748" y="205" key="#xdebugger.evaluate/54.27.1866.1053@54.27.1866.1053" timestamp="1584731976101" />
-    <state x="547" y="73" width="865" height="925" key="CommitChangelistDialog2" timestamp="1585857893418">
+    <state x="772" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1585901822362">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="547" y="73" key="CommitChangelistDialog2/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585857893418" />
+    <state x="772" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585901822362" />
+    <state x="547" y="73" width="1234" height="973" key="CommitChangelistDialog2" timestamp="1585901743502">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="547" y="73" width="1234" height="973" key="CommitChangelistDialog2/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585901743502" />
     <state x="547" y="73" key="CommitChangelistDialog2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585326661143" />
     <state x="552" y="96" width="865" height="925" key="CommitChangelistDialog2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074751979" />
-    <state x="773" y="283" width="424" height="497" key="FileChooserDialogImpl" timestamp="1584731843218">
-      <screen x="54" y="27" width="1866" height="1053" />
+    <state x="789" y="270" width="424" height="497" key="FileChooserDialogImpl" timestamp="1585904327592">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="789" y="270" key="FileChooserDialogImpl/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585904327592" />
     <state x="773" y="283" width="424" height="497" key="FileChooserDialogImpl/54.27.1866.1053@54.27.1866.1053" timestamp="1584731843218" />
-    <state width="2005" height="512" key="GridCell.Tab.0.bottom" timestamp="1585900322744">
+    <state width="2005" height="376" key="GridCell.Tab.0.bottom" timestamp="1585922207854">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="512" key="GridCell.Tab.0.bottom/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585900322744" />
-    <state width="1002" height="305" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585382663340" />
+    <state width="2005" height="210" key="GridCell.Tab.0.bottom/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585907255628" />
+    <state width="2005" height="376" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585922207854" />
     <state width="1820" height="375" key="GridCell.Tab.0.bottom/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393784" />
-    <state width="2005" height="512" key="GridCell.Tab.0.center" timestamp="1585900322744">
+    <state width="2005" height="376" key="GridCell.Tab.0.center" timestamp="1585922207854">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="512" key="GridCell.Tab.0.center/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585900322744" />
-    <state width="1002" height="305" key="GridCell.Tab.0.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585382663340" />
+    <state width="2005" height="210" key="GridCell.Tab.0.center/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585907255628" />
+    <state width="2005" height="376" key="GridCell.Tab.0.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585922207854" />
     <state width="1820" height="375" key="GridCell.Tab.0.center/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393783" />
-    <state width="2005" height="512" key="GridCell.Tab.0.left" timestamp="1585900322744">
+    <state width="2005" height="376" key="GridCell.Tab.0.left" timestamp="1585922207854">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="512" key="GridCell.Tab.0.left/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585900322744" />
-    <state width="1002" height="305" key="GridCell.Tab.0.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585382663339" />
+    <state width="2005" height="210" key="GridCell.Tab.0.left/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585907255628" />
+    <state width="2005" height="376" key="GridCell.Tab.0.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585922207854" />
     <state width="1820" height="375" key="GridCell.Tab.0.left/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393782" />
-    <state width="2005" height="512" key="GridCell.Tab.0.right" timestamp="1585900322744">
+    <state width="2005" height="376" key="GridCell.Tab.0.right" timestamp="1585922207854">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="512" key="GridCell.Tab.0.right/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585900322744" />
-    <state width="1002" height="305" key="GridCell.Tab.0.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585382663340" />
+    <state width="2005" height="210" key="GridCell.Tab.0.right/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585907255628" />
+    <state width="2005" height="376" key="GridCell.Tab.0.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585922207854" />
     <state width="1820" height="375" key="GridCell.Tab.0.right/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393783" />
     <state width="2005" height="376" key="GridCell.Tab.1.bottom" timestamp="1585326540938">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -260,21 +285,22 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="737" y="272" key="MultipleFileMergeDialog/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585382653178" />
-    <state x="466" y="153" width="1016" height="743" key="SettingsEditor" timestamp="1585900144197">
+    <state x="466" y="153" width="1016" height="743" key="SettingsEditor" timestamp="1585903849341">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="466" y="153" key="SettingsEditor/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585900144197" />
+    <state x="466" y="153" key="SettingsEditor/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585903849341" />
     <state x="466" y="153" key="SettingsEditor/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585327088387" />
     <state x="479" y="172" width="1016" height="743" key="SettingsEditor/54.27.1866.1053@54.27.1866.1053" timestamp="1584731847563" />
-    <state x="585" y="288" width="800" height="541" key="Vcs.Push.Dialog.v2" timestamp="1585074759295">
-      <screen x="54" y="27" width="1866" height="1053" />
-    </state>
-    <state x="585" y="288" width="800" height="541" key="Vcs.Push.Dialog.v2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074759295" />
-    <state x="651" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1585900244165">
+    <state x="583" y="276" width="800" height="541" key="Vcs.Push.Dialog.v2" timestamp="1585901753112">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="651" y="345" key="com.intellij.ide.util.TipDialog/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585900244165" />
-    <state x="651" y="345" key="com.intellij.ide.util.TipDialog/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585324572011" />
+    <state x="583" y="276" key="Vcs.Push.Dialog.v2/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585901753112" />
+    <state x="585" y="288" width="800" height="541" key="Vcs.Push.Dialog.v2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074759295" />
+    <state x="651" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1585910637220">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="651" y="345" key="com.intellij.ide.util.TipDialog/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585905021411" />
+    <state x="651" y="345" key="com.intellij.ide.util.TipDialog/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585910637220" />
     <state x="647" y="354" key="com.intellij.ide.util.TipDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1585152683903" />
     <state x="772" y="470" width="459" height="173" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585892997837">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -282,10 +308,10 @@
     <state x="772" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585892997826" />
     <state x="772" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585382614051" />
     <state x="757" y="472" width="459" height="173" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/54.27.1866.1053@54.27.1866.1053" timestamp="1585153314769" />
-    <state x="635" y="139" width="776" height="827" key="find.popup" timestamp="1585893818846">
+    <state x="635" y="139" width="776" height="827" key="find.popup" timestamp="1585904893501">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="635" y="139" width="776" height="827" key="find.popup/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585893818846" />
+    <state x="635" y="139" width="776" height="827" key="find.popup/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585904893501" />
     <state x="635" y="139" width="776" height="827" key="find.popup/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585325937779" />
     <state x="633" y="159" width="707" height="783" key="find.popup/54.27.1866.1053@54.27.1866.1053" timestamp="1585153913756" />
     <state x="749" y="199" width="550" height="706" key="refactoring.ChangeSignatureDialog" timestamp="1585326914867">

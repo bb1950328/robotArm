@@ -5,8 +5,5 @@ CMakeFiles/robotArm.dir/src/main.cpp.obj: ../h/ServoState.hpp
 CMakeFiles/robotArm.dir/src/main.cpp.obj: ../h/constants.hpp
 CMakeFiles/robotArm.dir/src/main.cpp.obj: ../h/coupling.hpp
 CMakeFiles/robotArm.dir/src/main.cpp.obj: ../h/libRobotArm.hpp
-CMakeFiles/robotArm.dir/src/main.cpp.obj: ../h/util.hpp
-CMakeFiles/robotArm.dir/src/main.cpp.obj: ../src/coupling.cpp
-CMakeFiles/robotArm.dir/src/main.cpp.obj: ../src/libRobotArm.cpp
 CMakeFiles/robotArm.dir/src/main.cpp.obj: ../src/main.cpp
 

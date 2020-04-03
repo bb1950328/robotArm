@@ -297,6 +297,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles\robotArm.dir\build.make CMakeFiles/robotArm.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/ramp3d.obj: src/ramp3d.cpp.obj
+
+.PHONY : src/ramp3d.obj
+
+# target to build an object file
+src/ramp3d.cpp.obj:
+	$(MAKE) -f CMakeFiles\robotArm_library.dir\build.make CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.obj
+.PHONY : src/ramp3d.cpp.obj
+
+src/ramp3d.i: src/ramp3d.cpp.i
+
+.PHONY : src/ramp3d.i
+
+# target to preprocess a source file
+src/ramp3d.cpp.i:
+	$(MAKE) -f CMakeFiles\robotArm_library.dir\build.make CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.i
+.PHONY : src/ramp3d.cpp.i
+
+src/ramp3d.s: src/ramp3d.cpp.s
+
+.PHONY : src/ramp3d.s
+
+# target to generate assembly for a file
+src/ramp3d.cpp.s:
+	$(MAKE) -f CMakeFiles\robotArm_library.dir\build.make CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.s
+.PHONY : src/ramp3d.cpp.s
+
 src/util.obj: src/util.cpp.obj
 
 .PHONY : src/util.obj
@@ -352,6 +379,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/ramp3d.obj
+	@echo ... src/ramp3d.i
+	@echo ... src/ramp3d.s
 	@echo ... src/util.obj
 	@echo ... src/util.i
 	@echo ... src/util.s

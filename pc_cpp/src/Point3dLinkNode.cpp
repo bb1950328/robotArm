@@ -3,7 +3,7 @@
 //
 
 #include "../h/Point3dLinkNode.hpp"
-#include "Point3d.cpp"
+#include "../h/Point3d.hpp"
 
 
 Point3dLinkNode::Point3dLinkNode() {

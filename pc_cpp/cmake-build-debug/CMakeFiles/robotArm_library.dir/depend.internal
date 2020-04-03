@@ -7,7 +7,6 @@ CMakeFiles/robotArm_library.dir/src/Point3d.cpp.obj
 CMakeFiles/robotArm_library.dir/src/Point3dLinkNode.cpp.obj
  D:/SchuleDev/robotArm/pc_cpp/h/Point3d.hpp
  D:/SchuleDev/robotArm/pc_cpp/h/Point3dLinkNode.hpp
- D:/SchuleDev/robotArm/pc_cpp/src/Point3d.cpp
  D:/SchuleDev/robotArm/pc_cpp/src/Point3dLinkNode.cpp
 CMakeFiles/robotArm_library.dir/src/ServoState.cpp.obj
  D:/SchuleDev/robotArm/pc_cpp/h/ServoState.hpp
@@ -23,6 +22,11 @@ CMakeFiles/robotArm_library.dir/src/libRobotArm.cpp.obj
  D:/SchuleDev/robotArm/pc_cpp/h/libRobotArm.hpp
  D:/SchuleDev/robotArm/pc_cpp/h/util.hpp
  D:/SchuleDev/robotArm/pc_cpp/src/libRobotArm.cpp
+CMakeFiles/robotArm_library.dir/src/ramp3d.cpp.obj
+ D:/SchuleDev/robotArm/pc_cpp/h/Point3d.hpp
+ D:/SchuleDev/robotArm/pc_cpp/h/Point3dLinkNode.hpp
+ D:/SchuleDev/robotArm/pc_cpp/h/ramp3d.hpp
+ D:/SchuleDev/robotArm/pc_cpp/src/ramp3d.cpp
 CMakeFiles/robotArm_library.dir/src/util.cpp.obj
  D:/SchuleDev/robotArm/pc_cpp/h/util.hpp
  D:/SchuleDev/robotArm/pc_cpp/src/util.cpp
