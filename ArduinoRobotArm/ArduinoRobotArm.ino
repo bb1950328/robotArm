@@ -1,3 +1,6 @@
+#include <Wire.h>
+#include "Nunchuk.h"
+
 //START_CPP_LIB
 //Start of constants.hpp********************************************************
 
@@ -490,10 +493,37 @@ bool ServoState::isValid() {
 //End of ServoState.cpp********************************************************
 //END_CPP_LIB
 
-void setup() {
-Serial.begin(2000000);
+Point3d point(10,20,10);
 
+void setup() {
+  Serial.begin(9600);
+  Wire.begin();
+  nunchuk_init();
 }
 
 void loop() {
+  if (nunchuk_read()) {
+    //nunchuk_print();
+
+    float x = nunchuk_joystickX();
+    float y = nunchuk_joystickY();
+    int c = nunchuk_buttonC();
+    int z = nunchuk_buttonZ();
+
+    if (x >= 20) {point.x += 0.2;}
+    if (y >= 20) {point.y += 0.2;}
+    if (x <= -20) {point.x -= 0.2;}
+    if (y <= -20) {point.y -= 0.2;}
+    if (c) {point.z += 0.2;}
+    if (z) {point.z -= 0.2;}
+
+    Serial.print("X: ");
+    Serial.print(point.x);
+    Serial.print("Y: ");
+    Serial.print(point.y);
+    Serial.print("Z: ");
+    Serial.print(point.z);
+    Serial.println(" ");
+  }
+  delay(10);
 }
