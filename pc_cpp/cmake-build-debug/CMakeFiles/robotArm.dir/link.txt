@@ -1,3 +1,0 @@
-"C:\Program Files\JetbrainsToolbox\apps\CLion\ch-0\193.6911.21\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\robotArm.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\robotArm.dir/objects.a @CMakeFiles\robotArm.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\robotArm.dir/objects.a -Wl,--no-whole-archive  -o robotArm.exe -Wl,--out-implib,librobotArm.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\robotArm.dir\linklibs.rsp

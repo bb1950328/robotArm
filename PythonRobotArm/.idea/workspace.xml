@@ -19,12 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f36a62af-f5c4-4ad8-bbf1-c160a489a638" name="Default Changelist" comment="added python and pc C++ project">
-      <change beforePath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" afterDir="false" />
+    <list default="true" id="f36a62af-f5c4-4ad8-bbf1-c160a489a638" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ino_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/ino_builder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pc_cpp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pc_cpp/generate_preprocessor_output.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/generate_preprocessor_output.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/cmake-build-debug/CMakeFiles/robotArm_library.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last.edited.regexp" value="#include &quot;ServoState.hpp&quot;" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/googleCodeJam" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -114,7 +114,9 @@
       <workItem from="1585073990723" duration="872000" />
       <workItem from="1585910456668" duration="155000" />
       <workItem from="1585910618751" duration="1217000" />
-      <workItem from="1585911845202" duration="13962000" />
+      <workItem from="1585911845202" duration="15343000" />
+      <workItem from="1586185148221" duration="1537000" />
+      <workItem from="1586272100120" duration="1950000" />
     </task>
     <task id="LOCAL-00001" summary="added python and pc C++ project">
       <created>1585074239810</created>
@@ -123,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585074239810</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="some improvements on ino_builder.py (cout -&gt; Serial.println and auto indent)">
+      <created>1585927131740</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585927131740</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,58 +153,59 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added python and pc C++ project" />
-    <option name="LAST_COMMIT_MESSAGE" value="added python and pc C++ project" />
+    <MESSAGE value="some improvements on ino_builder.py (cout -&gt; Serial.println and auto indent)" />
+    <option name="LAST_COMMIT_MESSAGE" value="some improvements on ino_builder.py (cout -&gt; Serial.println and auto indent)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1162" y="248" key="#xdebugger.evaluate" timestamp="1585919093843">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1162" y="248" key="#xdebugger.evaluate/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585919093843" />
-    <state x="578" y="100" width="1275" height="950" key="CommitChangelistDialog2" timestamp="1585911808295">
+    <state x="578" y="100" width="1275" height="950" key="CommitChangelistDialog2" timestamp="1585927130732">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="578" y="100" width="1275" height="950" key="CommitChangelistDialog2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585911808295" />
+    <state x="578" y="100" width="1275" height="950" key="CommitChangelistDialog2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585927130732" />
     <state x="581" y="122" width="808" height="868" key="CommitChangelistDialog2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074195008" />
     <state x="22" y="6" key="DiffContextDialog" timestamp="1585911806750">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="22" y="6" key="DiffContextDialog/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585911806750" />
-    <state x="804" y="311" key="FileChooserDialogImpl" timestamp="1585910583716">
+    <state x="804" y="311" key="FileChooserDialogImpl" timestamp="1585982147924">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="804" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585910583716" />
-    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1585927064526">
+    <state x="804" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585982147924" />
+    <state width="2005" height="514" key="GridCell.Tab.0.bottom" timestamp="1586148220862">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585927064526" />
-    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1585927064526">
+    <state width="2005" height="514" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220862" />
+    <state width="2005" height="514" key="GridCell.Tab.0.center" timestamp="1586148220861">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585927064526" />
-    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1585927064526">
+    <state width="2005" height="514" key="GridCell.Tab.0.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220861" />
+    <state width="2005" height="514" key="GridCell.Tab.0.left" timestamp="1586148220861">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585927064526" />
-    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1585927064526">
+    <state width="2005" height="514" key="GridCell.Tab.0.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220861" />
+    <state width="2005" height="514" key="GridCell.Tab.0.right" timestamp="1586148220862">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585927064526" />
-    <state width="2005" height="514" key="GridCell.Tab.1.bottom" timestamp="1585921185233">
+    <state width="2005" height="514" key="GridCell.Tab.0.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220862" />
+    <state width="2005" height="514" key="GridCell.Tab.1.bottom" timestamp="1586148220862">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="514" key="GridCell.Tab.1.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585921185233" />
-    <state width="2005" height="514" key="GridCell.Tab.1.center" timestamp="1585921185233">
+    <state width="2005" height="514" key="GridCell.Tab.1.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220862" />
+    <state width="2005" height="514" key="GridCell.Tab.1.center" timestamp="1586148220862">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="514" key="GridCell.Tab.1.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585921185233" />
-    <state width="2005" height="514" key="GridCell.Tab.1.left" timestamp="1585921185233">
+    <state width="2005" height="514" key="GridCell.Tab.1.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220862" />
+    <state width="2005" height="514" key="GridCell.Tab.1.left" timestamp="1586148220862">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="514" key="GridCell.Tab.1.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585921185233" />
-    <state width="2005" height="514" key="GridCell.Tab.1.right" timestamp="1585921185233">
+    <state width="2005" height="514" key="GridCell.Tab.1.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220862" />
+    <state width="2005" height="514" key="GridCell.Tab.1.right" timestamp="1586148220862">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="514" key="GridCell.Tab.1.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585921185233" />
+    <state width="2005" height="514" key="GridCell.Tab.1.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220862" />
     <state x="533" y="199" key="SettingsEditor" timestamp="1585910609237">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -215,7 +225,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ino_builder.py</url>
-          <line>153</line>
+          <line>158</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
