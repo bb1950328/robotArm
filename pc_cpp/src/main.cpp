@@ -31,22 +31,20 @@ void testCalc3d() {
 
 int main() {
     //testCalc3d();
-    //testCoupling();
-    coupling_calculator();
+    testCoupling();
+    //coupling_calculator();
     return 0;
 }
 
 void testCoupling() {
-    Coupling cp = Coupling(96, 64, 48);
-    clock_t start = clock();
-    float result;
-    for (int i = 0; i < times; ++i) {
-        result = cp.getServoAngle(35);
+    Coupling cp = Coupling(10.3, 9.87812, 5.09117, 3.6, 20.4576);
+    cout << "jointAngle;servoAngle" << EOL;
+    for (int i = -50; i <= 50; ++i) {
+        float servoAngle = cp.getServoAngle(i);
+        if (!isnan(servoAngle)) {
+            cout << i << ";" << servoAngle << EOL;
+        }
     }
-    clock_t end = clock();
-    cout << "servo angle: " << result << ANGLE_UNIT << EOL;
-    cout << "cp.getServoAngle(35) used " << (float) (end - start) * 1000000 / (float) times / CLOCKS_PER_SEC << "us"
-         << EOL;
 }
 
 void coupling_calculator() {
@@ -77,9 +75,11 @@ void coupling_calculator() {
     if (isnan(dx) || isnan(dy) || isnan(beta) || isnan(g) || isnan(c)) {
         cout << "Invalid parameters ):" << EOL;
     } else {
-        cout << "Servo horn offset angle (=beta) is " << beta << ANGLE_UNIT << EOL;
+        float offset = 90 - beta;
+        cout << "Servo horn and joint lever offset angle (=90-beta) is " << offset << ANGLE_UNIT << EOL;
         cout << "Joint radius (=g) is " << g << LEN_UNIT << EOL;
         cout << "Connector bar length (=c) is " << c << LEN_UNIT << EOL;
         cout << "dx=" << dx << LEN_UNIT << " and dy=" << dy << LEN_UNIT << EOL;
+        cout << "Constructor: Coupling(" << d << ", " << c << ", " << g << ", " << s << ", " << offset << ");" << EOL;
     }
 }

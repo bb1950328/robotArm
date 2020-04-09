@@ -7,12 +7,30 @@
 
 class Coupling {
 public:
-    float l;
-    float la, lb;
+    Coupling(float axleDistance, float couplerLength, float jointRadius, float servoHornRadius, float offsetAngle);
 
-    Coupling(float couplerLength, float jointRadius, float servoHornRadius);
+    /**
+     * @param jointAngle between -x and +x
+     * @return servoAngle between -90° and +90°
+     */
+    float getServoAngle(float jointAngle, bool optimizedMethod = false);// todo find out which one is faster on arduino
 
-    float getServoAngle(float jointAngle);
+    float getAxleDistance() const;
+
+    float getCouplerLength() const;
+
+    float getServoHornRadius() const;
+
+    float getJointRadius() const;
+
+    float getOffsetAngle() const;
+
+private:
+    float d;
+    float c;
+    float s;
+    float g;
+    float offsetAngle;
 };
 
 #endif //ROBOTARM_COUPLING_HPP
