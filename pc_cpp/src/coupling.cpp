@@ -30,6 +30,20 @@ float Coupling::getServoAngle(float jointAngle, bool optimizedMethod) {
     return offsetAngle - util::degrees(lambdaRad) + 90;
 }
 
+float Coupling::getJointAngle(float servoAngle, bool optimizedMethod) {
+    float gamma = offsetAngle + 90 - servoAngle; // γ
+    float b = std::sqrt(d * d + s * s - 2 * d * s * std::cos(util::radians(gamma)));
+    float fr1 = (d * d + b * b - s * s) / (2 * d * b);
+    float fr2 = (b * b + g * g - c * c) / (2 * b * g);
+    float deltaRad;
+    if (optimizedMethod) {
+        deltaRad = std::acos(fr1 * fr2 - std::sqrt(1 - fr1 * fr1) * std::sqrt(1 - fr2 * fr2));
+    } else {
+        deltaRad = std::acos(fr1) + std::acos(fr2);
+    }
+    return util::degrees(deltaRad) + offsetAngle - 90; // δ
+}
+
 float Coupling::getAxleDistance() const {
     return d;
 }

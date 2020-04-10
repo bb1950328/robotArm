@@ -15,6 +15,8 @@ public:
      */
     float getServoAngle(float jointAngle, bool optimizedMethod = false);// todo find out which one is faster on arduino
 
+    float getJointAngle(float servoAngle, bool optimizedMethod = false);
+
     float getAxleDistance() const;
 
     float getCouplerLength() const;

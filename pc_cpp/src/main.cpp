@@ -39,10 +39,10 @@ int main() {
 void testCoupling() {
     Coupling cp = Coupling(10.3, 9.87812, 5.09117, 3.6, 20.4576);
     cout << "jointAngle;servoAngle" << EOL;
-    for (int i = -50; i <= 50; ++i) {
-        float servoAngle = cp.getServoAngle(i);
-        if (!isnan(servoAngle)) {
-            cout << i << ";" << servoAngle << EOL;
+    for (int servoAngle = -200; servoAngle <= 200; ++servoAngle) {
+        float jointAngle = cp.getJointAngle(servoAngle);
+        if (!isnan(jointAngle)) {
+            cout << jointAngle << ";" << servoAngle << EOL;
         }
     }
 }
