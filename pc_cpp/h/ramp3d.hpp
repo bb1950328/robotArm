@@ -5,6 +5,8 @@
 #ifndef ROBOTARM_RAMP3D_HPP
 #define ROBOTARM_RAMP3D_HPP
 
+#include "Point3dLinkNode.hpp"
+
 class Ramp3d {
 public:
     double acceleration = 60; // unit/second^2
@@ -13,16 +15,21 @@ public:
 
     Ramp3d();
 
+    void calculate_nonlinear(Point3d *start, Point3d *stop);
+
+    void calculate_linear(Point3d *start, Point3d *stop, float desiredStepLength);
+
+public:
+    Point3dLinkNode *getStartNode() const;
+
+    Point3dLinkNode *getStopNode() const;
 
 private:
+
     Point3dLinkNode *startNode;
     Point3dLinkNode *stopNode;
 
     Point3dLinkNode *getStartRamp();
-
-    void calculate_nonlinear(Point3d *start, Point3d *stop);
-
-    void calculate_linear(Point3d *start, Point3d *stop, float desiredStepLength);
 };
 
 #endif //ROBOTARM_RAMP3D_HPP

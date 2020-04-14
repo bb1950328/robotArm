@@ -21,8 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f36a62af-f5c4-4ad8-bbf1-c160a489a638" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ino_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/ino_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pc_cpp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/h/Point3d.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/h/Point3d.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/h/ramp3d.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/h/ramp3d.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/src/Point3d.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/src/Point3d.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/src/ramp3d.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/src/ramp3d.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +121,7 @@
       <workItem from="1586185148221" duration="1537000" />
       <workItem from="1586272100120" duration="1950000" />
       <workItem from="1586365819023" duration="91000" />
-      <workItem from="1586852917681" duration="1824000" />
+      <workItem from="1586852917681" duration="2468000" />
     </task>
     <task id="LOCAL-00001" summary="added python and pc C++ project">
       <created>1585074239810</created>
@@ -139,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586365903989</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="improved ino_builder.py">
+      <created>1586854772330</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586854772330</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +174,8 @@
     <MESSAGE value="added python and pc C++ project" />
     <MESSAGE value="some improvements on ino_builder.py (cout -&gt; Serial.println and auto indent)" />
     <MESSAGE value="added build folder to .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="added build folder to .gitignore" />
+    <MESSAGE value="improved ino_builder.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved ino_builder.py" />
   </component>
   <component name="WindowStateProjectService">
     <state x="429" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586365836219">
@@ -173,9 +186,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1162" y="248" key="#xdebugger.evaluate/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585919093843" />
-    <state x="434" y="74" width="1275" height="950" key="CommitChangelistDialog2" timestamp="1586365903024">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="348" y="0" width="1700" height="1112" key="CommitChangelistDialog2" timestamp="1586854771769">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="348" y="0" width="1700" height="1112" key="CommitChangelistDialog2/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586854771769" />
     <state x="434" y="74" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586365903024" />
     <state x="578" y="100" width="1275" height="950" key="CommitChangelistDialog2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585927130732" />
     <state x="581" y="122" width="808" height="868" key="CommitChangelistDialog2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074195008" />
@@ -187,25 +201,29 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="804" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585982147924" />
-    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1586854716949">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1493" height="305" key="GridCell.Tab.0.bottom" timestamp="1586879399600">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="2005" height="305" key="GridCell.Tab.0.bottom/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586854716949" />
+    <state width="1493" height="305" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586879399600" />
     <state width="2005" height="514" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220862" />
-    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1586854716949">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1493" height="305" key="GridCell.Tab.0.center" timestamp="1586879399600">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="2005" height="305" key="GridCell.Tab.0.center/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586854716949" />
+    <state width="1493" height="305" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586879399600" />
     <state width="2005" height="514" key="GridCell.Tab.0.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220861" />
-    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1586854716949">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1493" height="305" key="GridCell.Tab.0.left" timestamp="1586879399600">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="2005" height="305" key="GridCell.Tab.0.left/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586854716949" />
+    <state width="1493" height="305" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586879399600" />
     <state width="2005" height="514" key="GridCell.Tab.0.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220861" />
-    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1586854716949">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1493" height="305" key="GridCell.Tab.0.right" timestamp="1586879399600">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="2005" height="305" key="GridCell.Tab.0.right/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586854716949" />
+    <state width="1493" height="305" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586879399600" />
     <state width="2005" height="514" key="GridCell.Tab.0.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220862" />
     <state width="2005" height="514" key="GridCell.Tab.1.bottom" timestamp="1586148220862">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -228,6 +246,10 @@
     </state>
     <state x="533" y="199" key="SettingsEditor/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585910240857" />
     <state x="533" y="199" key="SettingsEditor/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585910609237" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1586854778149">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586854778149" />
     <state x="780" y="401" key="cloudConfig.PluginsDialog" timestamp="1585910551683">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -254,6 +276,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PythonRobotArm$ino_builder.coverage" NAME="ino_builder Coverage Results" MODIFIED="1586854716940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonRobotArm$ino_builder.coverage" NAME="ino_builder Coverage Results" MODIFIED="1586879399542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

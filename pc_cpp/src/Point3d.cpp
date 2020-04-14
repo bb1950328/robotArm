@@ -1,4 +1,5 @@
 #include <cmath>
+#include <sstream>
 #include "../h/Point3d.hpp"
 
 
@@ -30,11 +31,17 @@ float Point3d::distance_to(Point3d *other) {
  */
 Point3d *Point3d::in_direction(Point3d *start, Point3d *target, float distance) {
     float factor = distance / distance_between(start, target);
-    float diffX = start->x - target->x;
-    float diffY = start->y - target->y;
-    float diffZ = start->z - target->z;
+    float diffX = target->x - start->x;
+    float diffY = target->y - start->y;
+    float diffZ = target->z - start->z;
     return new Point3d(
             start->x + diffX * factor,
             start->y + diffY * factor,
             start->z + diffZ * factor);
+}
+
+std::string Point3d::toString() {
+    std::stringstream result;
+    result << "X=" << x << ", Y=" << y << ", Z=" << z;
+    return result.str();
 }

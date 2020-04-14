@@ -43,5 +43,13 @@ Point3dLinkNode *Ramp3d::getStartRamp() {
     return nullptr;
 }
 
+Point3dLinkNode *Ramp3d::getStartNode() const {
+    return startNode;
+}
+
+Point3dLinkNode *Ramp3d::getStopNode() const {
+    return stopNode;
+}
+
 
 

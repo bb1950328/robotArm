@@ -2,6 +2,8 @@
 #define ROBOTARM_POINT3D_H
 
 
+#include <string>
+
 class Point3d {
 public:
     float x, y, z;
@@ -20,6 +22,8 @@ public:
      * start--------return----------target
      */
     static Point3d *in_direction(Point3d *start, Point3d *target, float distance);
+
+    std::string toString();
 };
 
 #endif //ROBOTARM_POINT3D_H

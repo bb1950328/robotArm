@@ -95,6 +95,8 @@ class Coupling {
 #define ROBOTARM_POINT3D_H
 
 
+#include <string>
+
 class Point3d {
   public:
   float x, y, z;
@@ -113,6 +115,8 @@ class Point3d {
   * start--------return----------target
   */
   static Point3d *in_direction(Point3d *start, Point3d *target, float distance);
+
+  std::string toString();
 };
 
 #endif //ROBOTARM_POINT3D_H
@@ -141,6 +145,7 @@ class Point3dLinkNode : public Point3d {
 #ifndef ROBOTARM_RAMP3D_HPP
 #define ROBOTARM_RAMP3D_HPP
 
+
 class Ramp3d {
   public:
   double acceleration = 60; // unit/second^2
@@ -149,16 +154,20 @@ class Ramp3d {
 
   Ramp3d();
 
+  void calculate_nonlinear(Point3d *start, Point3d *stop);
+
+  void calculate_linear(Point3d *start, Point3d *stop, float desiredStepLength);
+
+  public:
+  Point3dLinkNode *getStartNode() const;
+  Point3dLinkNode *getStopNode() const;
 
   private:
+
   Point3dLinkNode *startNode;
   Point3dLinkNode *stopNode;
 
   Point3dLinkNode *getStartRamp();
-
-  void calculate_nonlinear(Point3d *start, Point3d *stop);
-
-  void calculate_linear(Point3d *start, Point3d *stop, float desiredStepLength);
 };
 
 #endif //ROBOTARM_RAMP3D_HPP
@@ -408,6 +417,7 @@ void RobotArm::print_config() {
 const float RobotArm::U_MAX = sqrt(L1 * L1 + L2 * L2 - 2 * L1 * L2 * cos(radians(180 - BETA_MIN))); // cosine law
 //End of libRobotArm.cpp*******************************************************
 //Start of Point3d.cpp**********************************************************
+#include <sstream>
 
 
 Point3d::Point3d() {
@@ -438,13 +448,19 @@ float Point3d::distance_to(Point3d *other) {
 */
 Point3d *Point3d::in_direction(Point3d *start, Point3d *target, float distance) {
   float factor = distance / distance_between(start, target);
-  float diffX = start->x - target->x;
-  float diffY = start->y - target->y;
-  float diffZ = start->z - target->z;
+  float diffX = target->x - start->x;
+  float diffY = target->y - start->y;
+  float diffZ = target->z - start->z;
   return new Point3d(
   start->x + diffX * factor,
   start->y + diffY * factor,
   start->z + diffZ * factor);
+}
+
+std::string Point3d::toString() {
+  std::stringstream result;
+  result << "X=" << x << ", Y=" << y << ", Z=" << z;
+  return result.str();
 }
 //End of Point3d.cpp***********************************************************
 //Start of Point3dLinkNode.cpp**************************************************
@@ -503,6 +519,14 @@ void Ramp3d::calculate_linear(Point3d *start, Point3d *stop, float desiredStepLe
 Point3dLinkNode *Ramp3d::getStartRamp() {
   //todo
   return nullptr;
+}
+
+Point3dLinkNode *Ramp3d::getStartNode() const {
+  return startNode;
+}
+
+Point3dLinkNode *Ramp3d::getStopNode() const {
+  return stopNode;
 }
 
 

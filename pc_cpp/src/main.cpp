@@ -6,6 +6,9 @@
 #include "../h/constants.hpp"
 #include "../h/ServoState.hpp"
 #include "../h/util.hpp"
+#include "../h/Point3d.hpp"
+#include "../h/ramp3d.hpp"
+#include "../h/Point3dLinkNode.hpp"
 
 static const int times = 10000;
 using namespace std;
@@ -32,6 +35,8 @@ void testCalc3d();
 
 void coupling_calculator();
 
+void test_ramp();
+
 void testCalc3d() {
     RobotArm::print_config();
     ServoState state;
@@ -48,7 +53,8 @@ void testCalc3d() {
 int main() {
     //testCalc3d();
     //testCoupling(new Coupling(10.3, 9.87812, 5.09117, 3.6, 20.4576))->printResults();
-    coupling_calculator();
+    //coupling_calculator();
+    test_ramp();
     return 0;
 }
 
@@ -59,7 +65,7 @@ CouplingTestResult *testCoupling(Coupling *coupling) {
         float jointAngle = i / 10.0f;
         float servoAngle = coupling->getServoAngle(jointAngle);
         if (!isnan(servoAngle)) {
-            //cout << servoAngle << ";" << i << EOL;
+            //cout << servoAngle << ";" << jointAngle << EOL;
             if (isnan(result->minJointAngle) || jointAngle < result->minJointAngle) {
                 result->minJointAngle = jointAngle;
             }
@@ -74,7 +80,7 @@ CouplingTestResult *testCoupling(Coupling *coupling) {
 }
 
 void coupling_calculator() {
-    float alpha = 45, d = 10.3, s = 3.6;
+    float alpha = 45, d = 8, s = 4;
     char enter_own;
     cout << "Would you like to enter your own values? (y/n) ";
     cin >> enter_own;
@@ -119,5 +125,16 @@ void coupling_calculator() {
         auto *secondTestResults = testCoupling(new Coupling(d, c, g, s, servoOffset, servoOffset + adjustment));
         cout << STAR_LINE_64 << EOL;
         secondTestResults->printResults("Second testing results:\t");
+    }
+}
+
+void test_ramp() {
+    auto *start = new Point3d(10, 2, 3);
+    auto *end = new Point3d(5, 6, 4);
+    cout << "Calculating Ramp from " << start->toString() << " to " << end->toString() << EOL;
+    auto *ramp = new Ramp3d();
+    ramp->calculate_linear(start, end, 1);
+    for (Point3dLinkNode *i = ramp->getStartNode(); i != nullptr; i = i->next) {
+        cout << " -> " << i->toString() << EOL;
     }
 }
