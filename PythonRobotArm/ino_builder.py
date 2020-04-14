@@ -4,6 +4,9 @@ from typing import List
 
 import file_hasher
 
+END_TAG = "//END_CPP_LIB"
+START_TAG = "//START_CPP_LIB"
+
 obsolete_lines = [
     "#include <cmath>",
     "#include <iostream>",
@@ -101,6 +104,21 @@ def dependency_sort(li, deps) -> list:
     return result
 
 
+def clean_emty_lines(lines: List[str]) -> List[str]:
+    output = []
+    last_was_empty = False
+    for li in lines:
+        this_is_empty = li.strip() == ""
+        if this_is_empty:
+            li = ""
+        if last_was_empty:
+            if not this_is_empty:
+                output.append(li)
+        else:
+            output.append(li)
+    return output
+
+
 if __name__ == '__main__':
     before_md5 = file_hasher.get_md5(ino_file)
 
@@ -129,9 +147,14 @@ if __name__ == '__main__':
     for a, b in depending_files:
         print(f"{os.path.basename(a)} depends on {os.path.basename(b)}")
 
-    picasso = read_file(ino_file, False)
-    del picasso[picasso.index("//START_CPP_LIB") + 1:picasso.index("//END_CPP_LIB")]
-    pos = picasso.index("//END_CPP_LIB")
+    with open(ino_file) as f:
+        everything = f.read()
+        if START_TAG not in everything:
+            raise ValueError(START_TAG + "not in file!")
+        if END_TAG not in everything:
+            raise ValueError(END_TAG + "not in file!")
+        before_lib = everything.split(START_TAG)[0]
+        after_lib = everything.split(END_TAG)[-1]
     lib = []
 
     for fpath in hpp_paths:
@@ -147,21 +170,18 @@ if __name__ == '__main__':
 
     indent = 0
     for i in range(len(lib)):
-        if lib[i].endswith("{"):
-            lib[i] = indent * 2 * " " + lib[i]
-            indent += 1
-        elif lib[i].startswith("}"):
-            indent -= 1
-            lib[i] = indent * 2 * " " + lib[i]
-        elif lib[i]:
-            lib[i] = indent * 2 * " " + lib[i]
+        indent -= lib[i].count("}")
+        lib[i] = indent * 2 * " " + lib[i]
+        indent += lib[i].count("{")
 
-    picasso = picasso[:pos] + lib + picasso[pos:]
-
+    lib = clean_emty_lines(lib)
     with open(ino_file, "w") as f:
-        for line in picasso:
-            f.write(line)
-            f.write(EOL)
+        f.write(before_lib)
+        f.write(START_TAG + EOL)
+        for line in lib:
+            f.write(line + EOL)
+        f.write(END_TAG)
+        f.write(after_lib)
 
     after_md5 = file_hasher.get_md5(ino_file)
 

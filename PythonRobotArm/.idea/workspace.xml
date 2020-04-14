@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f36a62af-f5c4-4ad8-bbf1-c160a489a638" name="Default Changelist" comment="" />
+    <list default="true" id="f36a62af-f5c4-4ad8-bbf1-c160a489a638" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ino_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/ino_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pc_cpp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pc_cpp/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,6 +116,7 @@
       <workItem from="1586185148221" duration="1537000" />
       <workItem from="1586272100120" duration="1950000" />
       <workItem from="1586365819023" duration="91000" />
+      <workItem from="1586852917681" duration="1824000" />
     </task>
     <task id="LOCAL-00001" summary="added python and pc C++ project">
       <created>1585074239810</created>
@@ -182,21 +187,25 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="804" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585982147924" />
-    <state width="2005" height="514" key="GridCell.Tab.0.bottom" timestamp="1586148220862">
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1586854716949">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586854716949" />
     <state width="2005" height="514" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220862" />
-    <state width="2005" height="514" key="GridCell.Tab.0.center" timestamp="1586148220861">
+    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1586854716949">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.center/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586854716949" />
     <state width="2005" height="514" key="GridCell.Tab.0.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220861" />
-    <state width="2005" height="514" key="GridCell.Tab.0.left" timestamp="1586148220861">
+    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1586854716949">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.left/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586854716949" />
     <state width="2005" height="514" key="GridCell.Tab.0.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220861" />
-    <state width="2005" height="514" key="GridCell.Tab.0.right" timestamp="1586148220862">
+    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1586854716949">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.right/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586854716949" />
     <state width="2005" height="514" key="GridCell.Tab.0.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586148220862" />
     <state width="2005" height="514" key="GridCell.Tab.1.bottom" timestamp="1586148220862">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -233,23 +242,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ino_builder.py</url>
-          <line>158</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ino_builder.py</url>
-          <line>122</line>
+          <line>140</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ino_builder.py</url>
-          <line>119</line>
+          <line>137</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PythonRobotArm$ino_builder.coverage" NAME="ino_builder Coverage Results" MODIFIED="1585927064521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonRobotArm$ino_builder.coverage" NAME="ino_builder Coverage Results" MODIFIED="1586854716940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

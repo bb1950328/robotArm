@@ -9,6 +9,7 @@
 
 #define LEN_UNIT "cm"
 #define ANGLE_UNIT "deg"//"°"
+#define STAR_LINE_64 "****************************************************************"
 
 #define EOL "\n"
 
@@ -41,12 +42,50 @@ constexpr float OMEGA_UPPER = ALPHA_MIN - BETA_MAX - GAMMA_MAX;
 
 class Coupling {
   public:
-  float l;
-  float la, lb;
+  Coupling(float axleDistance,
+  float couplerLength,
+  float jointRadius,
+  float servoHornRadius,
+  float servoOffsetAngle,
+  float jointOffsetAngle);
 
-  Coupling(float couplerLength, float jointRadius, float servoHornRadius);
+  Coupling(float axleDistance,
+  float couplerLength,
+  float jointRadius,
+  float servoHornRadius,
+  float servoOffsetAngle);
 
-  float getServoAngle(float jointAngle);
+  /**
+  * @param jointAngle between -x and +x
+  * @return servoAngle between -90° and +90°
+  */
+  float
+  getServoAngle(float jointAngle, bool optimizedMethod = false);// todo find out which method is faster on arduino
+
+  /**
+  * @warning this method is not tested!!!
+  */
+  float getJointAngle(float servoAngle, bool optimizedMethod = false);
+
+  float getAxleDistance() const;
+
+  float getCouplerLength() const;
+
+  float getServoHornRadius() const;
+
+  float getJointRadius() const;
+
+  float getServoOffsetAngle() const;
+
+  float getJointOffsetAngle() const;
+
+  private:
+  float d;
+  float c;
+  float s;
+  float g;
+  float servoOffsetAngle;
+  float jointOffsetAngle;
 };
 
 #endif //ROBOTARM_COUPLING_HPP
@@ -181,22 +220,79 @@ class RobotArm {
 //End of libRobotArm.hpp*******************************************************
 //Start of coupling.cpp*********************************************************
 
-Coupling::Coupling(float couplerLength, float jointRadius, float servoHornRadius) {
-  this->l = couplerLength;
-  this->la = jointRadius;
-  this->lb = servoHornRadius;
+
+Coupling::Coupling(float axleDistance,
+float couplerLength,
+float jointRadius,
+float servoHornRadius,
+float servoOffsetAngle,
+float jointOffsetAngle) {
+  d = axleDistance;
+  c = couplerLength;
+  g = jointRadius;
+  s = servoHornRadius;
+  this->servoOffsetAngle = servoOffsetAngle;
+  this->jointOffsetAngle = jointOffsetAngle;
 }
 
-float Coupling::getServoAngle(float jointAngle) {
-  float dx = sin(radians(jointAngle)) * la;
-  float dy = cos(radians(jointAngle)) * la;
+Coupling::Coupling(float axleDistance,
+float couplerLength,
+float jointRadius,
+float servoHornRadius,
+float servoOffsetAngle)
+: Coupling(axleDistance, couplerLength, jointRadius, servoHornRadius, servoOffsetAngle, servoOffsetAngle) {
+}
 
-  float l_dx = l - dx;
-  float n = sqrt(dy * dy + l_dx * l_dx);
+float Coupling::getServoAngle(float jointAngle, bool optimizedMethod) {
+  float delta = 90 - jointOffsetAngle + jointAngle;
+  float a = sqrt(d * d + g * g - 2 * d * g * cos(radians(delta)));
+  float fr1 = (d * d + a * a - g * g) / (2 * d * a);
+  float fr2 = (a * a + s * s - c * c) / (2 * a * s);
+  float lambdaRad;
+  if (optimizedMethod) {
+    lambdaRad = acos(fr1 * fr2 - sqrt(1 - fr1 * fr1) * sqrt(1 - fr2 * fr2));
+  } else {
+    lambdaRad = acos(fr1) + acos(fr2);
+  }
+  return servoOffsetAngle - degrees(lambdaRad) + 90;
+}
 
-  float gamma = degrees(acos((n * n + lb * lb - l * l) / (2 * n * lb)));
-  float delta = degrees(atan(dy / l_dx));
-  return delta + gamma - 90;
+float Coupling::getJointAngle(float servoAngle, bool optimizedMethod) {
+  float gamma = servoOffsetAngle + 90 - servoAngle; // γ
+  float b = sqrt(d * d + s * s - 2 * d * s * cos(radians(gamma)));
+  float fr1 = (d * d + b * b - s * s) / (2 * d * b);
+  float fr2 = (b * b + g * g - c * c) / (2 * b * g);
+  float deltaRad;
+  if (optimizedMethod) {
+    deltaRad = acos(fr1 * fr2 - sqrt(1 - fr1 * fr1) * sqrt(1 - fr2 * fr2));
+  } else {
+    deltaRad = acos(fr1) + acos(fr2);
+  }
+  return degrees(deltaRad) + jointOffsetAngle - 90; // δ
+}
+
+float Coupling::getAxleDistance() const {
+  return d;
+}
+
+float Coupling::getCouplerLength() const {
+  return c;
+}
+
+float Coupling::getServoHornRadius() const {
+  return s;
+}
+
+float Coupling::getJointRadius() const {
+  return g;
+}
+
+float Coupling::getServoOffsetAngle() const {
+  return servoOffsetAngle;
+}
+
+float Coupling::getJointOffsetAngle() const {
+  return jointOffsetAngle;
 }
 //End of coupling.cpp**********************************************************
 //Start of libRobotArm.cpp******************************************************
