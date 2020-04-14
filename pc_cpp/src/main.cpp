@@ -10,7 +10,23 @@
 static const int times = 10000;
 using namespace std;
 
-void testCoupling();
+class CouplingTestResult {
+public:
+    float minJointAngle = NAN;
+    float maxJointAngle = NAN;
+    float minServoAngle = NAN;
+    float maxServoAngle = NAN;
+
+    void printResults(string lineStart);
+};
+
+void CouplingTestResult::printResults(string lineStart = "") {
+    cout << lineStart << "jointAngle is from " << minJointAngle << ANGLE_UNIT << " to " << maxJointAngle << ANGLE_UNIT;
+    cout << " that's a difference of " << maxJointAngle - minJointAngle << ANGLE_UNIT << EOL;
+    cout << lineStart << "servoAngle is from " << minServoAngle << ANGLE_UNIT << " to " << maxServoAngle << ANGLE_UNIT << EOL;
+}
+
+CouplingTestResult *testCoupling(Coupling *coupling);
 
 void testCalc3d();
 
@@ -31,20 +47,30 @@ void testCalc3d() {
 
 int main() {
     //testCalc3d();
-    testCoupling();
-    //coupling_calculator();
+    //testCoupling(new Coupling(10.3, 9.87812, 5.09117, 3.6, 20.4576))->printResults();
+    coupling_calculator();
     return 0;
 }
 
-void testCoupling() {
-    Coupling cp = Coupling(10.3, 9.87812, 5.09117, 3.6, 20.4576);
-    cout << "jointAngle;servoAngle" << EOL;
-    for (int servoAngle = -200; servoAngle <= 200; ++servoAngle) {
-        float jointAngle = cp.getJointAngle(servoAngle);
-        if (!isnan(jointAngle)) {
-            cout << jointAngle << ";" << servoAngle << EOL;
+CouplingTestResult *testCoupling(Coupling *coupling) {
+    //cout << "servoAngle;jointAngle" << EOL;
+    auto *result = new CouplingTestResult();
+    for (int i = -900; i <= 900; ++i) {
+        float jointAngle = i / 10.0f;
+        float servoAngle = coupling->getServoAngle(jointAngle);
+        if (!isnan(servoAngle)) {
+            //cout << servoAngle << ";" << i << EOL;
+            if (isnan(result->minJointAngle) || jointAngle < result->minJointAngle) {
+                result->minJointAngle = jointAngle;
+            }
+            if (isnan(result->maxJointAngle) || jointAngle > result->maxJointAngle) {
+                result->maxJointAngle = jointAngle;
+            }
         }
     }
+    result->minServoAngle = coupling->getServoAngle(result->minJointAngle);
+    result->maxServoAngle = coupling->getServoAngle(result->maxJointAngle);
+    return result;
 }
 
 void coupling_calculator() {
@@ -75,11 +101,23 @@ void coupling_calculator() {
     if (isnan(dx) || isnan(dy) || isnan(beta) || isnan(g) || isnan(c)) {
         cout << "Invalid parameters ):" << EOL;
     } else {
-        float offset = 90 - beta;
-        cout << "Servo horn and joint lever offset angle (=90-beta) is " << offset << ANGLE_UNIT << EOL;
+        float servoOffset = 90 - beta;
+        cout << "Servo horn offset angle (=90-beta) is " << servoOffset << ANGLE_UNIT << EOL;
         cout << "Joint radius (=g) is " << g << LEN_UNIT << EOL;
         cout << "Connector bar length (=c) is " << c << LEN_UNIT << EOL;
         cout << "dx=" << dx << LEN_UNIT << " and dy=" << dy << LEN_UNIT << EOL;
-        cout << "Constructor: Coupling(" << d << ", " << c << ", " << g << ", " << s << ", " << offset << ");" << EOL;
+        cout << "Constructor: Coupling(" << d << ", " << c << ", " << g << ", " << s << ", " << servoOffset << ");" << EOL;
+        auto *testResults = testCoupling(new Coupling(d, c, g, s, servoOffset));
+        cout << STAR_LINE_64 << EOL;
+        testResults->printResults("Testing results:\t");
+        cout << STAR_LINE_64 << EOL;
+        float adjustment = (testResults->minJointAngle + testResults->maxJointAngle) / -2;
+        cout << "Joint offset adjustment: " << adjustment << ANGLE_UNIT << EOL;
+        cout << "Constructor with adjustment: Coupling(" << d << ", " << c << ", " << g << ", " << s << ", " << servoOffset << ", " << servoOffset + adjustment
+             << ");" << EOL;
+
+        auto *secondTestResults = testCoupling(new Coupling(d, c, g, s, servoOffset, servoOffset + adjustment));
+        cout << STAR_LINE_64 << EOL;
+        secondTestResults->printResults("Second testing results:\t");
     }
 }

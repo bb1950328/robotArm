@@ -7,6 +7,7 @@
 
 #define LEN_UNIT "cm"
 #define ANGLE_UNIT "deg"//"°"
+#define STAR_LINE_64 "****************************************************************"
 
 #define EOL "\n"
 
