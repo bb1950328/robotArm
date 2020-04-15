@@ -160,6 +160,7 @@ class Ramp3d {
 
   public:
   Point3dLinkNode *getStartNode() const;
+
   Point3dLinkNode *getStopNode() const;
 
   private:
@@ -221,7 +222,11 @@ class RobotArm {
 
   static void print_config();
 
+  void goTo(Point3d *to, float omega);
+
+  ServoState *getState() const;
   private:
+  ServoState * state;
   static const float U_MAX;
 };
 
@@ -414,7 +419,15 @@ void RobotArm::print_config() {
   Serial.print("**********************\n");
 }
 
-const float RobotArm::U_MAX = sqrt(L1 * L1 + L2 * L2 - 2 * L1 * L2 * cos(radians(180 - BETA_MIN))); // cosine law
+const float RobotArm::U_MAX = sqrt(L1 * L1 + L2 * L2 - 2 * L1 * L2 * cos(radians(180 - BETA_MIN)));// cosine law
+
+ServoState *RobotArm::getState() const {
+  return state;
+}
+
+void RobotArm::goTo(Point3d *to, float omega) {
+  this->state = new ServoState(RobotArm::calc3d(to->x, to->y, to->z, omega));
+}
 //End of libRobotArm.cpp*******************************************************
 //Start of Point3d.cpp**********************************************************
 #include <sstream>

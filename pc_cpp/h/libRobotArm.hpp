@@ -7,6 +7,7 @@
 
 #include "constants.hpp"
 #include "ServoState.hpp"
+#include "Point3d.hpp"
 
 class RobotArm {
 public:
@@ -18,7 +19,12 @@ public:
 
     static void print_config();
 
+    void goTo(Point3d *to, float omega);
+
+    ServoState *getState() const;
+
 private:
+    ServoState *state;
     static const float U_MAX;
 };
 

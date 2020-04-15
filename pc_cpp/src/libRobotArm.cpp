@@ -68,4 +68,12 @@ void RobotArm::print_config() {
     cout << "**********************\n";
 }
 
-const float RobotArm::U_MAX = sqrt(L1 * L1 + L2 * L2 - 2 * L1 * L2 * cos(util::radians(180 - BETA_MIN))); // cosine law
+const float RobotArm::U_MAX = sqrt(L1 * L1 + L2 * L2 - 2 * L1 * L2 * cos(util::radians(180 - BETA_MIN)));// cosine law
+
+ServoState *RobotArm::getState() const {
+    return state;
+}
+
+void RobotArm::goTo(Point3d *to, float omega) {
+    this->state = new ServoState(RobotArm::calc3d(to->x, to->y, to->z, omega));
+}
