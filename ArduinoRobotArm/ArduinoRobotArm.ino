@@ -177,11 +177,17 @@ class Ramp3d {
 
 #ifndef ROBOTARM_ROTATION3D_HPP
 #define ROBOTARM_ROTATION3D_HPP
+
 class Rotation3d {
   public:
   float rotX, rotY, rotZ;
+
+  /**
+  * @param accX, accY, accZ in G or m/s^2
+  */
   static Rotation3d fromAcceleration(float accX, float accY, float accZ);
 };
+
 #endif //ROBOTARM_ROTATION3D_HPP
 //End of Rotation3d.hpp********************************************************
 //Start of ServoState.hpp*******************************************************
@@ -563,8 +569,13 @@ Point3dLinkNode *Ramp3d::getStopNode() const {
 
 
 Rotation3d Rotation3d::fromAcceleration(float accX, float accY, float accZ) {
-  //todo implement
+  //todo check if implementation is correct
+  // from https://forum.arduino.cc/index.php?topic=112031.0 Post #5
 Rotation3d result{};
+
+  result.rotX = degrees(atan2(-accY, -accZ)) + 180;
+  result.rotY = degrees(atan2(-accX, -accZ)) + 180;
+  result.rotZ = degrees(atan2(-accY, -accX)) + 180;
   return result;
 }
 //End of Rotation3d.cpp********************************************************
@@ -719,6 +730,8 @@ void HardwareController::moveArm(float deltaX, float deltaY, float deltaZ) {
 
 HardwareController controller{};
 
+const float NUNCHUK_G_PER_COUNT = 0.0188f;
+
 void setup() {
   Serial.begin(9600);
   Wire.begin();
@@ -742,7 +755,11 @@ void loop() {
     int c = nunchuk_buttonC();
     int z = nunchuk_buttonZ();
 
-    Rotation3d rotation = Rotation3d::fromAcceleration(nunchuk_accelerationX(), nunchuk_accelerationY(), nunchuk_accelerationZ());
+    Rotation3d rotation = Rotation3d::fromAcceleration(
+            NUNCHUK_G_PER_COUNT * nunchuk_accelerationX(),
+            NUNCHUK_G_PER_COUNT * nunchuk_accelerationY(),
+            NUNCHUK_G_PER_COUNT * nunchuk_accelerationZ()
+            );
 
     ServoState * state = controller.getArm()->getState();
     float omega = rotation.rotX;

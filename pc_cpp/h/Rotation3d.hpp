@@ -9,6 +9,9 @@ class Rotation3d {
 public:
     float rotX, rotY, rotZ;
 
+    /**
+     * @param accX, accY, accZ in G or m/s^2
+     */
     static Rotation3d fromAcceleration(float accX, float accY, float accZ);
 };
 
