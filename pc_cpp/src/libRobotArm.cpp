@@ -75,5 +75,5 @@ ServoState *RobotArm::getState() const {
 }
 
 void RobotArm::goTo(Point3d *to, float omega) {
-    this->state = new ServoState(RobotArm::calc3d(to->x, to->y, to->z, omega));
+    this->state->updateCalculated(new ServoState(RobotArm::calc3d(to->x, to->y, to->z, omega)));
 }

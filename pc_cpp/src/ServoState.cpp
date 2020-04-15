@@ -55,3 +55,10 @@ bool ServoState::isValid() {
             isnan(zeta) || ZETA_MIN > zeta || ZETA_MAX < zeta
     );
 }
+
+void ServoState::updateCalculated(ServoState *from) {
+    this->alpha = from->alpha;
+    this->beta = from->beta;
+    this->gamma = from->gamma;
+    this->delta = from->delta;
+}

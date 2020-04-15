@@ -28,6 +28,8 @@ public:
     void print();
 
     bool isValid();
+
+    void updateCalculated(ServoState *from);
 };
 
 

@@ -173,6 +173,17 @@ class Ramp3d {
 
 #endif //ROBOTARM_RAMP3D_HPP
 //End of ramp3d.hpp************************************************************
+//Start of Rotation3d.hpp*******************************************************
+
+#ifndef ROBOTARM_ROTATION3D_HPP
+#define ROBOTARM_ROTATION3D_HPP
+class Rotation3d {
+  public:
+  float rotX, rotY, rotZ;
+  static Rotation3d fromAcceleration(float accX, float accY, float accZ);
+};
+#endif //ROBOTARM_ROTATION3D_HPP
+//End of Rotation3d.hpp********************************************************
 //Start of ServoState.hpp*******************************************************
 
 #ifndef ROBOTARM_SERVOSTATE_HPP
@@ -201,6 +212,8 @@ class ServoState {
   void print();
 
   bool isValid();
+
+  void updateCalculated(ServoState *from);
 };
 
 
@@ -225,8 +238,9 @@ class RobotArm {
   void goTo(Point3d *to, float omega);
 
   ServoState *getState() const;
+
   private:
-  ServoState * state;
+  ServoState *state;
   static const float U_MAX;
 };
 
@@ -426,7 +440,7 @@ ServoState *RobotArm::getState() const {
 }
 
 void RobotArm::goTo(Point3d *to, float omega) {
-  this->state = new ServoState(RobotArm::calc3d(to->x, to->y, to->z, omega));
+  this->state->updateCalculated(new ServoState(RobotArm::calc3d(to->x, to->y, to->z, omega)));
 }
 //End of libRobotArm.cpp*******************************************************
 //Start of Point3d.cpp**********************************************************
@@ -545,6 +559,15 @@ Point3dLinkNode *Ramp3d::getStopNode() const {
 
 
 //End of ramp3d.cpp************************************************************
+//Start of Rotation3d.cpp*******************************************************
+
+
+Rotation3d Rotation3d::fromAcceleration(float accX, float accY, float accZ) {
+  //todo implement
+Rotation3d result{};
+  return result;
+}
+//End of Rotation3d.cpp********************************************************
 //Start of ServoState.cpp*******************************************************
 
 
@@ -623,17 +646,93 @@ bool ServoState::isValid() {
   isnan(zeta) || ZETA_MIN > zeta || ZETA_MAX < zeta
   );
 }
+
+void ServoState::updateCalculated(ServoState *from) {
+  this->alpha = from->alpha;
+  this->beta = from->beta;
+  this->gamma = from->gamma;
+  this->delta = from->delta;
+}
 //End of ServoState.cpp********************************************************
 //END_CPP_LIB
 
-Point3d point(10,20,10);
+
+class HardwareController {
+public:
+    void initialize();
+    RobotArm * getArm();
+    void updateServos();
+    void moveArm(float deltaX, float deltaY, float deltaZ);
+
+    float absGripperAngle, gripperRotation;
+private:
+    const int NUM_SERVOS = 6;
+    const int TURNTABLE = 0;
+    const int JOINT_A = 1;
+    const int JOINT_B = 2;
+    const int JOINT_C = 3;
+    const int GRIPPER_TURN = 4;
+    const int GRIPPER_OPEN = 5;
+    const int SERVO_PINS[] = {99, 98, 97, 96, 95, 94}; // todo look up correct pin numbers
+
+    Servo[NUM_SERVOS] servos;
+    RobotArm *arm = nullptr;
+    float posX, posY, posZ;
+
+    void attachAllServos();
+};
+
+void HardwareController::initialize() {
+    arm = new RobotArm();
+    attachAllServos();
+}
+
+void HardwareController::attachAllServos() {
+    for (int i = 0; i < NUM_SERVOS; ++i) {
+        servos[i] = Servo(SERVO_PINS[i]);
+        servos[i].attach();
+        servos[i].write(90);
+    }
+}
+RobotArm * HardwareController::getArm() {
+    return &arm;
+}
+
+void HardwareController::updateServos() {
+    Point3d * tmpPoint = new Point3d(posX, posY, posZ);
+    this->arm->goTo(tmpPoint, absGripperAngle);
+    ServoState * state = this->arm->getState();
+    servos[JOINT_A].write(state->alpha);
+    servos[JOINT_B].write(state->beta);
+    servos[JOINT_C].write(state->gamma);
+    servos[TURNTABLE].write(state->delta);
+    servos[GRIPPER_TURN].write(state->epsilon);
+    servos[GRIPPER_OPEN].write(state->zeta);
+    delete tmpPoint;
+}
+
+void HardwareController::moveArm(float deltaX, float deltaY, float deltaZ) {
+    posX += deltaX;
+    posY += deltaY;
+    posZ += deltaZ;
+}
+
+HardwareController controller{};
 
 void setup() {
   Serial.begin(9600);
   Wire.begin();
   nunchuk_init();
+  controller.initialize();
 }
 
+/**
+ * Move X:                 Joystick left/right
+ * Move Y:                 Joystick up/down
+ * Move Z:                 Button C/Z
+ * Rotate Gripper:         Tilt left/right
+ * Absolute Gripper angle: Tilt forward/backward
+ */
 void loop() {
   if (nunchuk_read()) {
     //nunchuk_print();
@@ -643,20 +742,14 @@ void loop() {
     int c = nunchuk_buttonC();
     int z = nunchuk_buttonZ();
 
-    if (x >= 20) {point.x += 0.2;}
-    if (y >= 20) {point.y += 0.2;}
-    if (x <= -20) {point.x -= 0.2;}
-    if (y <= -20) {point.y -= 0.2;}
-    if (c) {point.z += 0.2;}
-    if (z) {point.z -= 0.2;}
+    Rotation3d rotation = Rotation3d::fromAcceleration(nunchuk_accelerationX(), nunchuk_accelerationY(), nunchuk_accelerationZ());
 
-    Serial.print("X: ");
-    Serial.print(point.x);
-    Serial.print("Y: ");
-    Serial.print(point.y);
-    Serial.print("Z: ");
-    Serial.print(point.z);
-    Serial.println(" ");
+    ServoState * state = controller.getArm()->getState();
+    float omega = rotation.rotX;
+    state->epsilon = rotation.rotY;
+    controller.moveArm(x/100, y/100, c?0.2:z?-0.2:0);
+    controller.updateServos();
+    state->print();
   }
   delay(10);
 }

@@ -10,6 +10,7 @@ add_library(robotArm_library
         src/Point3dLinkNode.cpp
         src/ServoState.cpp
         src/util.cpp
-        src/ramp3d.cpp)
+        src/ramp3d.cpp
+        src/Rotation3d.cpp)
 add_executable(robotArm src/main.cpp)
 target_link_libraries(robotArm PUBLIC robotArm_library)
