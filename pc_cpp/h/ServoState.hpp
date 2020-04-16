@@ -30,6 +30,14 @@ public:
     bool isValid();
 
     void updateCalculated(ServoState *from);
+
+#ifdef ARDUINO
+    void toLCD();
+#else
+
+    std::string toString();
+
+#endif
 };
 
 

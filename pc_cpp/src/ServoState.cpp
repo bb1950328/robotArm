@@ -7,6 +7,12 @@
 #include <cmath>
 #include "../h/ServoState.hpp"
 
+#ifndef ARDUINO
+
+#include <sstream>
+
+#endif
+
 using namespace std;
 
 
@@ -62,3 +68,32 @@ void ServoState::updateCalculated(ServoState *from) {
     this->gamma = from->gamma;
     this->delta = from->delta;
 }
+
+#ifdef ARDUINO
+void Point3d::toLCD() {
+    //alpha;beta;gamma;;zeta  //show these four because the others can be seen easily
+    lcd.print(alpha, 0);
+    lcd.print(';');
+    lcd.print(beta, 0);
+    lcd.print(';');
+    lcd.print(gamma, 0);
+    lcd.print(";;");
+    lcd.print(zeta, 0);
+     */
+}
+#else
+
+std::string ServoState::toString() {
+    std::stringstream result;
+    result << "ServoState["
+           << "alpha=" << alpha
+           << ", beta=" << beta
+           << ", gamma=" << gamma
+           << ", delta=" << delta
+           << ", epsilon=" << epsilon
+           << ", zeta=" << zeta
+           << "]";
+    return result.str();
+}
+
+#endif

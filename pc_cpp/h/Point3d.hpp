@@ -23,7 +23,13 @@ public:
      */
     static Point3d *in_direction(Point3d *start, Point3d *target, float distance);
 
+#ifdef ARDUINO
+    void toLCD();
+#else
+
     std::string toString();
+
+#endif
 };
 
 #endif //ROBOTARM_POINT3D_H

@@ -40,8 +40,24 @@ Point3d *Point3d::in_direction(Point3d *start, Point3d *target, float distance) 
             start->z + diffZ * factor);
 }
 
+#ifdef ARDUINO
+void Point3d::toLCD() {
+    //X12.3Y45.6Z78.9
+    lcd.print("X");
+    lcd.print(x, 1);
+    lcd.print("Y");
+    lcd.print(y, 1);
+    lcd.print("Z");
+    lcd.print(z, 1);
+}
+#else
+
 std::string Point3d::toString() {
+
     std::stringstream result;
     result << "X=" << x << ", Y=" << y << ", Z=" << z;
     return result.str();
 }
+
+#endif
+

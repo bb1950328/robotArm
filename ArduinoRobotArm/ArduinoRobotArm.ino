@@ -1,6 +1,7 @@
 #include <Wire.h>
 #include "Nunchuk.h"
-
+#include <LiquidCrystal.h>
+#define ARDUINO
 //START_CPP_LIB
 //Start of constants.hpp********************************************************
 
@@ -116,7 +117,13 @@ class Point3d {
   */
   static Point3d *in_direction(Point3d *start, Point3d *target, float distance);
 
+  #ifdef ARDUINO
+  void toLCD();
+  #else
+
   std::string toString();
+
+  #endif
 };
 
 #endif //ROBOTARM_POINT3D_H
@@ -220,6 +227,13 @@ class ServoState {
   bool isValid();
 
   void updateCalculated(ServoState *from);
+  #ifdef ARDUINO
+  void toLCD();
+  #else
+
+  std::string toString();
+
+  #endif
 };
 
 
@@ -490,11 +504,27 @@ Point3d *Point3d::in_direction(Point3d *start, Point3d *target, float distance) 
   start->z + diffZ * factor);
 }
 
+#ifdef ARDUINO
+void Point3d::toLCD() {
+  //X12.3Y45.6Z78.9
+  lcd.print("X");
+  lcd.print(x, 1);
+  lcd.print("Y");
+  lcd.print(y, 1);
+  lcd.print("Z");
+  lcd.print(z, 1);
+}
+#else
+
 std::string Point3d::toString() {
+
   std::stringstream result;
   result << "X=" << x << ", Y=" << y << ", Z=" << z;
   return result.str();
 }
+
+#endif
+
 //End of Point3d.cpp***********************************************************
 //Start of Point3dLinkNode.cpp**************************************************
 
@@ -582,6 +612,12 @@ Rotation3d result{};
 //Start of ServoState.cpp*******************************************************
 
 
+#ifndef ARDUINO
+
+#include <sstream>
+
+#endif
+
 using namespace std;
 
 
@@ -664,37 +700,76 @@ void ServoState::updateCalculated(ServoState *from) {
   this->gamma = from->gamma;
   this->delta = from->delta;
 }
+
+#ifdef ARDUINO
+void Point3d::toLCD() {
+  //alpha;beta;gamma;;zeta  //show these four because the others can be seen easily
+  lcd.print(alpha, 0);
+  lcd.print(';');
+  lcd.print(beta, 0);
+  lcd.print(';');
+  lcd.print(gamma, 0);
+  lcd.print(";;");
+  lcd.print(zeta, 0);
+  */
+}
+#else
+
+std::string ServoState::toString() {
+  std::stringstream result;
+  result << "ServoState["
+  << "alpha=" << alpha
+  << ", beta=" << beta
+  << ", gamma=" << gamma
+  << ", delta=" << delta
+  << ", epsilon=" << epsilon
+  << ", zeta=" << zeta
+  << "]";
+  return result.str();
+}
+
+#endif
 //End of ServoState.cpp********************************************************
 //END_CPP_LIB
 
+const int LCD_PIN_DB4 = A3;
+const int LCD_PIN_DB5 = A2;
+const int LCD_PIN_DB6 = A1;
+const int LCD_PIN_DB7 = A0;
+const int LCD_PIN_RS = 2;
+const int LCD_PIN_E = 4;
+
+LiquidCrystal lcd(LCD_PIN_RS, LCD_PIN_E, LCD_PIN_DB4, LCD_PIN_DB5, LCD_PIN_DB6, LCD_PIN_DB7);
 
 class HardwareController {
 public:
     void initialize();
-    RobotArm * getArm();
+    RobotArm * getArm() const;
+    Point3d * getPosition() const;
     void updateServos();
     void moveArm(float deltaX, float deltaY, float deltaZ);
 
     float absGripperAngle, gripperRotation;
 private:
     const int NUM_SERVOS = 6;
-    const int TURNTABLE = 0;
-    const int JOINT_A = 1;
-    const int JOINT_B = 2;
-    const int JOINT_C = 3;
+    const int JOINT_A = 0;
+    const int JOINT_B = 1;
+    const int JOINT_C = 2;
+    const int TURNTABLE = 3;
     const int GRIPPER_TURN = 4;
     const int GRIPPER_OPEN = 5;
-    const int SERVO_PINS[] = {99, 98, 97, 96, 95, 94}; // todo look up correct pin numbers
+    const int SERVO_PINS[] = {3, 5, 6, 9, 10, 11}; // todo look up correct pin numbers
 
     Servo[NUM_SERVOS] servos;
     RobotArm *arm = nullptr;
-    float posX, posY, posZ;
+    Point3d *position = nullptr;
 
     void attachAllServos();
 };
 
 void HardwareController::initialize() {
     arm = new RobotArm();
+    position = new Point3d();
     attachAllServos();
 }
 
@@ -705,13 +780,16 @@ void HardwareController::attachAllServos() {
         servos[i].write(90);
     }
 }
-RobotArm * HardwareController::getArm() {
-    return &arm;
+RobotArm * HardwareController::getArm() const {
+    return arm;
+}
+
+Point3d * HardwareController::getPosition() const {
+    return position;
 }
 
 void HardwareController::updateServos() {
-    Point3d * tmpPoint = new Point3d(posX, posY, posZ);
-    this->arm->goTo(tmpPoint, absGripperAngle);
+    this->arm->goTo(position, absGripperAngle);
     ServoState * state = this->arm->getState();
     servos[JOINT_A].write(state->alpha);
     servos[JOINT_B].write(state->beta);
@@ -719,13 +797,12 @@ void HardwareController::updateServos() {
     servos[TURNTABLE].write(state->delta);
     servos[GRIPPER_TURN].write(state->epsilon);
     servos[GRIPPER_OPEN].write(state->zeta);
-    delete tmpPoint;
 }
 
 void HardwareController::moveArm(float deltaX, float deltaY, float deltaZ) {
-    posX += deltaX;
-    posY += deltaY;
-    posZ += deltaZ;
+    position->x += deltaX;
+    position->y += deltaY;
+    position->z += deltaZ;
 }
 
 HardwareController controller{};
@@ -737,6 +814,7 @@ void setup() {
   Wire.begin();
   nunchuk_init();
   controller.initialize();
+  lcd.begin(16, 2);
 }
 
 /**
@@ -767,6 +845,12 @@ void loop() {
     controller.moveArm(x/100, y/100, c?0.2:z?-0.2:0);
     controller.updateServos();
     state->print();
+
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    controller.getPosition()->toLCD();
+    lcd.setCursor(0, 1);
+    state->toLCD();
   }
   delay(10);
 }
