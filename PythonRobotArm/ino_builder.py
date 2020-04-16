@@ -185,6 +185,7 @@ if __name__ == '__main__':
 
     after_md5 = file_hasher.get_md5(ino_file)
 
+    print(f"INFO: copied {len(lib)} lines. {len(list(filter(lambda li: li.strip(), lib)))} of them aren't empty.")
     if before_md5 == after_md5:
         print(f"WARNING: file hash has not changed: {before_md5}")
     else:
