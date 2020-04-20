@@ -5,7 +5,7 @@
 #ifndef ROBOTARM_CONSTANTS_HPP
 #define ROBOTARM_CONSTANTS_HPP
 
-#define LEN_UNIT "cm"
+#define LEN_UNIT "mm"
 #define ANGLE_UNIT "deg"//"°"
 #define STAR_LINE_64 "****************************************************************"
 

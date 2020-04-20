@@ -6,9 +6,24 @@
 #include "../h/util.hpp"
 #include "../h/libRobotArm.hpp"
 #include "../h/constants.hpp"
+#include "../h/coupling.hpp"
 
 using namespace std;
 
+
+RobotArm::RobotArm() {
+    /**--------------given------------- | --------------------------------calculated-----------------------------------|
+     *  horn radius | distance | range  | servo horn offs | joint offs adj  | joint radius | connector | dx     | dy   |
+     * a 17mm       | 94mm     | +/-45° | 10.41°          | -1.8°           | 24.04mm      | 92.98mm   | 92.5mm | 17mm |
+     * b 28mm       | 77mm     | +/-40° | 25.6813°        | -3.85°          | 43.5603mm    | 71.6426mm | 69.4mm | 33mm |
+     * c 30mm       | 125mm    | +/-50° | 11.6179°        | -2.4°           | 39.1622mm    | 123.481mm | 122mm  | 25mm |
+     */
+    couplingA = new Coupling(94, 92.9848, 24.0416, 17, 10.4193, 8.61934); // NOLINT(cert-err58-cpp)
+    couplingB = new Coupling(77, 71.6426, 43.5603, 28, 25.6813, 21.8313); // NOLINT(cert-err58-cpp)
+    couplingC = new Coupling(125, 123.481, 39.1622, 30, 11.6179, 9.2179); // NOLINT(cert-err58-cpp)
+
+    state = new ServoState();
+}
 
 ServoState RobotArm::internal_calc2d(float r, float z, float omega) {
 
