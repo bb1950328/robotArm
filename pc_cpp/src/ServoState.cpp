@@ -37,7 +37,7 @@ bool ServoState::operator!=(const ServoState &rhs) const {
     return !(rhs == *this);
 }
 
-void ServoState::print() {
+void ServoState::print() const {
     cout << "***Servo state***\n";
     cout << "* alpha=" << alpha << ANGLE_UNIT << EOL;
     cout << "* beta=" << beta << ANGLE_UNIT << EOL;
@@ -51,7 +51,7 @@ void ServoState::print() {
     cout << "*****************\n";
 }
 
-bool ServoState::isValid() {
+bool ServoState::isValid() const {
     return !(
             isnan(alpha) || ALPHA_MIN > alpha || ALPHA_MAX < alpha ||
             isnan(beta) || BETA_MIN > beta || BETA_MAX < beta ||

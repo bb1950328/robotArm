@@ -25,9 +25,9 @@ public:
 
     bool operator!=(const ServoState &rhs) const;
 
-    void print();
+    void print() const;
 
-    bool isValid();
+    bool isValid() const;
 
     void updateCalculated(ServoState *from);
 

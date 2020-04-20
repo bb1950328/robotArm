@@ -16,9 +16,7 @@
       <change beforePath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h/Point3d.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/h/Point3d.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h/ServoState.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/h/ServoState.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Point3d.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point3d.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServoState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServoState.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +50,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -60,6 +57,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../PythonRobotArm/ino_builder.py" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -76,12 +74,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.ino_builder">
-    <configuration name="robotArm" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robotArm" RUN_TARGET_NAME="robotArm">
+    <configuration name="robotArm" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robotArm" RUN_TARGET_NAME="robotArm">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="robotArm_library" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm_library" CONFIG_NAME="Debug">
+    <configuration name="robotArm_library" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm_library" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -108,9 +106,12 @@
       <method v="2" />
     </configuration>
     <configuration name="Build lib" type="ShConfigurationType">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
       <option name="SCRIPT_PATH" value="$PROJECT_DIR$/build_lib.sh" />
       <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="false" />
       <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="false" />
       <option name="INTERPRETER_PATH" value="/bin/bash" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <method v="2" />
@@ -144,7 +145,8 @@
       <workItem from="1585910447064" duration="1244000" />
       <workItem from="1586786454078" duration="5932000" />
       <workItem from="1586876683555" duration="5427000" />
-      <workItem from="1586957846287" duration="15005000" />
+      <workItem from="1586957846287" duration="15393000" />
+      <workItem from="1587108150123" duration="1400000" />
     </task>
     <task id="LOCAL-00001" summary="some intellij files...">
       <created>1585074752086</created>
@@ -237,27 +239,32 @@
       <option name="project" value="LOCAL" />
       <updated>1586967144409</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="some arduino integration">
+      <created>1587060808238</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1587060808238</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="some intellij files..." />
     <MESSAGE value="- added algorithm to calculate servo angle from joint angle;" />
     <MESSAGE value="restructured class definition and implementation" />
@@ -270,7 +277,8 @@
     <MESSAGE value="added goTo() method&#10;the RobotArm class isn't stateless anymore" />
     <MESSAGE value="added HardwareController class to connect all the other classes to the hardware" />
     <MESSAGE value="added acceleration to rotation calculation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added acceleration to rotation calculation" />
+    <MESSAGE value="some arduino integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="some arduino integration" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -313,10 +321,11 @@
     </state>
     <state x="1018" y="117" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1586540110118" />
     <state x="748" y="205" key="#xdebugger.evaluate/54.27.1866.1053@54.27.1866.1053" timestamp="1584731976101" />
-    <state x="772" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1585901822362">
+    <state x="772" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587115863948">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="772" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585901822362" />
+    <state x="772" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587115863948" />
     <state x="547" y="73" width="1646" height="1112" key="CommitChangelistDialog2" timestamp="1587060807648">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -336,69 +345,69 @@
     <state x="789" y="270" key="FileChooserDialogImpl/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585904327592" />
     <state x="789" y="270" key="FileChooserDialogImpl/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586942478908" />
     <state x="773" y="283" width="424" height="497" key="FileChooserDialogImpl/54.27.1866.1053@54.27.1866.1053" timestamp="1584731843218" />
-    <state width="2005" height="258" key="GridCell.Tab.0.bottom" timestamp="1587060512227">
+    <state width="2005" height="258" key="GridCell.Tab.0.bottom" timestamp="1587358580091">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2005" height="210" key="GridCell.Tab.0.bottom/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585907255628" />
     <state width="2005" height="373" key="GridCell.Tab.0.bottom/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586852753221" />
     <state width="1493" height="258" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586962223196" />
     <state width="1237" height="258" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@-1280.418.1280.984" timestamp="1587058612718" />
-    <state width="2005" height="258" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587060512227" />
+    <state width="2005" height="258" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587358580091" />
     <state width="2005" height="375" key="GridCell.Tab.0.bottom/2560.355.1536.824/0.0.2048.1112/-1280.418.1280.984@0.0.2048.1112" timestamp="1586965139406" />
     <state width="1820" height="375" key="GridCell.Tab.0.bottom/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393784" />
-    <state width="2005" height="258" key="GridCell.Tab.0.center" timestamp="1587060512227">
+    <state width="2005" height="258" key="GridCell.Tab.0.center" timestamp="1587358580091">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2005" height="210" key="GridCell.Tab.0.center/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585907255628" />
     <state width="2005" height="373" key="GridCell.Tab.0.center/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586852753221" />
     <state width="1493" height="258" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586962223195" />
     <state width="1237" height="258" key="GridCell.Tab.0.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@-1280.418.1280.984" timestamp="1587058612718" />
-    <state width="2005" height="258" key="GridCell.Tab.0.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587060512227" />
+    <state width="2005" height="258" key="GridCell.Tab.0.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587358580091" />
     <state width="2005" height="375" key="GridCell.Tab.0.center/2560.355.1536.824/0.0.2048.1112/-1280.418.1280.984@0.0.2048.1112" timestamp="1586965139406" />
     <state width="1820" height="375" key="GridCell.Tab.0.center/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393783" />
-    <state width="2005" height="258" key="GridCell.Tab.0.left" timestamp="1587060512226">
+    <state width="2005" height="258" key="GridCell.Tab.0.left" timestamp="1587358580090">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2005" height="210" key="GridCell.Tab.0.left/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585907255628" />
     <state width="2005" height="373" key="GridCell.Tab.0.left/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586852753221" />
     <state width="1493" height="258" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586962223195" />
     <state width="1237" height="258" key="GridCell.Tab.0.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@-1280.418.1280.984" timestamp="1587058612718" />
-    <state width="2005" height="258" key="GridCell.Tab.0.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587060512226" />
+    <state width="2005" height="258" key="GridCell.Tab.0.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587358580090" />
     <state width="2005" height="375" key="GridCell.Tab.0.left/2560.355.1536.824/0.0.2048.1112/-1280.418.1280.984@0.0.2048.1112" timestamp="1586965139406" />
     <state width="1820" height="375" key="GridCell.Tab.0.left/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393782" />
-    <state width="2005" height="258" key="GridCell.Tab.0.right" timestamp="1587060512227">
+    <state width="2005" height="258" key="GridCell.Tab.0.right" timestamp="1587358580091">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2005" height="210" key="GridCell.Tab.0.right/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585907255628" />
     <state width="2005" height="373" key="GridCell.Tab.0.right/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586852753221" />
     <state width="1493" height="258" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586962223195" />
     <state width="1237" height="258" key="GridCell.Tab.0.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@-1280.418.1280.984" timestamp="1587058612718" />
-    <state width="2005" height="258" key="GridCell.Tab.0.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587060512227" />
+    <state width="2005" height="258" key="GridCell.Tab.0.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587358580091" />
     <state width="2005" height="375" key="GridCell.Tab.0.right/2560.355.1536.824/0.0.2048.1112/-1280.418.1280.984@0.0.2048.1112" timestamp="1586965139406" />
     <state width="1820" height="375" key="GridCell.Tab.0.right/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393783" />
-    <state width="2005" height="375" key="GridCell.Tab.1.bottom" timestamp="1587054746872">
+    <state width="2005" height="375" key="GridCell.Tab.1.bottom" timestamp="1587061169818">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586957689547" />
-    <state width="2005" height="375" key="GridCell.Tab.1.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587054746872" />
+    <state width="2005" height="375" key="GridCell.Tab.1.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587061169818" />
     <state width="1820" height="340" key="GridCell.Tab.1.bottom/54.27.1866.1053@54.27.1866.1053" timestamp="1584732095008" />
-    <state width="2005" height="375" key="GridCell.Tab.1.center" timestamp="1587054746872">
+    <state width="2005" height="375" key="GridCell.Tab.1.center" timestamp="1587061169817">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586957689545" />
-    <state width="2005" height="375" key="GridCell.Tab.1.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587054746872" />
+    <state width="2005" height="375" key="GridCell.Tab.1.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587061169817" />
     <state width="1820" height="340" key="GridCell.Tab.1.center/54.27.1866.1053@54.27.1866.1053" timestamp="1584732095008" />
-    <state width="2005" height="375" key="GridCell.Tab.1.left" timestamp="1587054746871">
+    <state width="2005" height="375" key="GridCell.Tab.1.left" timestamp="1587061169817">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586957689543" />
-    <state width="2005" height="375" key="GridCell.Tab.1.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587054746871" />
+    <state width="2005" height="375" key="GridCell.Tab.1.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587061169817" />
     <state width="1820" height="340" key="GridCell.Tab.1.left/54.27.1866.1053@54.27.1866.1053" timestamp="1584732095007" />
-    <state width="2005" height="375" key="GridCell.Tab.1.right" timestamp="1587054746872">
+    <state width="2005" height="375" key="GridCell.Tab.1.right" timestamp="1587061169818">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586957689546" />
-    <state width="2005" height="375" key="GridCell.Tab.1.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587054746872" />
+    <state width="2005" height="375" key="GridCell.Tab.1.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587061169818" />
     <state width="1820" height="340" key="GridCell.Tab.1.right/54.27.1866.1053@54.27.1866.1053" timestamp="1584732095008" />
     <state x="198" y="94" key="MergeDialog" timestamp="1585382648499">
       <screen x="0" y="0" width="2048" height="1112" />

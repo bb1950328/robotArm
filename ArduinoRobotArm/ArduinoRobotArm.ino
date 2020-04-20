@@ -222,11 +222,12 @@ class ServoState {
 
   bool operator!=(const ServoState &rhs) const;
 
-  void print();
+  void print() const;
 
-  bool isValid();
+  bool isValid() const;
 
   void updateCalculated(ServoState *from);
+
   #ifdef ARDUINO
   void toLCD();
   #else
@@ -642,7 +643,7 @@ bool ServoState::operator!=(const ServoState &rhs) const {
   return !(rhs == *this);
 }
 
-void ServoState::print() {
+void ServoState::print() const {
   Serial.print("***Servo state***\n");
   Serial.print("* alpha=");
   Serial.print(alpha);
@@ -683,7 +684,7 @@ void ServoState::print() {
   Serial.print("*****************\n");
 }
 
-bool ServoState::isValid() {
+bool ServoState::isValid() const {
   return !(
   isnan(alpha) || ALPHA_MIN > alpha || ALPHA_MAX < alpha ||
   isnan(beta) || BETA_MIN > beta || BETA_MAX < beta ||
