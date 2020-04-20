@@ -3,5 +3,14 @@ project(robotArm)
 
 set(CMAKE_CXX_STANDARD 14)
 
-#add_executable(robotArm src/main.cpp)
-add_executable(robotArm src/main.cpp src/ramp3d.cpp)
+add_library(robotArm_library
+        src/coupling.cpp
+        src/libRobotArm.cpp
+        src/Point3d.cpp
+        src/Point3dLinkNode.cpp
+        src/ServoState.cpp
+        src/util.cpp
+        src/ramp3d.cpp
+        src/Rotation3d.cpp)
+add_executable(robotArm src/main.cpp)
+target_link_libraries(robotArm PUBLIC robotArm_library)

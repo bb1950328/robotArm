@@ -30,3 +30,5 @@
 *.exe
 *.out
 *.app
+/preprocessor_output.cpp
+/cmake-build-debug/

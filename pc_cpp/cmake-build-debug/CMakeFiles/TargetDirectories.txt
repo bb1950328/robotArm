@@ -1,3 +1,0 @@
-/home/bab21/PycharmProjects/robotArm/pc_cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/bab21/PycharmProjects/robotArm/pc_cpp/cmake-build-debug/CMakeFiles/robotArm.dir
-/home/bab21/PycharmProjects/robotArm/pc_cpp/cmake-build-debug/CMakeFiles/edit_cache.dir

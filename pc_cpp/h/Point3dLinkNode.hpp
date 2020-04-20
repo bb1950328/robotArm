@@ -5,9 +5,17 @@
 #ifndef ROBOTARM_POINT3DLINKNODE_H
 #define ROBOTARM_POINT3DLINKNODE_H
 
-#include "../src/Point3dLinkNode.cpp"
 
-class Point3dLinkNode;
+#include "Point3d.hpp"
+
+class Point3dLinkNode : public Point3d {
+public:
+    Point3dLinkNode *last, *next;
+
+    Point3dLinkNode();
+
+    explicit Point3dLinkNode(Point3d *from);
+};
 
 
 #endif //ROBOTARM_POINT3DLINKNODE_H
