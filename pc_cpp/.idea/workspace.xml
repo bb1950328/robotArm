@@ -14,10 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="09459e80-773d-43e5-81ec-57aef335d28b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/robotArm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/robotArm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h/ServoState.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/h/ServoState.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServoState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServoState.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +25,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -73,13 +72,13 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ino_builder">
-    <configuration name="robotArm" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robotArm" RUN_TARGET_NAME="robotArm">
+  <component name="RunManager" selected="CMake Application.robotArm">
+    <configuration name="robotArm" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robotArm" RUN_TARGET_NAME="robotArm">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="robotArm_library" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm_library" CONFIG_NAME="Debug">
+    <configuration name="robotArm_library" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm_library" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -106,12 +105,9 @@
       <method v="2" />
     </configuration>
     <configuration name="Build lib" type="ShConfigurationType">
-      <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
       <option name="SCRIPT_PATH" value="$PROJECT_DIR$/build_lib.sh" />
       <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="false" />
       <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="false" />
       <option name="INTERPRETER_PATH" value="/bin/bash" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <method v="2" />
@@ -147,6 +143,7 @@
       <workItem from="1586876683555" duration="5427000" />
       <workItem from="1586957846287" duration="15393000" />
       <workItem from="1587108150123" duration="1400000" />
+      <workItem from="1587479217495" duration="1559000" />
     </task>
     <task id="LOCAL-00001" summary="some intellij files...">
       <created>1585074752086</created>
@@ -250,19 +247,20 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some intellij files..." />
@@ -345,8 +343,8 @@
     <state x="789" y="270" key="FileChooserDialogImpl/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585904327592" />
     <state x="789" y="270" key="FileChooserDialogImpl/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586942478908" />
     <state x="773" y="283" width="424" height="497" key="FileChooserDialogImpl/54.27.1866.1053@54.27.1866.1053" timestamp="1584731843218" />
-    <state width="2005" height="258" key="GridCell.Tab.0.bottom" timestamp="1587358580091">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1820" height="375" key="GridCell.Tab.0.bottom" timestamp="1587407704674">
+      <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state width="2005" height="210" key="GridCell.Tab.0.bottom/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585907255628" />
     <state width="2005" height="373" key="GridCell.Tab.0.bottom/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586852753221" />
@@ -354,9 +352,9 @@
     <state width="1237" height="258" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@-1280.418.1280.984" timestamp="1587058612718" />
     <state width="2005" height="258" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587358580091" />
     <state width="2005" height="375" key="GridCell.Tab.0.bottom/2560.355.1536.824/0.0.2048.1112/-1280.418.1280.984@0.0.2048.1112" timestamp="1586965139406" />
-    <state width="1820" height="375" key="GridCell.Tab.0.bottom/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393784" />
-    <state width="2005" height="258" key="GridCell.Tab.0.center" timestamp="1587358580091">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1820" height="375" key="GridCell.Tab.0.bottom/54.27.1866.1053@54.27.1866.1053" timestamp="1587407704674" />
+    <state width="1820" height="375" key="GridCell.Tab.0.center" timestamp="1587407704674">
+      <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state width="2005" height="210" key="GridCell.Tab.0.center/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585907255628" />
     <state width="2005" height="373" key="GridCell.Tab.0.center/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586852753221" />
@@ -364,9 +362,9 @@
     <state width="1237" height="258" key="GridCell.Tab.0.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@-1280.418.1280.984" timestamp="1587058612718" />
     <state width="2005" height="258" key="GridCell.Tab.0.center/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587358580091" />
     <state width="2005" height="375" key="GridCell.Tab.0.center/2560.355.1536.824/0.0.2048.1112/-1280.418.1280.984@0.0.2048.1112" timestamp="1586965139406" />
-    <state width="1820" height="375" key="GridCell.Tab.0.center/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393783" />
-    <state width="2005" height="258" key="GridCell.Tab.0.left" timestamp="1587358580090">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1820" height="375" key="GridCell.Tab.0.center/54.27.1866.1053@54.27.1866.1053" timestamp="1587407704674" />
+    <state width="1820" height="375" key="GridCell.Tab.0.left" timestamp="1587407704673">
+      <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state width="2005" height="210" key="GridCell.Tab.0.left/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585907255628" />
     <state width="2005" height="373" key="GridCell.Tab.0.left/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586852753221" />
@@ -374,9 +372,9 @@
     <state width="1237" height="258" key="GridCell.Tab.0.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@-1280.418.1280.984" timestamp="1587058612718" />
     <state width="2005" height="258" key="GridCell.Tab.0.left/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587358580090" />
     <state width="2005" height="375" key="GridCell.Tab.0.left/2560.355.1536.824/0.0.2048.1112/-1280.418.1280.984@0.0.2048.1112" timestamp="1586965139406" />
-    <state width="1820" height="375" key="GridCell.Tab.0.left/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393782" />
-    <state width="2005" height="258" key="GridCell.Tab.0.right" timestamp="1587358580091">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1820" height="375" key="GridCell.Tab.0.left/54.27.1866.1053@54.27.1866.1053" timestamp="1587407704673" />
+    <state width="1820" height="375" key="GridCell.Tab.0.right" timestamp="1587407704674">
+      <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state width="2005" height="210" key="GridCell.Tab.0.right/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585907255628" />
     <state width="2005" height="373" key="GridCell.Tab.0.right/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586852753221" />
@@ -384,7 +382,7 @@
     <state width="1237" height="258" key="GridCell.Tab.0.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@-1280.418.1280.984" timestamp="1587058612718" />
     <state width="2005" height="258" key="GridCell.Tab.0.right/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587358580091" />
     <state width="2005" height="375" key="GridCell.Tab.0.right/2560.355.1536.824/0.0.2048.1112/-1280.418.1280.984@0.0.2048.1112" timestamp="1586965139406" />
-    <state width="1820" height="375" key="GridCell.Tab.0.right/54.27.1866.1053@54.27.1866.1053" timestamp="1585154393783" />
+    <state width="1820" height="375" key="GridCell.Tab.0.right/54.27.1866.1053@54.27.1866.1053" timestamp="1587407704674" />
     <state width="2005" height="375" key="GridCell.Tab.1.bottom" timestamp="1587061169818">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -433,13 +431,13 @@
     <state x="583" y="276" key="Vcs.Push.Dialog.v2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586942580372" />
     <state x="583" y="276" key="Vcs.Push.Dialog.v2/2560.355.1536.824/0.0.2048.1112/-1280.418.1280.984@0.0.2048.1112" timestamp="1586964488678" />
     <state x="585" y="288" width="800" height="541" key="Vcs.Push.Dialog.v2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074759295" />
-    <state x="488" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1586957849997">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="647" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1587479219093">
+      <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="651" y="345" key="com.intellij.ide.util.TipDialog/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585905021411" />
     <state x="488" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586957849997" />
     <state x="651" y="345" key="com.intellij.ide.util.TipDialog/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585910637220" />
-    <state x="647" y="354" key="com.intellij.ide.util.TipDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1585152683903" />
+    <state x="647" y="348" key="com.intellij.ide.util.TipDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1587479219093" />
     <state x="772" y="470" width="459" height="173" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585892997837">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -456,15 +454,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="550" y="125" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1586365519379" />
-    <state x="562" y="72" width="550" height="706" key="refactoring.ChangeSignatureDialog" timestamp="1586877721062">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="806" y="118" width="550" height="706" key="refactoring.ChangeSignatureDialog" timestamp="1587402773557">
+      <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="562" y="72" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1586877721062" />
     <state x="749" y="199" width="550" height="706" key="refactoring.ChangeSignatureDialog/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585326914867" />
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1587060256193">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state x="806" y="118" key="refactoring.ChangeSignatureDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1587402773557" />
+    <state x="680" y="257" width="672" height="643" key="search.everywhere.popup" timestamp="1587404029581">
+      <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587060256193" />
+    <state x="680" y="257" width="672" height="643" key="search.everywhere.popup/54.27.1866.1053@54.27.1866.1053" timestamp="1587404029581" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
