@@ -464,7 +464,9 @@ ServoState *RobotArm::getState() const {
 }
 
 void RobotArm::goTo(Point3d *to, float omega) {
-    this->state->updateCalculated(new ServoState(RobotArm::calc3d(to->x, to->y, to->z, omega)));
+    ServoState robotArm = RobotArm::calc3d(to->x, to->y, to->z, omega);
+    ServoState* servoState = new ServoState(robotArm);
+    this->state->updateCalculated(servoState);
 }
 //End of libRobotArm.cpp*******************************************************
 //Start of Point3d.cpp**********************************************************
@@ -690,13 +692,11 @@ bool ServoState::isValid() const {
     );
 }
 
-void ServoState::updateCalculated(ServoState *from) {
+void ServoState::updateCalculated(ServoState* from) {
     this->alpha = from->alpha;
     this->beta = from->beta;
     this->gamma = from->gamma;
     this->delta = from->delta;
-    Serial.println(this->alpha);
-    Serial.println(from->alpha);
 }
 
 #ifdef ARDUINO
@@ -855,7 +855,7 @@ void loop() {
 
         controller.moveArm(x / 100, y / 100, c ? 0.2 : z ? -0.2 : 0);
         controller.updateServos();
-        state->print();
+        //state->print();
 }
 
     delay(1000);
