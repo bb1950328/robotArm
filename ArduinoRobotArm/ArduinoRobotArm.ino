@@ -1,7 +1,5 @@
 #include <Wire.h>
 #include "Nunchuk.h"
-#include <LiquidCrystal.h>
-
 #define ARDUINO
 //START_CPP_LIB
 //Start of constants.hpp********************************************************
@@ -851,8 +849,9 @@ void setup() {
  * Move X:                 Joystick left/right
  * Move Y:                 Joystick up/down
  * Move Z:                 Button C/Z
- * Rotate Gripper:         Tilt left/right
- * Absolute Gripper angle: Tilt forward/backward
+ * Rotate Gripper:         Buttongroup 1
+ * Absolute Gripper angle: Buttongroup 2
+ * Grip:                   Buttongroup 3
  */
 void loop() {
     if (nunchuk_read()) {
@@ -886,12 +885,7 @@ void loop() {
         controller.moveArm(x / 100, y / 100, c ? 0.2 : z ? -0.2 : 0);
         controller.updateServos();
         state->print();
+}
 
-        lcd.clear();
-        lcd.setCursor(0, 0);
-        controller.getPosition()->toLCD();
-        lcd.setCursor(0, 1);
-        state->toLCD();
-    }
     delay(10);
 }
