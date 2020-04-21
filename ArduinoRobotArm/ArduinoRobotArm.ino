@@ -1,5 +1,6 @@
 #include <Wire.h>
 #include "Nunchuk.h"
+#include <Servo.h>
 #define ARDUINO
 //START_CPP_LIB
 //Start of constants.hpp********************************************************
@@ -95,7 +96,7 @@ private:
 #define ROBOTARM_POINT3D_H
 
 
-#include <string>
+//#include <string>
 
 class Point3d {
 public:
@@ -467,7 +468,7 @@ void RobotArm::goTo(Point3d *to, float omega) {
 }
 //End of libRobotArm.cpp*******************************************************
 //Start of Point3d.cpp**********************************************************
-#include <sstream>
+//#include <sstream>
 
 
 Point3d::Point3d() {
@@ -508,16 +509,6 @@ Point3d *Point3d::in_direction(Point3d *start, Point3d *target, float distance) 
 }
 
 #ifdef ARDUINO
-
-void Point3d::toLCD() {
-    //X12.3Y45.6Z78.9
-    lcd.print("X");
-    lcd.print(x, 1);
-    lcd.print("Y");
-    lcd.print(y, 1);
-    lcd.print("Z");
-    lcd.print(z, 1);
-}
 
 #else
 
@@ -704,21 +695,11 @@ void ServoState::updateCalculated(ServoState *from) {
     this->beta = from->beta;
     this->gamma = from->gamma;
     this->delta = from->delta;
+    Serial.println(this->alpha);
+    Serial.println(from->alpha);
 }
 
 #ifdef ARDUINO
-
-void Point3d::toLCD() {
-    //alpha;beta;gamma;;zeta  //show these four because the others can be seen easily
-    lcd.print(alpha, 0);
-    lcd.print(';');
-    lcd.print(beta, 0);
-    lcd.print(';');
-    lcd.print(gamma, 0);
-    lcd.print(";;");
-    lcd.print(zeta, 0);
-    * /
-}
 
 #else
 
@@ -739,13 +720,6 @@ std::string ServoState::toString() {
 //End of ServoState.cpp********************************************************
 //END_CPP_LIB
 
-const int LCD_PIN_DB4 = A3;
-const int LCD_PIN_DB5 = A2;
-const int LCD_PIN_DB6 = A1;
-const int LCD_PIN_DB7 = A0;
-const int LCD_PIN_RS = 2;
-const int LCD_PIN_E = 4;
-
 const int BUTTON_OPEN_GRIPPER_PIN = -1;
 const int BUTTON_CLOSE_GRIPPER_PIN = -1;
 const int BUTTON_TURN_LEFT_PIN = -1;
@@ -753,7 +727,7 @@ const int BUTTON_TURN_RIGHT_PIN = -1;
 const int BUTTON_ANGLE_LOWER_PIN = -1;
 const int BUTTON_ANGLE_HIGHER_PIN = -1;
 
-LiquidCrystal lcd(LCD_PIN_RS, LCD_PIN_E, LCD_PIN_DB4, LCD_PIN_DB5, LCD_PIN_DB6, LCD_PIN_DB7);
+#define NUM_SERVOS 6
 
 class HardwareController {
 public:
@@ -769,17 +743,15 @@ public:
 
     float absGripperAngle, gripperRotation;
 private:
-    const int NUM_SERVOS = 6;
     const int JOINT_A = 0;
     const int JOINT_B = 1;
     const int JOINT_C = 2;
     const int TURNTABLE = 3;
     const int GRIPPER_TURN = 4;
     const int GRIPPER_OPEN = 5;
-    const int SERVO_PINS[] = {3, 5, 6, 9, 10, 11}; // todo look up correct pin numbers
+    const int SERVO_PINS[6] = {3, 5, 6, 9, 10, 11}; // todo look up correct pin numbers
 
-    Servo[NUM_SERVOS]
-    servos;
+    Servo servos[NUM_SERVOS];
     RobotArm *arm = nullptr;
     Point3d *position = nullptr;
 
@@ -794,8 +766,8 @@ void HardwareController::initialize() {
 
 void HardwareController::attachAllServos() {
     for (int i = 0; i < NUM_SERVOS; ++i) {
-        servos[i] = Servo(SERVO_PINS[i]);
-        servos[i].attach();
+        servos[i] = Servo();
+        servos[i].attach(SERVO_PINS[i]);
         servos[i].write(90);
     }
 }
@@ -835,7 +807,6 @@ void setup() {
     Wire.begin();
     nunchuk_init();
     controller.initialize();
-    lcd.begin(16, 2);
 
     pinMode(BUTTON_OPEN_GRIPPER_PIN, INPUT_PULLUP);
     pinMode(BUTTON_CLOSE_GRIPPER_PIN, INPUT_PULLUP);
@@ -887,5 +858,5 @@ void loop() {
         state->print();
 }
 
-    delay(10);
+    delay(1000);
 }
