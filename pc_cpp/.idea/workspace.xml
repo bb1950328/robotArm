@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="robotArm" targetName="robotArm" />
@@ -13,9 +31,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09459e80-773d-43e5-81ec-57aef335d28b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/PythonRobotArm/interactive_calc3d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pc_cpp/codeDescription.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/robotArm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/robotArm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +77,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PythonRobotArm/ino_builder.py" />
+    <property name="last_opened_file_path" value="G:/robotarm1.patch" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="Console" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -73,12 +93,12 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.robotArm">
-    <configuration name="robotArm" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robotArm" RUN_TARGET_NAME="robotArm">
+    <configuration name="robotArm" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robotArm" RUN_TARGET_NAME="robotArm">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="robotArm_library" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm_library" CONFIG_NAME="Debug">
+    <configuration name="robotArm_library" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm_library" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -105,9 +125,12 @@
       <method v="2" />
     </configuration>
     <configuration name="Build lib" type="ShConfigurationType">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
       <option name="SCRIPT_PATH" value="$PROJECT_DIR$/build_lib.sh" />
       <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="false" />
       <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="false" />
       <option name="INTERPRETER_PATH" value="/bin/bash" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <method v="2" />
@@ -254,13 +277,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some intellij files..." />
@@ -277,6 +299,7 @@
     <MESSAGE value="added acceleration to rotation calculation" />
     <MESSAGE value="some arduino integration" />
     <option name="LAST_COMMIT_MESSAGE" value="some arduino integration" />
+    <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -333,15 +356,16 @@
     <state x="547" y="73" key="CommitChangelistDialog2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587060807648" />
     <state x="402" y="0" width="1646" height="1112" key="CommitChangelistDialog2/2560.355.1536.824/0.0.2048.1112/-1280.418.1280.984@0.0.2048.1112" timestamp="1586967143930" />
     <state x="552" y="96" width="865" height="925" key="CommitChangelistDialog2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074751979" />
-    <state x="396" y="94" key="DiffContextDialog" timestamp="1586964458229">
+    <state x="396" y="94" width="1638" height="917" key="DiffContextDialog" timestamp="1587556071342">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="396" y="94" width="1638" height="917" key="DiffContextDialog/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587556071342" />
     <state x="396" y="94" key="DiffContextDialog/2560.355.1536.824/0.0.2048.1112/-1280.418.1280.984@0.0.2048.1112" timestamp="1586964458229" />
-    <state x="789" y="270" width="424" height="497" key="FileChooserDialogImpl" timestamp="1586942478908">
+    <state x="789" y="270" width="424" height="497" key="FileChooserDialogImpl" timestamp="1587568897975">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="789" y="270" key="FileChooserDialogImpl/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585904327592" />
-    <state x="789" y="270" key="FileChooserDialogImpl/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586942478908" />
+    <state x="789" y="270" key="FileChooserDialogImpl/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587568897975" />
     <state x="773" y="283" width="424" height="497" key="FileChooserDialogImpl/54.27.1866.1053@54.27.1866.1053" timestamp="1584731843218" />
     <state width="1820" height="375" key="GridCell.Tab.0.bottom" timestamp="1587407704674">
       <screen x="54" y="27" width="1866" height="1053" />
@@ -416,12 +440,12 @@
     </state>
     <state x="553" y="202" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1586365525429" />
     <state x="737" y="272" key="MultipleFileMergeDialog/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585382653178" />
-    <state x="461" y="152" width="1190" height="707" key="SettingsEditor" timestamp="1586965132946">
+    <state x="466" y="153" width="1190" height="707" key="SettingsEditor" timestamp="1587568947507">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="466" y="153" key="SettingsEditor/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585903849341" />
     <state x="346" y="113" width="1190" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586957617021" />
-    <state x="466" y="153" key="SettingsEditor/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1586942503647" />
+    <state x="466" y="153" key="SettingsEditor/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587568947507" />
     <state x="461" y="152" key="SettingsEditor/2560.355.1536.824/0.0.2048.1112/-1280.418.1280.984@0.0.2048.1112" timestamp="1586965132946" />
     <state x="479" y="172" width="1016" height="743" key="SettingsEditor/54.27.1866.1053@54.27.1866.1053" timestamp="1584731847563" />
     <state x="583" y="276" width="800" height="541" key="Vcs.Push.Dialog.v2" timestamp="1586964488678">
@@ -438,11 +462,11 @@
     <state x="488" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586957849997" />
     <state x="651" y="345" key="com.intellij.ide.util.TipDialog/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585910637220" />
     <state x="647" y="348" key="com.intellij.ide.util.TipDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1587479219093" />
-    <state x="772" y="470" width="459" height="173" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585892997837">
+    <state x="772" y="470" width="459" height="173" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587554937882">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="772" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585892997826" />
-    <state x="772" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585382614051" />
+    <state x="772" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587554937882" />
     <state x="757" y="472" width="459" height="173" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/54.27.1866.1053@54.27.1866.1053" timestamp="1585153314769" />
     <state x="635" y="139" width="776" height="827" key="find.popup" timestamp="1585904893501">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -465,6 +489,10 @@
     </state>
     <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587060256193" />
     <state x="680" y="257" width="672" height="643" key="search.everywhere.popup/54.27.1866.1053@54.27.1866.1053" timestamp="1587404029581" />
+    <state x="676" y="258" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1587568904687">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="676" y="258" key="vcs.ApplyPatchDifferentiatedDialog/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587568904687" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -39,6 +39,8 @@ void coupling_calculator();
 
 void test_ramp();
 
+void interactive_calc3d();
+
 void testCalc3d() {
     RobotArm::print_config();
     ServoState state;
@@ -56,7 +58,8 @@ int main() {
     //testCalc3d();
     //testCoupling(new Coupling(10.3, 9.87812, 5.09117, 3.6, 20.4576))->printResults();
     //test_ramp();
-    coupling_calculator();
+    //coupling_calculator();
+    interactive_calc3d();
     return 0;
 }
 
@@ -158,3 +161,18 @@ void test_ramp() {
         cout << " -> " << i->toString() << EOL;
     }
 }
+
+void interactive_calc3d() {
+    auto *arm = new RobotArm();
+    float x, y, z, omega;
+    cin >> x;
+    cin >> y;
+    cin >> z;
+    cin >> omega;
+    auto *to = new Point3d(x, y, z);
+    arm->goTo(to, omega);
+    arm->getState()->print();
+    delete to;
+    RobotArm::print_config();
+}
+
