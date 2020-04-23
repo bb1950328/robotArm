@@ -2,7 +2,7 @@
 
 ### Auswahl der Programmiersprache
 Zuerst haben wir uns noch überlegt, die Berechnung der Winkel am PC zu erledingen und danach diese über die Serielle Schnittstelle an den Arduino zu übertragen.
-Da wir dann auch gemerkt haben dass es gut wäre, wenn der Arm auch ohne PC funktionsfähig sein sollte. Damit war diese Idee wieder vom Tisch und wir mussten die Berechnung in C++ implementieren.
+Da wir dann auch gemerkt haben dass es gut wäre, wenn der Arm auch ohne PC funktionsfähig sein sollte, war diese Idee wieder vom Tisch und wir mussten die Berechnung in C++ implementieren.
 Zum Glück läuft der normale C++ Code auch auf dem Arduino wenn man nicht allzu viele Bibliotheken verwendet.
 
 ### ino_builder.py
@@ -31,7 +31,7 @@ Zudem hat es noch eine zweidimensionale Darstellung des Roboterarms, welche auch
 ### Inverse Kinematik
 Inverse Kinematik ist ein komplexes Thema. Es ist erstaunlich schwierig, das nachzuprogrammieren was ein Mensch ohne zu überlegen kann, nämlich die Berechnung der einzelnen Gelenkwinkel aus der Zielposition.
 Wir haben dies bereits beim Design berücksichtigt und darum sind die Achsen der Gelenke 2, 3 und 4 alle parallel. So kann der Hauptteil der Berechung in einer Ebene, also zweidimensional berechnet werden.
-Die Berechnung wird in `RobotArm::calc3d` und `RobotArm::internal_calc2d` mithilfe des Satzes von Pythagoras und Trigonometrie ausgeführt.
+Die Berechnung wird in `RobotArm::calc3d` und `RobotArm::internal_calc2d` mithilfe des Satzes von Pythagoras und Trigonometrie durchgeführt.
  
 Da die meisten Gelenke mithilfe von Verbindungsstangen (Viergelenkgetriebe) bewegt werden, ist dort ebenfalls eine Berechnung nötig, um vom Gelenkwinkel auf den Servowinkel zu kommen.
 Diese Funktionalität ist in `Coupling::getServoAngle` implementiert, ebenfalls mithilfe von Trigonometrie.
@@ -39,4 +39,4 @@ Die Funktion `coupling_calculator()` in `main.cpp` kann die Länge des Verbinder
 Da diese Funktion nicht laufzeitkritisch ist, ist die Implementation nicht sonderlich effizient, dafür sind die Formeln viel einfacher als sie ohne Brute-Force wären.
 
 ### main.cpp
-In dieser Datei findet man alle Funkionen, die nur auf dem PC gebraucht werden. Hauptsächlich sind es Funktionen, die dem Testing dienen.
+In dieser Datei findet man alle Funkionen, die nur auf dem PC gebraucht werden. Hauptsächlich sind es Funktionen, die dem Testing dienen. Sie wird nicht in den Arduino-Sketch kopiert, da sie dort nicht gebraucht wird und nur stören würde.

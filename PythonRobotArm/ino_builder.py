@@ -30,6 +30,7 @@ file_blacklist = [
 replaces = [
     ["util::radians", "radians"],
     ["util::degrees", "degrees"],
+    ["util::millis", "millis"],
     ["std::sin", "sin"],
     ["std::cos", "cos"],
     ["std::tan", "tan"],

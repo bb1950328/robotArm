@@ -1,5 +1,4 @@
 
-
 #include <cmath>
 #include <iostream>
 #include "../h/ServoState.hpp"
@@ -26,7 +25,7 @@ RobotArm::RobotArm() {
 }
 
 ServoState RobotArm::internal_calc2d(float r, float z, float omega) {
-
+    long start = util::millis();
     ServoState state;
 
     float x_gamma = cos(util::radians(omega)) * L3;
@@ -41,7 +40,14 @@ ServoState RobotArm::internal_calc2d(float r, float z, float omega) {
     state.alpha = state.u + util::degrees(acos((c * c + L1 * L1 - L2 * L2) / (2 * c * L1)));
     state.beta = 180 - util::degrees(acos((L1 * L1 + L2 * L2 - c * c) / (2 * L1 * L2)));
     state.gamma = omega + (state.alpha - state.beta);
-
+    long end = util::millis();
+    state.print();
+    cout << "r: " << r << EOL;
+    cout << "z: " << z << EOL;
+    cout << "x_gamma: " << x_gamma << EOL;
+    cout << "y_gamma: " << y_gamma << EOL;
+    cout << "u: " << state.u << EOL;
+    cout << "time used in ms: " << end << EOL;
     return state;
 }
 
@@ -60,7 +66,7 @@ ServoState RobotArm::calc2d(float r, float z, float omega) {
         state = internal_calc2d(r, z, omega);
     }
 #endif
-    state.print();
+
     return state;
 }
 
