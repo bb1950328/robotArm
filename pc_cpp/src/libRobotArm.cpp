@@ -40,7 +40,7 @@ ServoState RobotArm::internal_calc2d(float r, float z, float omega) {
 
     state.alpha = state.u + util::degrees(acos((c * c + L1 * L1 - L2 * L2) / (2 * c * L1)));
     state.beta = 180 - util::degrees(acos((L1 * L1 + L2 * L2 - c * c) / (2 * L1 * L2)));
-    state.gamma = omega - state.alpha - state.beta;
+    state.gamma = omega + (state.alpha - state.beta);
 
     return state;
 }
@@ -48,18 +48,20 @@ ServoState RobotArm::internal_calc2d(float r, float z, float omega) {
 
 ServoState RobotArm::calc2d(float r, float z, float omega) {
     ServoState state = internal_calc2d(r, z, omega);
-    if (state.isValid()) {
-        return state;
+#ifdef AUTOCORRECT_TOO_FAR_COORDS
+    if (!state.isValid()) {
+        // r and z are too far away
+        float new_p2_x = cos(util::radians(state.u)) * U_MAX;
+        float new_p2_y = sin(util::radians(state.u)) * U_MAX;
+
+        r -= state.p2_x - new_p2_x;
+        z -= state.p2_y - new_p2_y;
+
+        state = internal_calc2d(r, z, omega);
     }
-
-    // r and z are too far away
-    float new_p2_x = cos(util::radians(state.u)) * U_MAX;
-    float new_p2_y = sin(util::radians(state.u)) * U_MAX;
-
-    r -= state.p2_x - new_p2_x;
-    z -= state.p2_y - new_p2_y;
-
-    return internal_calc2d(r, z, omega);
+#endif
+    state.print();
+    return state;
 }
 
 ServoState RobotArm::calc3d(float x, float y, float z, float omega) {

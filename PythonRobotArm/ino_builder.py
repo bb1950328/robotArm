@@ -1,4 +1,5 @@
 import os
+import pathlib
 import re
 from typing import List
 
@@ -12,6 +13,8 @@ obsolete_lines = [
     "#include <iostream>",
     '#include "iostream"',
     "#include <ctime>",
+    "#include <string>",
+    "#include <sstream>",
     r'#include "../h/.*\.hpp"',
     r'//\s*',
     r'// Created by .* on .*',
@@ -39,7 +42,7 @@ replaces = [
 
 EOL = "\n"
 
-ino_file = r"D:\SchuleDev\robotArm\ArduinoRobotArm\ArduinoRobotArm.ino"
+ino_file = str(pathlib.Path(__file__).parent.parent.joinpath("ArduinoRobotArm").joinpath("ArduinoRobotArm.ino"))
 cpp_base_dir = os.path.abspath(os.path.join(".", "..", "pc_cpp"))
 
 

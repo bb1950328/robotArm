@@ -171,6 +171,20 @@ void interactive_calc3d() {
     cin >> omega;
     auto *to = new Point3d(x, y, z);
     arm->goTo(to, omega);
+    //arm->getState()->print();
+    delete to;
+    RobotArm::print_config();
+}
+
+void interactive_calc3d() {
+    auto *arm = new RobotArm();
+    float x, y, z, omega;
+    cin >> x;
+    cin >> y;
+    cin >> z;
+    cin >> omega;
+    auto *to = new Point3d(x, y, z);
+    arm->goTo(to, omega);
     arm->getState()->print();
     delete to;
     RobotArm::print_config();

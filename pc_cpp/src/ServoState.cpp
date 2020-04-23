@@ -70,6 +70,7 @@ void ServoState::updateCalculated(ServoState *from) {
 }
 
 #ifdef ARDUINO
+#ifdef USE_LCD
 void Point3d::toLCD() {
     //alpha;beta;gamma;;zeta  //show these four because the others can be seen easily
     lcd.print(alpha, 0);
@@ -81,6 +82,7 @@ void Point3d::toLCD() {
     lcd.print(zeta, 0);
      */
 }
+#endif
 #else
 
 std::string ServoState::toString() {

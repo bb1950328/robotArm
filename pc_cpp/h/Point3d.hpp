@@ -24,7 +24,9 @@ public:
     static Point3d *in_direction(Point3d *start, Point3d *target, float distance);
 
 #ifdef ARDUINO
+#ifdef USE_LCD
     void toLCD();
+#endif
 #else
 
     std::string toString();
