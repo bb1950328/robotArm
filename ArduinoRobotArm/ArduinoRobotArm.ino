@@ -1,6 +1,7 @@
 #include <Wire.h>
 #include "Nunchuk.h"
 #include <Servo.h>
+
 #define ARDUINO
 //START_CPP_LIB
 //Start of constants.hpp********************************************************
@@ -96,8 +97,6 @@ private:
 #define ROBOTARM_POINT3D_H
 
 
-//#include <string>
-
 class Point3d {
 public:
     float x, y, z;
@@ -181,6 +180,23 @@ private:
 
 #endif //ROBOTARM_RAMP3D_HPP
 //End of ramp3d.hpp************************************************************
+//Start of Rotation3d.hpp*******************************************************
+
+#ifndef ROBOTARM_ROTATION3D_HPP
+#define ROBOTARM_ROTATION3D_HPP
+
+class Rotation3d {
+public:
+    float rotX, rotY, rotZ;
+
+    /**
+    * @param accX, accY, accZ in G or m/s^2
+    */
+    static Rotation3d fromAcceleration(float accX, float accY, float accZ);
+};
+
+#endif //ROBOTARM_ROTATION3D_HPP
+//End of Rotation3d.hpp********************************************************
 //Start of ServoState.hpp*******************************************************
 
 #ifndef ROBOTARM_SERVOSTATE_HPP
@@ -210,7 +226,7 @@ public:
 
     bool isValid() const;
 
-  void updateCalculated(float alpha, float beta, float gamma, float delta);
+    void updateCalculated(ServoState *from);
 
 #ifdef ARDUINO
 #ifdef USE_LCD
@@ -258,25 +274,84 @@ private:
 
 #endif //ROBOTARM_LIBROBOTARM_HPP
 //End of libRobotArm.hpp*******************************************************
-//Start of Rotation3d.hpp*******************************************************
+//Start of coupling.cpp*********************************************************
 
-#ifndef ROBOTARM_ROTATION3D_HPP
-#define ROBOTARM_ROTATION3D_HPP
 
-class Rotation3d {
-public:
-    float rotX, rotY, rotZ;
+Coupling::Coupling(float axleDistance,
+                   float couplerLength,
+                   float jointRadius,
+                   float servoHornRadius,
+                   float servoOffsetAngle,
+                   float jointOffsetAngle) {
+    d = axleDistance;
+    c = couplerLength;
+    g = jointRadius;
+    s = servoHornRadius;
+    this->servoOffsetAngle = servoOffsetAngle;
+    this->jointOffsetAngle = jointOffsetAngle;
+}
 
-    /**
-    * @param accX, accY, accZ in G or m/s^2
-    */
-    static Rotation3d fromAcceleration(float accX, float accY, float accZ);
-};
+Coupling::Coupling(float axleDistance,
+                   float couplerLength,
+                   float jointRadius,
+                   float servoHornRadius,
+                   float servoOffsetAngle)
+        : Coupling(axleDistance, couplerLength, jointRadius, servoHornRadius, servoOffsetAngle, servoOffsetAngle) {
+}
 
-#endif //ROBOTARM_ROTATION3D_HPP
-//End of Rotation3d.hpp********************************************************
+float Coupling::getServoAngle(float jointAngle, bool optimizedMethod) {
+    float delta = 90 - jointOffsetAngle + jointAngle;
+    float a = sqrt(d * d + g * g - 2 * d * g * cos(radians(delta)));
+    float fr1 = (d * d + a * a - g * g) / (2 * d * a);
+    float fr2 = (a * a + s * s - c * c) / (2 * a * s);
+    float lambdaRad;
+    if (optimizedMethod) {
+        lambdaRad = acos(fr1 * fr2 - sqrt(1 - fr1 * fr1) * sqrt(1 - fr2 * fr2));
+    } else {
+        lambdaRad = acos(fr1) + acos(fr2);
+    }
+    return servoOffsetAngle - degrees(lambdaRad) + 90;
+}
+
+float Coupling::getJointAngle(float servoAngle, bool optimizedMethod) {
+    float gamma = servoOffsetAngle + 90 - servoAngle; // γ
+    float b = sqrt(d * d + s * s - 2 * d * s * cos(radians(gamma)));
+    float fr1 = (d * d + b * b - s * s) / (2 * d * b);
+    float fr2 = (b * b + g * g - c * c) / (2 * b * g);
+    float deltaRad;
+    if (optimizedMethod) {
+        deltaRad = acos(fr1 * fr2 - sqrt(1 - fr1 * fr1) * sqrt(1 - fr2 * fr2));
+    } else {
+        deltaRad = acos(fr1) + acos(fr2);
+    }
+    return degrees(deltaRad) + jointOffsetAngle - 90; // δ
+}
+
+float Coupling::getAxleDistance() const {
+    return d;
+}
+
+float Coupling::getCouplerLength() const {
+    return c;
+}
+
+float Coupling::getServoHornRadius() const {
+    return s;
+}
+
+float Coupling::getJointRadius() const {
+    return g;
+}
+
+float Coupling::getServoOffsetAngle() const {
+    return servoOffsetAngle;
+}
+
+float Coupling::getJointOffsetAngle() const {
+    return jointOffsetAngle;
+}
+//End of coupling.cpp**********************************************************
 //Start of libRobotArm.cpp******************************************************
-
 
 
 using namespace std;
@@ -297,7 +372,7 @@ RobotArm::RobotArm() {
 }
 
 ServoState RobotArm::internal_calc2d(float r, float z, float omega) {
-
+    long start = millis();
     ServoState state;
 
     float x_gamma = cos(radians(omega)) * L3;
@@ -312,6 +387,25 @@ ServoState RobotArm::internal_calc2d(float r, float z, float omega) {
     state.alpha = state.u + degrees(acos((c * c + L1 * L1 - L2 * L2) / (2 * c * L1)));
     state.beta = 180 - degrees(acos((L1 * L1 + L2 * L2 - c * c) / (2 * L1 * L2)));
     state.gamma = omega + (state.alpha - state.beta);
+    long end = millis();
+    state.print();
+    Serial.print("r: ");
+    Serial.println(r);
+
+    Serial.print("z: ");
+    Serial.println(z);
+
+    Serial.print("x_gamma: ");
+    Serial.println(x_gamma);
+
+    Serial.print("y_gamma: ");
+    Serial.println(y_gamma);
+
+    Serial.print("u: ");
+    Serial.println(state.u);
+
+    Serial.print("time used in ms: ");
+    Serial.println(end);
 
     return state;
 }
@@ -331,7 +425,7 @@ ServoState RobotArm::calc2d(float r, float z, float omega) {
       state = internal_calc2d(r, z, omega);
     }
 #endif
-    state.print();
+
     return state;
 }
 
@@ -408,13 +502,10 @@ ServoState *RobotArm::getState() const {
 }
 
 void RobotArm::goTo(Point3d *to, float omega) {
-    ServoState robotArm = RobotArm::calc3d(to->x, to->y, to->z, omega);
-    ServoState* servoState = new ServoState(robotArm);
-    this->state->updateCalculated(servoState);
+    this->state->updateCalculated(new ServoState(RobotArm::calc3d(to->x, to->y, to->z, omega)));
 }
 //End of libRobotArm.cpp*******************************************************
 //Start of Point3d.cpp**********************************************************
-//#include <sstream>
 
 
 Point3d::Point3d() {
@@ -455,7 +546,17 @@ Point3d *Point3d::in_direction(Point3d *start, Point3d *target, float distance) 
 }
 
 #ifdef ARDUINO
-
+#ifdef USE_LCD
+void Point3d::toLCD() {
+  //X12.3Y45.6Z78.9
+  lcd.print("X");
+  lcd.print(x, 1);
+  lcd.print("Y");
+  lcd.print(y, 1);
+  lcd.print("Z");
+  lcd.print(z, 1);
+}
+#endif
 #else
 
 std::string Point3d::toString() {
@@ -537,6 +638,20 @@ Point3dLinkNode *Ramp3d::getStopNode() const {
 
 
 //End of ramp3d.cpp************************************************************
+//Start of Rotation3d.cpp*******************************************************
+
+
+Rotation3d Rotation3d::fromAcceleration(float accX, float accY, float accZ) {
+    //todo check if implementation is correct
+    // from https://forum.arduino.cc/index.php?topic=112031.0 Post #5
+    Rotation3d result{};
+
+    result.rotX = degrees(atan2(-accY, -accZ)) + 180;
+    result.rotY = degrees(atan2(-accX, -accZ)) + 180;
+    result.rotZ = degrees(atan2(-accY, -accX)) + 180;
+    return result;
+}
+//End of Rotation3d.cpp********************************************************
 //Start of ServoState.cpp*******************************************************
 
 
@@ -621,11 +736,11 @@ bool ServoState::isValid() const {
     );
 }
 
-void ServoState::updateCalculated(float alpha, float beta, float gamma, float delta) {
-   alpha = from->alpha;
-   beta = from->beta;
-   gamma = from->gamma;
-   delta = from->delta;
+void ServoState::updateCalculated(ServoState *from) {
+    this->alpha = from->alpha;
+    this->beta = from->beta;
+    this->gamma = from->gamma;
+    this->delta = from->delta;
 }
 
 #ifdef ARDUINO
@@ -659,176 +774,6 @@ std::string ServoState::toString() {
 
 #endif
 //End of ServoState.cpp********************************************************
-//Start of Rotation3d.cpp*******************************************************
-
-
-Rotation3d Rotation3d::fromAcceleration(float accX, float accY, float accZ) {
-    //todo check if implementation is correct
-    // from https://forum.arduino.cc/index.php?topic=112031.0 Post #5
-    Rotation3d result{};
-
-    result.rotX = degrees(atan2(-accY, -accZ)) + 180;
-    result.rotY = degrees(atan2(-accX, -accZ)) + 180;
-    result.rotZ = degrees(atan2(-accY, -accX)) + 180;
-    return result;
-}
-//End of Rotation3d.cpp********************************************************
-//Start of Point3dLinkNode.cpp**************************************************
-
-
-
-Point3dLinkNode::Point3dLinkNode() {
-    last = next = nullptr;
-}
-
-Point3dLinkNode::Point3dLinkNode(Point3d *from) {
-    x = from->x;
-    y = from->y;
-    z = from->z;
-    last = next = nullptr;
-}
-//End of Point3dLinkNode.cpp***************************************************
-//Start of Point3d.cpp**********************************************************
-
-
-Point3d::Point3d() {
-    x = y = z = 0.0f;
-}
-
-Point3d::Point3d(float x, float y, float z) {
-    this->x = x;
-    this->y = y;
-    this->z = z;
-}
-
-float Point3d::distance_between(Point3d *p1, Point3d *p2) {
-    float diffX = p1->x - p2->x;
-    float diffY = p1->y - p2->y;
-    float diffZ = p1->z - p2->z;
-    return sqrt(diffX * diffX + diffY * diffY + diffZ * diffZ);
-}
-
-float Point3d::distance_to(Point3d *other) {
-    return distance_between(this, other);
-}
-
-/**
-*     distance
-*   |<---------->|
-* start--------return----------target
-*/
-Point3d *Point3d::in_direction(Point3d *start, Point3d *target, float distance) {
-    float factor = distance / distance_between(start, target);
-    float diffX = target->x - start->x;
-    float diffY = target->y - start->y;
-    float diffZ = target->z - start->z;
-    return new Point3d(
-            start->x + diffX * factor,
-            start->y + diffY * factor,
-            start->z + diffZ * factor);
-}
-
-#ifdef ARDUINO
-#ifdef USE_LCD
-void Point3d::toLCD() {
-  //X12.3Y45.6Z78.9
-  lcd.print("X");
-  lcd.print(x, 1);
-  lcd.print("Y");
-  lcd.print(y, 1);
-  lcd.print("Z");
-  lcd.print(z, 1);
-}
-#endif
-#else
-
-std::string Point3d::toString() {
-
-  std::stringstream result;
-  result << "X=" << x << ", Y=" << y << ", Z=" << z;
-  return result.str();
-}
-
-#endif
-
-//End of Point3d.cpp***********************************************************
-//Start of coupling.cpp*********************************************************
-
-
-Coupling::Coupling(float axleDistance,
-                   float couplerLength,
-                   float jointRadius,
-                   float servoHornRadius,
-                   float servoOffsetAngle,
-                   float jointOffsetAngle) {
-    d = axleDistance;
-    c = couplerLength;
-    g = jointRadius;
-    s = servoHornRadius;
-    this->servoOffsetAngle = servoOffsetAngle;
-    this->jointOffsetAngle = jointOffsetAngle;
-}
-
-Coupling::Coupling(float axleDistance,
-                   float couplerLength,
-                   float jointRadius,
-                   float servoHornRadius,
-                   float servoOffsetAngle)
-        : Coupling(axleDistance, couplerLength, jointRadius, servoHornRadius, servoOffsetAngle, servoOffsetAngle) {
-}
-
-float Coupling::getServoAngle(float jointAngle, bool optimizedMethod) {
-    float delta = 90 - jointOffsetAngle + jointAngle;
-    float a = sqrt(d * d + g * g - 2 * d * g * cos(radians(delta)));
-    float fr1 = (d * d + a * a - g * g) / (2 * d * a);
-    float fr2 = (a * a + s * s - c * c) / (2 * a * s);
-    float lambdaRad;
-    if (optimizedMethod) {
-        lambdaRad = acos(fr1 * fr2 - sqrt(1 - fr1 * fr1) * sqrt(1 - fr2 * fr2));
-    } else {
-        lambdaRad = acos(fr1) + acos(fr2);
-    }
-    return servoOffsetAngle - degrees(lambdaRad) + 90;
-}
-
-float Coupling::getJointAngle(float servoAngle, bool optimizedMethod) {
-    float gamma = servoOffsetAngle + 90 - servoAngle; // γ
-    float b = sqrt(d * d + s * s - 2 * d * s * cos(radians(gamma)));
-    float fr1 = (d * d + b * b - s * s) / (2 * d * b);
-    float fr2 = (b * b + g * g - c * c) / (2 * b * g);
-    float deltaRad;
-    if (optimizedMethod) {
-        deltaRad = acos(fr1 * fr2 - sqrt(1 - fr1 * fr1) * sqrt(1 - fr2 * fr2));
-    } else {
-        deltaRad = acos(fr1) + acos(fr2);
-    }
-    return degrees(deltaRad) + jointOffsetAngle - 90; // δ
-}
-
-float Coupling::getAxleDistance() const {
-    return d;
-}
-
-float Coupling::getCouplerLength() const {
-    return c;
-}
-
-float Coupling::getServoHornRadius() const {
-    return s;
-}
-
-float Coupling::getJointRadius() const {
-    return g;
-}
-
-float Coupling::getServoOffsetAngle() const {
-    return servoOffsetAngle;
-}
-
-float Coupling::getJointOffsetAngle() const {
-    return jointOffsetAngle;
-}
-//End of coupling.cpp**********************************************************
 //END_CPP_LIB
 
 const int BUTTON_OPEN_GRIPPER_PIN = -1;
@@ -912,7 +857,6 @@ HardwareController controller{};
 
 const float NUNCHUK_G_PER_COUNT = 0.0188f;
 
-// *lvc* OR *lcc* OR *lcd* OR *lel* OR *lec* OR *lup* OR *lddisab* OR *ldbavs* OR *ldbavc* OR *ldpfas* OR *ldpfac* OR *lduv* OR *lduvgts* OR *ldlrepo* OR *lsd* OR *lsl* OR *lsm* OR *lss* OR *lsv* OR *ldptta*
 void setup() {
     Serial.begin(9600);
     Wire.begin();
@@ -937,8 +881,6 @@ void setup() {
  */
 void loop() {
     if (nunchuk_read()) {
-        //nunchuk_print();
-
         float x = nunchuk_joystickX();
         float y = nunchuk_joystickY();
         int c = nunchuk_buttonC();
