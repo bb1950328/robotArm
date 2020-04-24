@@ -1,6 +1,9 @@
 #include <ctime>
 #include <cmath>
 #include <iostream>
+#include <vector>
+#include <sstream>
+#include <iterator>
 #include "../h/libRobotArm.hpp"
 #include "../h/coupling.hpp"
 #include "../h/constants.hpp"
@@ -39,6 +42,8 @@ void coupling_calculator();
 
 void test_ramp();
 
+void interactive_calc3d(string input = "");
+
 void testCalc3d() {
     RobotArm::print_config();
     ServoState state;
@@ -52,11 +57,17 @@ void testCalc3d() {
     state.print();
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     //testCalc3d();
     //testCoupling(new Coupling(10.3, 9.87812, 5.09117, 3.6, 20.4576))->printResults();
     //test_ramp();
-    coupling_calculator();
+    //coupling_calculator();
+    if (argc > 1) {
+        std::string arg1(argv[1]);
+        interactive_calc3d(arg1);
+    } else {
+        interactive_calc3d();
+    }
     return 0;
 }
 
@@ -158,3 +169,45 @@ void test_ramp() {
         cout << " -> " << i->toString() << EOL;
     }
 }
+
+vector<string> split(const string &s, char delim) {
+    vector<string> result;
+    stringstream ss(s);
+    string item;
+
+    while (getline(ss, item, delim)) {
+        result.push_back(item);
+    }
+
+    return result;
+}
+
+template<typename T>
+std::ostream &operator<<(std::ostream &os, std::vector<T> vec) {
+    os << "{ ";
+    std::copy(vec.begin(), vec.end(), std::ostream_iterator<T>(os, " "));
+    os << "}";
+    return os;
+}
+
+void interactive_calc3d(string input) {
+    auto *arm = new RobotArm();
+    float x, y, z, omega;
+    if (input.length() == 0) {
+        getline(cin, input);
+    }
+    //vector<string> splitted = split(input, ';');
+    std::sscanf(input.c_str(), "%f;%f;%f;%f", &x, &y, &z, &omega);
+
+    /*cout << splitted << EOL;
+    x = stof(splitted[0]);
+    y = stof(splitted[1]);
+    z = stof(splitted[2]);
+    omega = stof(splitted[3]);*/
+    auto *to = new Point3d(x, y, z);
+    arm->goTo(to, omega);
+    //arm->getState()->print();
+    delete to;
+    RobotArm::print_config();
+}
+

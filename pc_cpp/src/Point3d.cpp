@@ -41,6 +41,7 @@ Point3d *Point3d::in_direction(Point3d *start, Point3d *target, float distance) 
 }
 
 #ifdef ARDUINO
+#ifdef USE_LCD
 void Point3d::toLCD() {
     //X12.3Y45.6Z78.9
     lcd.print("X");
@@ -50,6 +51,7 @@ void Point3d::toLCD() {
     lcd.print("Z");
     lcd.print(z, 1);
 }
+#endif
 #else
 
 std::string Point3d::toString() {

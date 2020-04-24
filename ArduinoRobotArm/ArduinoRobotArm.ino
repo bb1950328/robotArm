@@ -1,6 +1,7 @@
 #include <Wire.h>
 #include "Nunchuk.h"
 #include <Servo.h>
+
 #define ARDUINO
 //START_CPP_LIB
 //Start of constants.hpp********************************************************
@@ -8,15 +9,15 @@
 #ifndef ROBOTARM_CONSTANTS_HPP
 #define ROBOTARM_CONSTANTS_HPP
 
-#define LEN_UNIT "cm"
+#define LEN_UNIT "mm"
 #define ANGLE_UNIT "deg"//"°"
 #define STAR_LINE_64 "****************************************************************"
 
 #define EOL "\n"
 
-constexpr float L1 = 11.2;
-constexpr float L2 = 5.6;
-constexpr float L3 = 3.2;
+constexpr float L1 = 300;
+constexpr float L2 = 200;
+constexpr float L3 = 175;
 
 constexpr float ALPHA_MIN = 0.0f;
 constexpr float ALPHA_MAX = 90.0f;
@@ -96,8 +97,6 @@ private:
 #define ROBOTARM_POINT3D_H
 
 
-//#include <string>
-
 class Point3d {
 public:
     float x, y, z;
@@ -118,9 +117,9 @@ public:
     static Point3d *in_direction(Point3d *start, Point3d *target, float distance);
 
 #ifdef ARDUINO
-
+#ifdef USE_LCD
     void toLCD();
-
+#endif
 #else
 
     std::string toString();
@@ -230,9 +229,9 @@ public:
     void updateCalculated(ServoState *from);
 
 #ifdef ARDUINO
-
+#ifdef USE_LCD
     void toLCD();
-
+#endif
 #else
 
     std::string toString();
@@ -251,6 +250,8 @@ public:
 
 class RobotArm {
 public:
+    RobotArm();
+
     static ServoState internal_calc2d(float r, float z, float omega);
 
     static ServoState calc2d(float r, float z, float omega);
@@ -266,6 +267,9 @@ public:
 private:
     ServoState *state;
     static const float U_MAX;
+    const Coupling *couplingA = nullptr;
+    const Coupling *couplingB = nullptr;
+    const Coupling *couplingC = nullptr;
 };
 
 #endif //ROBOTARM_LIBROBOTARM_HPP
@@ -350,12 +354,25 @@ float Coupling::getJointOffsetAngle() const {
 //Start of libRobotArm.cpp******************************************************
 
 
-
 using namespace std;
 
 
-ServoState RobotArm::internal_calc2d(float r, float z, float omega) {
+RobotArm::RobotArm() {
+    /**--------------given------------- | --------------------------------calculated-----------------------------------|
+    *  horn radius | distance | range  | servo horn offs | joint offs adj  | joint radius | connector | dx     | dy   |
+    * a 17mm       | 94mm     | +/-45° | 10.41°          | -1.8°           | 24.04mm      | 92.98mm   | 92.5mm | 17mm |
+    * b 28mm       | 77mm     | +/-40° | 25.6813°        | -3.85°          | 43.5603mm    | 71.6426mm | 69.4mm | 33mm |
+    * c 30mm       | 125mm    | +/-50° | 11.6179°        | -2.4°           | 39.1622mm    | 123.481mm | 122mm  | 25mm |
+    */
+    couplingA = new Coupling(94, 92.9848, 24.0416, 17, 10.4193, 8.61934); // NOLINT(cert-err58-cpp)
+    couplingB = new Coupling(77, 71.6426, 43.5603, 28, 25.6813, 21.8313); // NOLINT(cert-err58-cpp)
+    couplingC = new Coupling(125, 123.481, 39.1622, 30, 11.6179, 9.2179); // NOLINT(cert-err58-cpp)
 
+    state = new ServoState();
+}
+
+ServoState RobotArm::internal_calc2d(float r, float z, float omega) {
+    long start = millis();
     ServoState state;
 
     float x_gamma = cos(radians(omega)) * L3;
@@ -369,7 +386,26 @@ ServoState RobotArm::internal_calc2d(float r, float z, float omega) {
 
     state.alpha = state.u + degrees(acos((c * c + L1 * L1 - L2 * L2) / (2 * c * L1)));
     state.beta = 180 - degrees(acos((L1 * L1 + L2 * L2 - c * c) / (2 * L1 * L2)));
-    state.gamma = omega - state.alpha - state.beta;
+    state.gamma = omega + (state.alpha - state.beta);
+    long end = millis();
+    state.print();
+    Serial.print("r: ");
+    Serial.println(r);
+
+    Serial.print("z: ");
+    Serial.println(z);
+
+    Serial.print("x_gamma: ");
+    Serial.println(x_gamma);
+
+    Serial.print("y_gamma: ");
+    Serial.println(y_gamma);
+
+    Serial.print("u: ");
+    Serial.println(state.u);
+
+    Serial.print("time used in ms: ");
+    Serial.println(end);
 
     return state;
 }
@@ -377,18 +413,20 @@ ServoState RobotArm::internal_calc2d(float r, float z, float omega) {
 
 ServoState RobotArm::calc2d(float r, float z, float omega) {
     ServoState state = internal_calc2d(r, z, omega);
-    if (state.isValid()) {
-        return state;
+#ifdef AUTOCORRECT_TOO_FAR_COORDS
+    if (!state.isValid()) {
+      // r and z are too far away
+      float new_p2_x = cos(radians(state.u)) * U_MAX;
+      float new_p2_y = sin(radians(state.u)) * U_MAX;
+
+      r -= state.p2_x - new_p2_x;
+      z -= state.p2_y - new_p2_y;
+
+      state = internal_calc2d(r, z, omega);
     }
+#endif
 
-    // r and z are too far away
-    float new_p2_x = cos(radians(state.u)) * U_MAX;
-    float new_p2_y = sin(radians(state.u)) * U_MAX;
-
-    r -= state.p2_x - new_p2_x;
-    z -= state.p2_y - new_p2_y;
-
-    return internal_calc2d(r, z, omega);
+    return state;
 }
 
 ServoState RobotArm::calc3d(float x, float y, float z, float omega) {
@@ -464,13 +502,10 @@ ServoState *RobotArm::getState() const {
 }
 
 void RobotArm::goTo(Point3d *to, float omega) {
-    ServoState robotArm = RobotArm::calc3d(to->x, to->y, to->z, omega);
-    ServoState* servoState = new ServoState(robotArm);
-    this->state->updateCalculated(servoState);
+    this->state->updateCalculated(new ServoState(RobotArm::calc3d(to->x, to->y, to->z, omega)));
 }
 //End of libRobotArm.cpp*******************************************************
 //Start of Point3d.cpp**********************************************************
-//#include <sstream>
 
 
 Point3d::Point3d() {
@@ -511,7 +546,17 @@ Point3d *Point3d::in_direction(Point3d *start, Point3d *target, float distance) 
 }
 
 #ifdef ARDUINO
-
+#ifdef USE_LCD
+void Point3d::toLCD() {
+  //X12.3Y45.6Z78.9
+  lcd.print("X");
+  lcd.print(x, 1);
+  lcd.print("Y");
+  lcd.print(y, 1);
+  lcd.print("Z");
+  lcd.print(z, 1);
+}
+#endif
 #else
 
 std::string Point3d::toString() {
@@ -612,7 +657,6 @@ Rotation3d Rotation3d::fromAcceleration(float accX, float accY, float accZ) {
 
 #ifndef ARDUINO
 
-#include <sstream>
 
 #endif
 
@@ -692,7 +736,7 @@ bool ServoState::isValid() const {
     );
 }
 
-void ServoState::updateCalculated(ServoState* from) {
+void ServoState::updateCalculated(ServoState *from) {
     this->alpha = from->alpha;
     this->beta = from->beta;
     this->gamma = from->gamma;
@@ -700,7 +744,19 @@ void ServoState::updateCalculated(ServoState* from) {
 }
 
 #ifdef ARDUINO
-
+#ifdef USE_LCD
+void Point3d::toLCD() {
+  //alpha;beta;gamma;;zeta  //show these four because the others can be seen easily
+  lcd.print(alpha, 0);
+  lcd.print(';');
+  lcd.print(beta, 0);
+  lcd.print(';');
+  lcd.print(gamma, 0);
+  lcd.print(";;");
+  lcd.print(zeta, 0);
+  */
+}
+#endif
 #else
 
 std::string ServoState::toString() {
@@ -801,7 +857,6 @@ HardwareController controller{};
 
 const float NUNCHUK_G_PER_COUNT = 0.0188f;
 
-
 void setup() {
     Serial.begin(9600);
     Wire.begin();
@@ -826,8 +881,6 @@ void setup() {
  */
 void loop() {
     if (nunchuk_read()) {
-        //nunchuk_print();
-
         float x = nunchuk_joystickX();
         float y = nunchuk_joystickY();
         int c = nunchuk_buttonC();
@@ -856,7 +909,7 @@ void loop() {
         controller.moveArm(x / 100, y / 100, c ? 0.2 : z ? -0.2 : 0);
         controller.updateServos();
         //state->print();
-}
+    }
 
     delay(1000);
 }

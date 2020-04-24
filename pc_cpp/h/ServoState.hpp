@@ -32,7 +32,9 @@ public:
     void updateCalculated(ServoState *from);
 
 #ifdef ARDUINO
+#ifdef USE_LCD
     void toLCD();
+#endif
 #else
 
     std::string toString();
