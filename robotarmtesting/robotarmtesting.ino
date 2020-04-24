@@ -17,24 +17,34 @@ const int BUTTON_ANGLE_HIGHER_PIN = 13;
 // define all min am max angles
 const int MIN = 0;
 const int MAX = 180;
+const int MIN_A = 10;
+const int MAX_A = 180;
+const int MIN_B = 0;
+const int MAX_B = 180;
+const int MIN_W = 0;
+const int MAX_W = 180;
+const int MIN_GRIPPERL = 0;
+const int MAX_GRIPPERL = 180;
+const int MIN_GRIPPERT = 0;
+const int MAX_GRIPPERT = 180;
 
 
 // define all start angles from the servos
-int angleA = 90;
-int angleB = 90;
-int tableW = 90;
-int gripperLowerAngle = 90;
-int gripperTurnAngle = 90;
-int gripperOpenAngle = 90;
+float angleA = 90;
+float angleB = 90;
+float tableW = 90;
+float gripperLowerAngle = 90;
+float gripperTurnAngle = 90;
+float gripperOpenAngle = 90;
 
 void setup() {
     // Servos den Pins zuweisen
-    sa.attach(5);
-    sb.attach(10);
-    table.attach(3);
-    gripperLower.attach(9);
-    gripperTurn.attach(6);
-    gripperOpen.attach(11);
+    sa.attach(3);  // Black
+    sb.attach(10);  // Yellow
+    table.attach(5);  // Brown
+    gripperLower.attach(9);  // Orange
+    gripperTurn.attach(6);  // Red
+    gripperOpen.attach(11);  // Green
 
     // Nunchuk einbinden
     Serial.begin(9600);
@@ -58,6 +68,9 @@ void loop() {
     int c = nunchuk_buttonC();
     int z = nunchuk_buttonZ();
 
+    Serial.println("PRINT:__________");
+    Serial.println(nunchuk_buttonC());
+    Serial.println(c);
 
     // Roboter drehen
     if(MIN < tableW) {
@@ -77,7 +90,7 @@ void loop() {
     }
 
     // Roboterarm vorne bewegen
-    if(MIN < angleB) {
+    if(MIN_B < angleB) {
       if(y > 90) {
         angleB -= 1;
       } else if(y > 30) {
@@ -85,7 +98,7 @@ void loop() {
       }
     }
 
-    if(MAX > angleB) {
+    if(MAX_B > angleB) {
       if(y < -90) {
         angleB += 1;
       } else if(y < -30) {
@@ -94,25 +107,30 @@ void loop() {
     }
 
     // Roboterarm hinten bewegen
-    if(z == 1 && MIN < angleA) {
-      angleA -= 1;
+    if(z == 1 && MIN_A < angleA) {
+      angleA -= 0.3;
+      Serial.println("LOWER");
     }
     
-    if(c == 1 && MAX > angleA) {
-      angleA += 1;
+    if(c == 1 && MAX_A > angleA) {
+      angleA += 0.3;
+      Serial.println("HIGHER");
+
     }
 
+    Serial.println(angleA);
+
     // Greifer nach oben oder unten
-    if (!digitalRead(BUTTON_ANGLE_HIGHER_PIN) && MAX > gripperLowerAngle) {
+    if (!digitalRead(BUTTON_ANGLE_HIGHER_PIN) && MAX_GRIPPERL > gripperLowerAngle) {
         gripperLowerAngle += 1;
-    } else if (!digitalRead(BUTTON_ANGLE_LOWER_PIN) && MIN < gripperLowerAngle) {
+    } else if (!digitalRead(BUTTON_ANGLE_LOWER_PIN) && MIN_GRIPPERL < gripperLowerAngle) {
         gripperLowerAngle -= 1;
     }
 
     // Greifer drehen
-    if (!digitalRead(BUTTON_TURN_LEFT_PIN) && MAX > gripperTurnAngle) {
+    if (!digitalRead(BUTTON_TURN_LEFT_PIN) && MAX_GRIPPERT > gripperTurnAngle) {
         gripperTurnAngle += 1;
-    } else if (!digitalRead(BUTTON_TURN_RIGHT_PIN) && MIN < gripperTurnAngle) {
+    } else if (!digitalRead(BUTTON_TURN_RIGHT_PIN) && MIN_GRIPPERT < gripperTurnAngle) {
         gripperTurnAngle -= 1;
     }
 
