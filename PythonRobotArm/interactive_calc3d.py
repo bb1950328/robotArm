@@ -69,13 +69,14 @@ def delete2lines():
 
 
 def recalc():
-    inp = ";".join(map(str, [xval, yval, zval, omegaval]))
+    inp = "and".join(map(str, [xval, yval, zval, omegaval]))
     bin_path = str(pathlib.Path(__file__).parent.parent
                    .joinpath("pc_cpp").joinpath("cmake-build-debug").joinpath("robotArm").absolute())
     if os.name == 'nt':
         command = f"\"{bin_path}.exe\" {inp}"
     else:
         command = f"\"{bin_path}\" {inp}"
+    print(command)
     output = subprocess.getoutput(command)
     outlabel["text"] = output
     output = output.splitlines(False)

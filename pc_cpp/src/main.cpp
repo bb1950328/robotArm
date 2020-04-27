@@ -197,7 +197,7 @@ void interactive_calc3d(string input) {
         getline(cin, input);
     }
     //vector<string> splitted = split(input, ';');
-    std::sscanf(input.c_str(), "%f;%f;%f;%f", &x, &y, &z, &omega);
+    std::sscanf(input.c_str(), "%fand%fand%fand%f", &x, &y, &z, &omega);
 
     /*cout << splitted << EOL;
     x = stof(splitted[0]);
