@@ -1,4 +1,4 @@
-
+#define USE_COUPLING
 
 #ifndef NO_HARDWARE
 #include <Wire.h>
@@ -12,6 +12,66 @@
 #define STAR_LINE_64 "****************************************************************"
 
 #define EOL "\n"
+
+class Coupling {
+public:
+    Coupling(float axleDistance,
+             float couplerLength,
+             float jointRadius,
+             float servoHornRadius,
+             float servoOffsetAngle,
+             float jointOffsetAngle);
+
+    /**
+    * @param jointAngle between -x and +x
+    * @return servoAngle between -90° and +90°
+    */
+    float getServoAngle(float jointAngle, bool optimizedMethod = false);
+
+private:
+    float d;
+    float c;
+    float s;
+    float g;
+    float servoOffsetAngle;
+    float jointOffsetAngle;
+};
+
+Coupling::Coupling(float axleDistance,
+                   float couplerLength,
+                   float jointRadius,
+                   float servoHornRadius,
+                   float servoOffsetAngle,
+                   float jointOffsetAngle) {
+    d = axleDistance;
+    c = couplerLength;
+    g = jointRadius;
+    s = servoHornRadius;
+    this->servoOffsetAngle = servoOffsetAngle;
+    this->jointOffsetAngle = jointOffsetAngle;
+}
+
+float Coupling::getServoAngle(float jointAngle, bool optimizedMethod) {
+    float delta = 90 - jointOffsetAngle + jointAngle;
+    float a = sqrt(d * d + g * g - 2 * d * g * cos(radians(delta)));
+    float fr1 = (d * d + a * a - g * g) / (2 * d * a);
+    float fr2 = (a * a + s * s - c * c) / (2 * a * s);
+    float lambdaRad;
+    if (optimizedMethod) {
+        lambdaRad = acos(fr1 * fr2 - sqrt(1 - fr1 * fr1) * sqrt(1 - fr2 * fr2));
+    } else {
+        lambdaRad = acos(fr1) + acos(fr2);
+    }
+    return servoOffsetAngle - degrees(lambdaRad) + 90;
+}
+
+/**--------------given------------- | --------------------------------calculated-----------------------------------|
+    *  horn radius | distance | range  | servo horn offs | joint offs adj  | joint radius | connector | dx     | dy   |
+    * a 17mm       | 94mm     | +/-45° | 10.41°          | -1.8°           | 24.04mm      | 92.98mm   | 92.5mm | 17mm |
+    * b 28mm       | 77mm     | +/-40° | 25.6813°        | -3.85°          | 43.5603mm    | 71.6426mm | 69.4mm | 33mm |
+    * c 30mm       | 125mm    | +/-50° | 11.6179°        | -2.4°           | 39.1622mm    | 123.481mm | 122mm  | 25mm |
+    */
+
 
 constexpr float L1 = 300;
 constexpr float L2 = 200;
@@ -59,18 +119,11 @@ float gripperRotation = 90;//deg
 float zeta = 90;//deg
 float alpha, beta, gamma, delta;
 
-#ifdef USE_COUPLINGS
-/**--------------given------------- | --------------------------------calculated-----------------------------------|
-    *  horn radius | distance | range  | servo horn offs | joint offs adj  | joint radius | connector | dx     | dy   |
-    * a 17mm       | 94mm     | +/-45° | 10.41°          | -1.8°           | 24.04mm      | 92.98mm   | 92.5mm | 17mm |
-    * b 28mm       | 77mm     | +/-40° | 25.6813°        | -3.85°          | 43.5603mm    | 71.6426mm | 69.4mm | 33mm |
-    * c 30mm       | 125mm    | +/-50° | 11.6179°        | -2.4°           | 39.1622mm    | 123.481mm | 122mm  | 25mm |
-    */
-    couplingA = new Coupling(94, 92.9848, 24.0416, 17, 10.4193, 8.61934); // NOLINT(cert-err58-cpp)
-    couplingB = new Coupling(77, 71.6426, 43.5603, 28, 25.6813, 21.8313); // NOLINT(cert-err58-cpp)
-    couplingC = new Coupling(125, 123.481, 39.1622, 30, 11.6179, 9.2179); // NOLINT(cert-err58-cpp)
+#ifdef USE_COUPLING
+Coupling *couplingA;
+Coupling *couplingB;
+Coupling *couplingC;
 #endif
-
 
 void attachAllServos() {
     for (int i = 0; i < NUM_SERVOS; ++i) {
@@ -105,7 +158,7 @@ void calc2d(float r, float z, float omega) {
     long end = micros();
 
     Serial.print("Used");
-    Serial.print(end-start);
+    Serial.print(end - start);
     Serial.println("us");
 
     Serial.print("r: ");
@@ -142,9 +195,25 @@ void calc3d() {
 
 
 void updateServos() {
-    servos[JOINT_A].write(map(alpha, ALPHA_MIN, ALPHA_MAX, 0, 180)); // todo use real couplings
+#ifdef USE_COUPLING
+    float correctAlpha = couplingA->getServoAngle(alpha);
+    float correctBeta = couplingB->getServoAngle(beta);
+    float correctGamma = couplingC->getServoAngle(gamma);
+    Serial.print("Correct servo angles: ");
+    Serial.print(correctAlpha);
+    Serial.print(";");
+    Serial.print(correctBeta);
+    Serial.print(";");
+    Serial.println(correctGamma);
+
+    servos[JOINT_A].write(correctAlpha);
+    servos[JOINT_B].write(correctBeta);
+    servos[JOINT_C].write(correctGamma);
+#else
+    servos[JOINT_A].write(map(alpha, ALPHA_MIN, ALPHA_MAX, 0, 180));
     servos[JOINT_B].write(map(beta, BETA_MIN, BETA_MAX, 0, 180));
     servos[JOINT_C].write(map(gamma, GAMMA_MIN, GAMMA_MAX, 0, 180));
+#endif
     servos[TURNTABLE].write(map(delta, DELTA_MIN, DELTA_MAX, 0, 180));
     servos[GRIPPER_TURN].write(gripperRotation);
     servos[GRIPPER_OPEN].write(zeta);
@@ -196,6 +265,11 @@ void setup() {
     pinMode(BUTTON_TURN_RIGHT_PIN, INPUT_PULLUP);
     pinMode(BUTTON_ANGLE_LOWER_PIN, INPUT_PULLUP);
     pinMode(BUTTON_ANGLE_HIGHER_PIN, INPUT_PULLUP);
+#ifdef USE_COUPLING
+    couplingA = new Coupling(94, 92.9848, 24.0416, 17, 10.4193, 8.61934);
+    couplingB = new Coupling(77, 71.6426, 43.5603, 28, 25.6813, 21.8313);
+    couplingC = new Coupling(125, 123.481, 39.1622, 30, 11.6179, 9.2179);
+#endif
 }
 
 /**
