@@ -11,9 +11,9 @@
 
 #define EOL "\n"
 
-constexpr float L1 = 11.2;
-constexpr float L2 = 5.6;
-constexpr float L3 = 3.2;
+constexpr float L1 = 300;
+constexpr float L2 = 200;
+constexpr float L3 = 175;
 
 constexpr float ALPHA_MIN = 0.0f;
 constexpr float ALPHA_MAX = 90.0f;
