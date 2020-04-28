@@ -30,11 +30,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09459e80-773d-43e5-81ec-57aef335d28b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoRobotArm/ArduinoRobotArm.ino" afterDir="false" />
+    <list default="true" id="09459e80-773d-43e5-81ec-57aef335d28b" name="Default Changelist" comment="- made interactive_calc3d.py work on windows too">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoRobotArmPatchwork/ArduinoRobotArmPatchwork.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoRobotArmPatchwork/ArduinoRobotArmPatchwork.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PythonRobotArm/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PythonRobotArm/interactive_calc3d.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PythonRobotArm/interactive_calc3d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/robotArm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/robotArm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pc_cpp/codeDescription.md" beforeDir="false" afterPath="$PROJECT_DIR$/pc_cpp/codeDescription.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +48,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -90,13 +95,13 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ino_builder">
-    <configuration name="robotArm" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robotArm" RUN_TARGET_NAME="robotArm">
+  <component name="RunManager" selected="CMake Application.robotArm">
+    <configuration name="robotArm" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robotArm" RUN_TARGET_NAME="robotArm">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="robotArm_library" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm_library" CONFIG_NAME="Debug">
+    <configuration name="robotArm_library" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robotArm" TARGET_NAME="robotArm_library" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -123,12 +128,9 @@
       <method v="2" />
     </configuration>
     <configuration name="Build lib" type="ShConfigurationType">
-      <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
       <option name="SCRIPT_PATH" value="$PROJECT_DIR$/build_lib.sh" />
       <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="false" />
       <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="false" />
       <option name="INTERPRETER_PATH" value="/bin/bash" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <method v="2" />
@@ -293,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587662919000</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="- added new sketch with important stuff, simplified">
+      <created>1588014044865</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1588014044865</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,12 +313,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some intellij files..." />
@@ -329,7 +339,8 @@
     <MESSAGE value="- extended code documentation" />
     <MESSAGE value="- some bugfixes in angle calculation&#10;- extended interactive_calc3d.py" />
     <MESSAGE value="- made interactive_calc3d.py work on windows too" />
-    <option name="LAST_COMMIT_MESSAGE" value="- made interactive_calc3d.py work on windows too" />
+    <MESSAGE value="- added new sketch with important stuff, simplified" />
+    <option name="LAST_COMMIT_MESSAGE" value="- added new sketch with important stuff, simplified" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -378,8 +389,8 @@
     </state>
     <state x="772" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585901822362" />
     <state x="772" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587115863948" />
-    <state x="547" y="73" width="1338" height="999" key="CommitChangelistDialog2" timestamp="1587662918471">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state x="554" y="66" width="860" height="859" key="CommitChangelistDialog2" timestamp="1588015044609">
+      <screen x="56" y="27" width="1864" height="1053" />
     </state>
     <state x="547" y="73" width="1234" height="973" key="CommitChangelistDialog2/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1587622124469" />
     <state x="547" y="73" key="CommitChangelistDialog2/-1280.418.1280.974/2560.355.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1586852872871" />
@@ -387,6 +398,7 @@
     <state x="547" y="73" width="1338" height="999" key="CommitChangelistDialog2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587662918471" />
     <state x="402" y="0" width="1646" height="1112" key="CommitChangelistDialog2/2560.355.1536.824/0.0.2048.1112/-1280.418.1280.984@0.0.2048.1112" timestamp="1586967143930" />
     <state x="552" y="96" width="865" height="925" key="CommitChangelistDialog2/54.27.1866.1053@54.27.1866.1053" timestamp="1585074751979" />
+    <state x="554" y="66" width="860" height="859" key="CommitChangelistDialog2/56.27.1864.1053@56.27.1864.1053" timestamp="1588015044609" />
     <state x="98" y="86" width="1638" height="917" key="DiffContextDialog" timestamp="1587712887535">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -504,12 +516,13 @@
     <state x="772" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585892997826" />
     <state x="772" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1587554937882" />
     <state x="757" y="472" width="459" height="173" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/54.27.1866.1053@54.27.1866.1053" timestamp="1585153314769" />
-    <state x="635" y="139" width="776" height="827" key="find.popup" timestamp="1585904893501">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state x="634" y="159" width="707" height="784" key="find.popup" timestamp="1588012508690">
+      <screen x="56" y="27" width="1864" height="1053" />
     </state>
     <state x="635" y="139" width="776" height="827" key="find.popup/-1280.418.1280.974/0.0.2048.1112/2560.355.1536.824@0.0.2048.1112" timestamp="1585904893501" />
     <state x="635" y="139" width="776" height="827" key="find.popup/0.0.2048.1112/-1280.418.1280.984/2560.355.1536.824@0.0.2048.1112" timestamp="1585325937779" />
     <state x="633" y="159" width="707" height="783" key="find.popup/54.27.1866.1053@54.27.1866.1053" timestamp="1585153913756" />
+    <state x="634" y="159" width="707" height="784" key="find.popup/56.27.1864.1053@56.27.1864.1053" timestamp="1588012508690" />
     <state x="550" y="125" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586365519379">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
